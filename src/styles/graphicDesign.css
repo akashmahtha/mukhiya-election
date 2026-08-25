@@ -1,0 +1,1478 @@
+/* =====================================================
+   GRAPHIC DESIGN SECTION
+===================================================== */
+
+.graphic-section {
+  position: relative;
+
+  padding: 110px 30px;
+
+  background: #f7f8f5;
+
+  overflow: hidden;
+}
+
+.graphic-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  top: -280px;
+  right: -240px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(20, 83, 45, 0.065),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.graphic-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  bottom: -260px;
+  left: -220px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 107, 0, 0.055),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.graphic-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.graphic-header {
+  max-width: 760px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.graphic-header .section-label {
+  color: var(--green, #14532d);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+
+  text-transform: uppercase;
+}
+
+.graphic-header h2 {
+  margin-top: 15px;
+
+  color: var(--green, #14532d);
+
+  font-size:
+    clamp(38px, 4.5vw, 60px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2.5px;
+}
+
+.graphic-header h2 span {
+  display: block;
+
+  margin-top: 7px;
+
+  color: var(--orange, #ff6b00);
+}
+
+.graphic-header p {
+  max-width: 650px;
+
+  margin: 18px auto 0;
+
+  color: #777;
+
+  font-size: 12px;
+
+  line-height: 1.85;
+}
+
+
+/* =====================================================
+   FEATURE
+===================================================== */
+
+.graphic-feature {
+  min-height: 455px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.95fr
+    1.05fr;
+
+  margin-bottom: 58px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--green, #14532d),
+      #092d18
+    );
+
+  border-radius: 21px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 55px
+    rgba(20, 83, 45, 0.12);
+}
+
+
+/* =====================================================
+   FEATURE CONTENT
+===================================================== */
+
+.graphic-feature-content {
+  position: relative;
+
+  z-index: 3;
+
+  padding: 48px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.graphic-feature-label {
+  color: #ff9955;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.8px;
+}
+
+.graphic-feature-content h3 {
+  margin-top: 16px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(36px, 4vw, 54px);
+
+  line-height: 1.02;
+
+  letter-spacing: -2px;
+}
+
+.graphic-feature-content h3 span {
+  display: block;
+
+  color: #ff9955;
+}
+
+.graphic-feature-content > p {
+  max-width: 500px;
+
+  margin-top: 19px;
+
+  color:
+    rgba(255, 255, 255, 0.58);
+
+  font-size: 10px;
+
+  line-height: 1.85;
+}
+
+
+/* =====================================================
+   FEATURE POINTS
+===================================================== */
+
+.graphic-feature-points {
+  margin-top: 25px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.graphic-feature-points div {
+  min-height: 34px;
+
+  padding: 0 11px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color:
+    rgba(255, 255, 255, 0.8);
+
+  background:
+    rgba(255, 255, 255, 0.065);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 7px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+.graphic-feature-points svg {
+  color: #ff9955;
+}
+
+
+/* =====================================================
+   FEATURE VISUAL
+===================================================== */
+
+.graphic-feature-visual {
+  position: relative;
+
+  min-height: 455px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #153d24,
+      #062613
+    );
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   DECORATIVE SHAPES
+===================================================== */
+
+.graphic-shape {
+  position: absolute;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.graphic-shape-one {
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+}
+
+.graphic-shape-two {
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  border-color:
+    rgba(255, 255, 255, 0.04);
+}
+
+
+/* =====================================================
+   DESIGN BOARD
+===================================================== */
+
+.graphic-design-board {
+  position: relative;
+
+  z-index: 4;
+
+  width: 320px;
+
+  min-height: 340px;
+
+  padding: 18px;
+
+  background:
+    #ffffff;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 30px 70px
+    rgba(0, 0, 0, 0.25);
+
+  transform:
+    rotate(-4deg);
+
+  transition:
+    transform 0.35s ease;
+}
+
+.graphic-feature:hover .graphic-design-board {
+  transform:
+    rotate(0deg)
+    translateY(-5px);
+}
+
+
+/* =====================================================
+   BOARD TOP
+===================================================== */
+
+.graphic-board-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-bottom: 12px;
+
+  border-bottom:
+    1px solid #e8ebe7;
+}
+
+.graphic-board-top span {
+  color:
+    var(--green, #14532d);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.graphic-board-top small {
+  color:
+    var(--orange, #ff6b00);
+
+  font-size: 6px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   BOARD CONTENT
+===================================================== */
+
+.graphic-board-content {
+  min-height: 200px;
+
+  margin-top: 13px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #edf4ee,
+      #f8faf7
+    );
+
+  border-radius: 9px;
+}
+
+.graphic-board-avatar {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color:
+    var(--orange, #ff6b00);
+
+  background:
+    #fff3e9;
+
+  border-radius: 50%;
+}
+
+.graphic-board-content strong {
+  margin-top: 14px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 16px;
+
+  font-weight: 900;
+}
+
+.graphic-board-content > span {
+  margin-top: 6px;
+
+  color: #8a8f89;
+
+  font-size: 7px;
+}
+
+
+/* =====================================================
+   BOARD LINES
+===================================================== */
+
+.graphic-board-lines {
+  margin-top: 13px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.graphic-board-lines span {
+  display: block;
+
+  width: 100%;
+
+  height: 5px;
+
+  background:
+    #edf0ec;
+
+  border-radius: 20px;
+}
+
+.graphic-board-lines span:first-child {
+  width: 80px;
+}
+
+.graphic-board-lines span:nth-child(2) {
+  width: 130px;
+}
+
+.graphic-board-lines span:last-child {
+  width: 105px;
+}
+
+
+/* =====================================================
+   SERVICES HEADING
+===================================================== */
+
+.graphic-services-heading {
+  margin-bottom: 25px;
+}
+
+.graphic-services-heading > span {
+  color:
+    var(--orange, #ff6b00);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+.graphic-services-heading h3 {
+  margin-top: 7px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 28px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.graphic-services-heading h3 strong {
+  margin-left: 6px;
+
+  color:
+    var(--orange, #ff6b00);
+}
+
+
+/* =====================================================
+   DESIGN GRID
+===================================================== */
+
+.graphic-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+
+/* =====================================================
+   DESIGN CARD
+===================================================== */
+
+.graphic-card {
+  min-height: 190px;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid #e3e8e2;
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.graphic-card:hover {
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(255, 107, 0, 0.2);
+
+  box-shadow:
+    0 17px 38px
+    rgba(0, 0, 0, 0.065);
+}
+
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.graphic-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.graphic-number {
+  color:
+    #b7bdb7;
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.graphic-icon {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color:
+    var(--orange, #ff6b00);
+
+  background:
+    #fff3e9;
+
+  border-radius: 9px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.graphic-card:hover .graphic-icon {
+  color: #ffffff;
+
+  background:
+    var(--orange, #ff6b00);
+
+  transform:
+    rotate(-4deg);
+}
+
+
+/* =====================================================
+   CARD TEXT
+===================================================== */
+
+.graphic-card h4 {
+  margin-top: 18px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 15px;
+
+  font-weight: 900;
+
+  line-height: 1.3;
+}
+
+.graphic-hindi {
+  margin-top: 4px;
+
+  color:
+    var(--orange, #ff6b00);
+
+  font-family:
+    "Noto Sans Devanagari",
+    "Poppins",
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   CARD LINE
+===================================================== */
+
+.graphic-card-line {
+  width: 35px;
+
+  height: 2px;
+
+  margin-top: auto;
+  margin-bottom: 13px;
+
+  background:
+    var(--orange, #ff6b00);
+
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   CARD LINK
+===================================================== */
+
+.graphic-card-link {
+  width: fit-content;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.graphic-card-link:hover {
+  color:
+    var(--orange, #ff6b00);
+
+  transform:
+    translateX(3px);
+}
+
+
+/* =====================================================
+   FORMATS SECTION
+===================================================== */
+
+.graphic-formats {
+  margin-top: 18px;
+
+  padding: 30px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.8fr 1.2fr;
+
+  gap: 30px;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid #e3e8e2;
+
+  border-radius: 16px;
+}
+
+.graphic-formats-heading > span {
+  color:
+    var(--orange, #ff6b00);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.graphic-formats-heading h3 {
+  margin-top: 8px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 25px;
+
+  line-height: 1.1;
+}
+
+.graphic-formats-heading h3 strong {
+  display: block;
+
+  color:
+    var(--orange, #ff6b00);
+}
+
+
+/* =====================================================
+   FORMAT LIST
+===================================================== */
+
+.graphic-format-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
+
+  align-content: center;
+}
+
+.graphic-format-list div {
+  min-height: 40px;
+
+  padding: 0 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #666;
+
+  background:
+    #f7f8f5;
+
+  border:
+    1px solid #e8ebe7;
+
+  border-radius: 8px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+.graphic-format-list div span {
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  background:
+    var(--orange, #ff6b00);
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.graphic-cta {
+  position: relative;
+
+  margin-top: 18px;
+
+  padding: 30px 33px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--green, #14532d),
+      #092d18
+    );
+
+  border-radius: 16px;
+
+  overflow: hidden;
+}
+
+.graphic-cta::before {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  right: -170px;
+  top: -220px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+
+  border-radius: 50%;
+}
+
+.graphic-cta > div {
+  position: relative;
+
+  z-index: 2;
+}
+
+.graphic-cta > div > span {
+  color: #ff9955;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+.graphic-cta h3 {
+  margin-top: 7px;
+
+  color: #ffffff;
+
+  font-size: 27px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.graphic-cta h3 strong {
+  color: #ff9955;
+
+  margin-left: 5px;
+}
+
+.graphic-cta p {
+  max-width: 600px;
+
+  margin-top: 8px;
+
+  color:
+    rgba(255, 255, 255, 0.52);
+
+  font-size: 9px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   CTA BUTTON
+===================================================== */
+
+.graphic-cta-btn {
+  position: relative;
+
+  z-index: 3;
+
+  flex-shrink: 0;
+
+  min-height: 43px;
+
+  padding: 0 17px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  color:
+    var(--green, #14532d);
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.graphic-cta-btn:hover {
+  color: #ffffff;
+
+  background:
+    var(--orange, #ff6b00);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .graphic-section {
+    padding:
+      90px 25px;
+  }
+
+  .graphic-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .graphic-card:last-child {
+    grid-column: span 1;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .graphic-section {
+    padding:
+      80px 22px;
+  }
+
+  .graphic-feature {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .graphic-feature-content {
+    padding: 38px;
+  }
+
+  .graphic-feature-visual {
+    min-height: 390px;
+  }
+
+  .graphic-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .graphic-formats {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL TABLET
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .graphic-section {
+    padding:
+      70px 18px;
+  }
+
+  .graphic-header {
+    margin-bottom: 35px;
+  }
+
+  .graphic-header h2 {
+    font-size:
+      clamp(33px, 9vw, 47px);
+
+    letter-spacing: -1.5px;
+  }
+
+  .graphic-header p {
+    font-size: 10px;
+  }
+
+  .graphic-feature-content {
+    padding:
+      30px 25px;
+  }
+
+  .graphic-feature-content h3 {
+    font-size: 37px;
+
+    letter-spacing: -1.3px;
+  }
+
+  .graphic-feature-visual {
+    min-height: 350px;
+  }
+
+  .graphic-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .graphic-card {
+    min-height: 175px;
+
+    padding: 18px;
+  }
+
+  .graphic-formats {
+    padding: 25px;
+  }
+
+  .graphic-cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 25px;
+  }
+
+  .graphic-cta-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 560px) {
+
+  .graphic-section {
+    padding:
+      65px 16px;
+  }
+
+
+  /* Header */
+
+  .graphic-header h2 {
+    font-size:
+      clamp(31px, 9.5vw, 42px);
+
+    line-height: 1.08;
+  }
+
+  .graphic-header h2 span {
+    margin-top: 5px;
+  }
+
+  .graphic-header p {
+    margin-top: 14px;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+  }
+
+
+  /* Feature */
+
+  .graphic-feature {
+    margin-bottom: 45px;
+
+    border-radius: 15px;
+  }
+
+  .graphic-feature-content {
+    padding:
+      26px 20px;
+  }
+
+  .graphic-feature-label {
+    font-size: 7px;
+  }
+
+  .graphic-feature-content h3 {
+    margin-top: 13px;
+
+    font-size:
+      clamp(30px, 9vw, 38px);
+  }
+
+  .graphic-feature-content > p {
+    margin-top: 14px;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+  }
+
+  .graphic-feature-points {
+    margin-top: 19px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .graphic-feature-points div {
+    min-height: 31px;
+
+    font-size: 8px;
+  }
+
+
+  /* Visual */
+
+  .graphic-feature-visual {
+    min-height: 300px;
+  }
+
+  .graphic-shape-one {
+    width: 230px;
+    height: 230px;
+  }
+
+  .graphic-shape-two {
+    width: 350px;
+    height: 350px;
+  }
+
+  .graphic-design-board {
+    width: 235px;
+
+    min-height: 270px;
+
+    padding: 13px;
+
+    border-radius: 11px;
+  }
+
+  .graphic-board-content {
+    min-height: 155px;
+  }
+
+  .graphic-board-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .graphic-board-content strong {
+    margin-top: 10px;
+
+    font-size: 13px;
+  }
+
+  .graphic-board-content > span {
+    font-size: 6px;
+  }
+
+
+  /* Services */
+
+  .graphic-services-heading {
+    margin-bottom: 18px;
+  }
+
+  .graphic-services-heading h3 {
+    font-size: 23px;
+  }
+
+  .graphic-grid {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+  .graphic-card {
+    min-height: 155px;
+
+    padding:
+      18px;
+
+    border-radius: 13px;
+  }
+
+  .graphic-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  .graphic-card h4 {
+    margin-top: 14px;
+
+    font-size: 16px;
+  }
+
+  .graphic-hindi {
+    font-size: 8px;
+  }
+
+
+  /* Formats */
+
+  .graphic-formats {
+    margin-top: 12px;
+
+    padding:
+      21px 18px;
+
+    border-radius: 14px;
+  }
+
+  .graphic-formats-heading h3 {
+    font-size: 21px;
+  }
+
+  .graphic-format-list {
+    margin-top: 17px;
+
+    grid-template-columns: 1fr;
+
+    gap: 6px;
+  }
+
+  .graphic-format-list div {
+    min-height: 37px;
+
+    font-size: 8px;
+  }
+
+
+  /* CTA */
+
+  .graphic-cta {
+    margin-top: 12px;
+
+    padding:
+      21px 18px;
+
+    border-radius: 14px;
+  }
+
+  .graphic-cta > div > span {
+    font-size: 7px;
+  }
+
+  .graphic-cta h3 {
+    font-size: 21px;
+
+    line-height: 1.15;
+  }
+
+  .graphic-cta p {
+    font-size: 8px;
+  }
+
+  .graphic-cta-btn {
+    min-height: 42px;
+
+    font-size: 8px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .graphic-section {
+    padding:
+      55px 14px;
+  }
+
+  .graphic-feature-content {
+    padding:
+      23px 17px;
+  }
+
+  .graphic-feature-content h3 {
+    font-size: 29px;
+  }
+
+  .graphic-feature-visual {
+    min-height: 275px;
+  }
+
+  .graphic-design-board {
+    width: 215px;
+
+    min-height: 250px;
+  }
+
+  .graphic-grid {
+    gap: 8px;
+  }
+
+  .graphic-card {
+    padding:
+      17px;
+  }
+
+  .graphic-formats {
+    padding:
+      19px 16px;
+  }
+
+  .graphic-cta {
+    padding:
+      20px 16px;
+  }
+
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+.graphic-card-link:focus-visible,
+.graphic-cta-btn:focus-visible {
+  outline:
+    3px solid
+    rgba(255, 107, 0, 0.3);
+
+  outline-offset: 3px;
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .graphic-card,
+  .graphic-icon,
+  .graphic-card-link,
+  .graphic-design-board,
+  .graphic-cta-btn {
+    transition: none;
+  }
+
+  .graphic-card:hover {
+    transform: none;
+  }
+
+  .graphic-feature:hover .graphic-design-board {
+    transform: rotate(-4deg);
+  }
+
+}

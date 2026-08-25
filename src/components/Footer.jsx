@@ -9,13 +9,40 @@ import {
 import "../styles/footer.css";
 
 const productLinks = [
-  "Badges",
-  "Caps & Topi",
-  "Flags",
-  "Patka & Gamcha",
-  "Printing",
-  "Clothing",
-  "Stickers",
+  "Posters & Banners",
+  "Flags & Branding",
+  "Gamcha & Patka",
+  "Caps & T-Shirts",
+  "Badges & ID Cards",
+  "Pamphlets & Stickers",
+  "Pen, Diary & Calendar",
+];
+
+const serviceLinks = [
+  {
+    label: "Campaign Planning",
+    target: "services",
+  },
+  {
+    label: "Digital Campaign",
+    target: "services",
+  },
+  {
+    label: "Ground Campaign",
+    target: "ground-campaign",
+  },
+  {
+    label: "Campaign Vehicles",
+    target: "campaign-vehicles",
+  },
+  {
+    label: "Event Management",
+    target: "event-management",
+  },
+  {
+    label: "Documentation",
+    target: "documentation",
+  },
 ];
 
 const quickLinks = [
@@ -36,14 +63,6 @@ const quickLinks = [
     target: "services",
   },
   {
-    label: "Booth Packet",
-    target: "booth-packet",
-  },
-  {
-    label: "Campaign Vehicles",
-    target: "campaign-vehicles",
-  },
-  {
     label: "Gallery",
     target: "gallery",
   },
@@ -57,21 +76,57 @@ export default function Footer() {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
 
-    if (!element) {
-      console.warn(`Section with id="${id}" was not found.`);
-      return;
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
-
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
   };
 
   return (
     <footer className="footer">
 
       <div className="footer-container">
+
+        {/* =====================================================
+            TOP CTA
+        ===================================================== */}
+
+        <div className="footer-top-cta">
+
+          <div>
+
+            <span>
+              BIHAR MUKHIYA ELECTION 2026
+            </span>
+
+            <h2>
+              अपना Campaign
+              <strong>
+                Professional तरीके से Plan करें।
+              </strong>
+            </h2>
+
+            <p>
+              Strategy • Design • Printing • Branding • Digital
+              • Ground Campaign • Events • Documentation
+            </p>
+
+          </div>
+
+          <a
+            href="https://wa.me/919820280493"
+            target="_blank"
+            rel="noreferrer"
+            className="footer-top-cta-btn"
+          >
+            WhatsApp Enquiry
+            <ArrowUpRight size={16} />
+          </a>
+
+        </div>
+
 
         {/* =====================================================
             MAIN FOOTER
@@ -88,7 +143,9 @@ export default function Footer() {
             <button
               type="button"
               className="footer-logo"
-              onClick={() => scrollToSection("top")}
+              onClick={() =>
+                scrollToSection("top")
+              }
               aria-label="Mukhiya Election Home"
             >
 
@@ -97,28 +154,34 @@ export default function Footer() {
               </div>
 
               <div className="footer-logo-text">
-                <strong>MUKHIYA</strong>
-                <span>ELECTION</span>
+
+                <strong>
+                  MUKHIYA
+                </strong>
+
+                <span>
+                  ELECTION
+                </span>
+
               </div>
 
             </button>
 
 
             <p className="footer-description">
-              Mukhiya election campaign ke liye
-              products, printing, branding aur
-              promotional solutions — ek organised
-              platform par.
+              बिहार मुखिया एवं पंचायत चुनाव के लिए
+              campaign planning, promotional solutions,
+              printing, branding, digital content,
+              ground campaign और event support —
+              एक integrated platform पर।
             </p>
 
 
             {/* =================================================
-                SOCIAL LINKS
+                SOCIAL
             ================================================= */}
 
             <div className="footer-socials">
-
-              {/* Instagram */}
 
               <a
                 href="#"
@@ -128,9 +191,6 @@ export default function Footer() {
                 IG
               </a>
 
-
-              {/* Facebook */}
-
               <a
                 href="#"
                 aria-label="Facebook"
@@ -139,20 +199,14 @@ export default function Footer() {
                 f
               </a>
 
-
-              {/* WhatsApp */}
-
               <a
                 href="https://wa.me/919820280493"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp Mukhiya Election"
+                aria-label="WhatsApp"
               >
                 <MessageCircle size={16} />
               </a>
-
-
-              {/* Share */}
 
               <a
                 href="#"
@@ -179,6 +233,7 @@ export default function Footer() {
             <div className="footer-links">
 
               {quickLinks.map((item) => (
+
                 <button
                   type="button"
                   key={item.label}
@@ -188,6 +243,38 @@ export default function Footer() {
                 >
                   {item.label}
                 </button>
+
+              ))}
+
+            </div>
+
+          </div>
+
+
+          {/* =================================================
+              SERVICES
+          ================================================= */}
+
+          <div className="footer-column">
+
+            <h3>
+              Services
+            </h3>
+
+            <div className="footer-links">
+
+              {serviceLinks.map((item) => (
+
+                <button
+                  type="button"
+                  key={item.label}
+                  onClick={() =>
+                    scrollToSection(item.target)
+                  }
+                >
+                  {item.label}
+                </button>
+
               ))}
 
             </div>
@@ -202,12 +289,13 @@ export default function Footer() {
           <div className="footer-column">
 
             <h3>
-              Products
+              Campaign Products
             </h3>
 
             <div className="footer-links">
 
               {productLinks.map((item) => (
+
                 <button
                   type="button"
                   key={item}
@@ -217,6 +305,7 @@ export default function Footer() {
                 >
                   {item}
                 </button>
+
               ))}
 
             </div>
@@ -244,13 +333,15 @@ export default function Footer() {
               </div>
 
               <p>
-                Mukhiya Election,
-                <br />
-                Bhagwat Complex, Office No. 401,
-                <br />
-                4th Floor, Above Bata Show Room,
-                <br />
-                Anishabad, Patna – 800002
+
+                <strong>
+                  Patna, Bihar
+                </strong>
+
+                <span>
+                  Bihar-wide Campaign Support
+                </span>
+
               </p>
 
             </div>
@@ -268,6 +359,7 @@ export default function Footer() {
               </div>
 
               <p>
+
                 <strong>
                   98202 80493
                 </strong>
@@ -275,6 +367,7 @@ export default function Footer() {
                 <span>
                   Call for Enquiry
                 </span>
+
               </p>
 
             </a>
@@ -294,6 +387,7 @@ export default function Footer() {
               </div>
 
               <p>
+
                 <strong>
                   WhatsApp
                 </strong>
@@ -301,6 +395,7 @@ export default function Footer() {
                 <span>
                   Quick Campaign Enquiry
                 </span>
+
               </p>
 
               <ArrowUpRight
@@ -316,37 +411,28 @@ export default function Footer() {
 
 
         {/* =====================================================
-            FOOTER CTA
+            SERVICE NETWORK
         ===================================================== */}
 
-        <div className="footer-cta">
+        <div className="footer-network">
 
           <div>
 
             <span>
-              READY TO START?
+              SERVICE NETWORK
             </span>
 
             <h3>
-              Apna Campaign
-
-              <strong>
-                Aaj Se Plan Karein.
-              </strong>
+              Bihar में Campaign Support
             </h3>
 
           </div>
 
-
-          <a
-            href="https://wa.me/919820280493"
-            target="_blank"
-            rel="noreferrer"
-            className="footer-cta-button"
-          >
-            WhatsApp Us
-            <ArrowUpRight size={16} />
-          </a>
+          <p>
+            Patna • Darbhanga • Muzaffarpur • Gaya • Bhagalpur •
+            Purnia • Begusarai • Samastipur • Madhubani • Sitamarhi
+            • Supaul • Saharsa • Araria • Katihar • और अन्य बिहार क्षेत्र
+          </p>
 
         </div>
 
@@ -361,7 +447,6 @@ export default function Footer() {
             © {new Date().getFullYear()} Mukhiya Election.
             All Rights Reserved.
           </p>
-
 
           <div className="footer-bottom-links">
 
@@ -379,7 +464,7 @@ export default function Footer() {
             </span>
 
             <span>
-              Mukhiya Election Campaign Solutions
+              Next Gen / Election Campaign & Promotional Solutions
             </span>
 
           </div>

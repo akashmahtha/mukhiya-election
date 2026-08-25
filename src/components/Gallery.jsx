@@ -1,8 +1,49 @@
-import { ArrowUpRight, Images } from "lucide-react";
-
-import galleryItems from "../data/gallery";
+import {
+  ArrowUpRight,
+  Camera,
+  Maximize2,
+} from "lucide-react";
 
 import "../styles/gallery.css";
+
+const galleryImages = [
+  {
+    id: 1,
+    image: "/images/gallery/gallery-1.jpg",
+    title: "Campaign Activity",
+    category: "Ground Campaign",
+  },
+  {
+    id: 2,
+    image: "/images/gallery/gallery-2.jpg",
+    title: "Election Branding",
+    category: "Campaign Branding",
+  },
+  {
+    id: 3,
+    image: "/images/gallery/gallery-3.jpg",
+    title: "Public Campaign",
+    category: "Ground Activity",
+  },
+  {
+    id: 4,
+    image: "/images/gallery/gallery-4.jpg",
+    title: "Campaign Event",
+    category: "Event Management",
+  },
+  {
+    id: 5,
+    image: "/images/gallery/gallery-5.jpg",
+    title: "Promotional Work",
+    category: "Campaign Promotion",
+  },
+  {
+    id: 6,
+    image: "/images/gallery/gallery-6.jpg",
+    title: "Campaign Support",
+    category: "Election Campaign",
+  },
+];
 
 export default function Gallery() {
   return (
@@ -12,141 +53,125 @@ export default function Gallery() {
     >
       <div className="gallery-container">
 
-        {/* =================================================
+        {/* =====================================================
             HEADER
-        ================================================= */}
+        ===================================================== */}
 
         <div className="gallery-header">
 
           <div className="section-label">
-            Our Gallery
+            Campaign Gallery
           </div>
 
           <h2>
-            Campaign Ki
-            <span> Ek Jhalak</span>
+            हमारे Campaign Work की
+            <span>
+              कुछ झलकियां।
+            </span>
           </h2>
 
           <p>
-            Election campaign materials, branding aur
-            promotional work ki kuch visual glimpses.
+            Campaign branding, ground activities, events और
+            promotional work से जुड़ी कुछ selected highlights.
           </p>
 
         </div>
 
 
-        {/* =================================================
+        {/* =====================================================
             GALLERY GRID
-        ================================================= */}
+        ===================================================== */}
 
         <div className="gallery-grid">
 
-          {galleryItems.length > 0 ? (
+          {galleryImages.map((item, index) => (
 
-            galleryItems.map((item, index) => (
+            <article
+              className={`gallery-card gallery-card-${index + 1}`}
+              key={item.id}
+            >
 
-              <article
-                className={`gallery-item gallery-item-${index + 1}`}
-                key={item.id}
-              >
+              <div className="gallery-image">
 
-                {/* =================================================
-                    IMAGE
-                ================================================= */}
-
-                <div className="gallery-image">
-
-                  <img
-                    src={item.image}
-                    alt={`${item.title} - ${item.category}`}
-                    className="gallery-img"
-                    loading="lazy"
-                  />
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  loading={index === 0 ? "eager" : "lazy"}
+                />
 
 
-                  {/* =================================================
-                      OVERLAY
-                  ================================================= */}
-
-                  <div className="gallery-overlay">
-
-                    <div className="gallery-overlay-content">
-
-                      <span>
-                        {item.category}
-                      </span>
-
-                      <h3>
-                        {item.title}
-                      </h3>
-
-                    </div>
+                <div className="gallery-overlay"></div>
 
 
-                    <div className="gallery-arrow">
+                {/* Category */}
 
-                      <ArrowUpRight
-                        size={18}
-                      />
+                <span className="gallery-category">
+                  {item.category}
+                </span>
 
-                    </div>
 
-                  </div>
+                {/* Expand Icon */}
+
+                <div className="gallery-expand">
+                  <Maximize2 size={16} />
+                </div>
+
+
+                {/* Bottom Content */}
+
+                <div className="gallery-image-content">
+
+                  <span>
+                    0{item.id}
+                  </span>
+
+                  <h3>
+                    {item.title}
+                  </h3>
 
                 </div>
 
-              </article>
+              </div>
 
-            ))
+            </article>
 
-          ) : (
-
-            /* =================================================
-               EMPTY STATE
-            ================================================= */
-
-            <div className="gallery-empty">
-
-              <Images size={35} />
-
-              <h3>
-                Gallery Coming Soon
-              </h3>
-
-              <p>
-                Campaign designs aur materials
-                yahan add kiye jayenge.
-              </p>
-
-            </div>
-
-          )}
+          ))}
 
         </div>
 
 
-        {/* =================================================
-            GALLERY CTA
-        ================================================= */}
+        {/* =====================================================
+            GALLERY BOTTOM
+        ===================================================== */}
 
         <div className="gallery-bottom">
 
-          <p>
-            More campaign designs & materials
-            coming soon.
-          </p>
+          <div className="gallery-bottom-icon">
+            <Camera size={19} />
+          </div>
+
+          <div className="gallery-bottom-content">
+
+            <span>
+              CAMPAIGN WORK
+            </span>
+
+            <h3>
+              आपके Campaign की
+              <strong>
+                अगली कहानी यहां से शुरू करें।
+              </strong>
+            </h3>
+
+          </div>
+
 
           <a
-            href="https://wa.me/919820280493"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+            className="gallery-bottom-btn"
           >
-            Get Campaign Details
-
-            <ArrowUpRight
-              size={16}
-            />
-
+            Start Your Campaign
+            <ArrowUpRight size={16} />
           </a>
 
         </div>

@@ -1,86 +1,43 @@
 import {
-  MapPin,
-  Phone,
-  MessageCircle,
-  Clock3,
   ArrowUpRight,
+  CheckCircle2,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Phone,
+  Send,
 } from "lucide-react";
 
 import "../styles/contact.css";
 
-
-/* =====================================================
-   WHATSAPP
-===================================================== */
-
-const whatsappUrl =
-  "https://wa.me/919820280493?text=Hello%20Election%20Kart%2C%20mujhe%20campaign%20materials%20aur%20services%20ke%20baare%20mein%20enquiry%20karni%20hai.";
-
-
-/* =====================================================
-   CONTACT DETAILS
-===================================================== */
-
-const contactDetails = [
-  {
-    icon: MapPin,
-    title: "Our Office",
-    hindi: "हमारा कार्यालय",
-    content: (
-      <>
-        Election Kart,
-        <br />
-        Bhagwat Complex, Office No. 401,
-        <br />
-        4th Floor, Above Bata Show Room,
-        <br />
-        Anishabad, Opposite Police Colony,
-        <br />
-        Patna – 800002
-      </>
-    ),
-  },
-
-  {
-    icon: Phone,
-    title: "Call Us",
-    hindi: "फोन करें",
-    content: (
-      <>
-        <strong>98202 80493</strong>
-        <br />
-        Campaign Enquiry & Support
-      </>
-    ),
-  },
-
-  {
-    icon: MessageCircle,
-    title: "WhatsApp",
-    hindi: "WhatsApp पर बात करें",
-    content: (
-      <>
-        Quick campaign enquiry ke liye
-        <br />
-        WhatsApp par message karein.
-      </>
-    ),
-  },
-
-  {
-    icon: Clock3,
-    title: "Enquiry",
-    hindi: "Campaign Enquiry",
-    content: (
-      <>
-        Products, Printing,
-        <br />
-        Campaign Materials & Services
-      </>
-    ),
-  },
+const serviceOptions = [
+  "Campaign Planning",
+  "Printing & Promotional Material",
+  "Digital Campaign",
+  "Graphic Design",
+  "Ground Campaign Support",
+  "Campaign Vehicles",
+  "Event Management",
+  "Photography & Videography",
+  "Complete Campaign Support",
 ];
 
+const serviceAreas = [
+  "Patna",
+  "Darbhanga",
+  "Muzaffarpur",
+  "Gaya",
+  "Bhagalpur",
+  "Purnia",
+  "Begusarai",
+  "Samastipur",
+  "Madhubani",
+  "Sitamarhi",
+  "Supaul",
+  "Saharsa",
+  "Araria",
+  "Katihar",
+];
 
 export default function Contact() {
   return (
@@ -88,134 +45,400 @@ export default function Contact() {
       id="contact"
       className="contact-section"
     >
-
       <div className="contact-container">
 
-
-        {/* =================================================
+        {/* =====================================================
             HEADER
-        ================================================= */}
+        ===================================================== */}
 
         <div className="contact-header">
 
           <div className="section-label">
-            Contact Us
+            Get In Touch
           </div>
 
           <h2>
-            Campaign Ke Liye
-            <span> Baat Karein</span>
+            आपके Campaign की
+            <span>
+              शुरुआत यहां से करें।
+            </span>
           </h2>
 
           <p>
-            Aapko campaign material, printing ya promotion
-            service chahiye? Election Kart se enquiry karein.
+            बिहार मुखिया चुनाव के लिए campaign planning,
+            printing, branding, digital promotion, ground
+            campaign, event management और अन्य campaign
+            support services के लिए हमसे संपर्क करें।
           </p>
 
         </div>
 
 
-        {/* =================================================
-            CONTACT CARDS
-        ================================================= */}
+        {/* =====================================================
+            MAIN CONTACT AREA
+        ===================================================== */}
 
-        <div className="contact-grid">
+        <div className="contact-main">
 
-          {contactDetails.map((item, index) => {
+          {/* =================================================
+              LEFT
+          ================================================= */}
 
-            const Icon = item.icon;
+          <div className="contact-info">
 
-            return (
-              <article
-                className={`contact-card ${
-                  index === 0
-                    ? "contact-card-main"
-                    : ""
-                }`}
-                key={item.title}
+            <div className="contact-info-heading">
+
+              <span>
+                CAMPAIGN ENQUIRY
+              </span>
+
+              <h3>
+                आपकी Requirement,
+                <strong>
+                  हमारी Professional Support.
+                </strong>
+              </h3>
+
+              <p>
+                अपनी campaign requirement बताएं। हमारी team
+                project scope, location और requirement के
+                अनुसार available services पर चर्चा करेगी।
+              </p>
+
+            </div>
+
+
+            {/* =================================================
+                CONTACT CARDS
+            ================================================= */}
+
+            <div className="contact-cards">
+
+              {/* PHONE */}
+
+              <a
+                href="tel:+919820280493"
+                className="contact-card"
               >
 
-                {/* Icon */}
-
-                <div className="contact-icon">
-                  <Icon size={21} />
+                <div className="contact-card-icon">
+                  <Phone size={19} />
                 </div>
 
+                <div>
+                  <span>
+                    CALL US
+                  </span>
 
-                {/* Title */}
+                  <strong>
+                    98202 80493
+                  </strong>
 
-                <h3>
-                  {item.title}
-                </h3>
-
-
-                {/* Hindi */}
-
-                <div className="contact-hindi">
-                  {item.hindi}
+                  <small>
+                    Quick Campaign Enquiry
+                  </small>
                 </div>
 
+                <ArrowUpRight
+                  size={15}
+                  className="contact-card-arrow"
+                />
 
-                {/* Content */}
+              </a>
 
-                <p>
-                  {item.content}
-                </p>
 
-              </article>
-            );
+              {/* WHATSAPP */}
 
-          })}
+              <a
+                href="https://wa.me/919820280493"
+                target="_blank"
+                rel="noreferrer"
+                className="contact-card"
+              >
+
+                <div className="contact-card-icon">
+                  <MessageCircle size={19} />
+                </div>
+
+                <div>
+                  <span>
+                    WHATSAPP
+                  </span>
+
+                  <strong>
+                    WhatsApp Us
+                  </strong>
+
+                  <small>
+                    Fast Campaign Discussion
+                  </small>
+                </div>
+
+                <ArrowUpRight
+                  size={15}
+                  className="contact-card-arrow"
+                />
+
+              </a>
+
+
+              {/* LOCATION */}
+
+              <div className="contact-card contact-card-static">
+
+                <div className="contact-card-icon">
+                  <MapPin size={19} />
+                </div>
+
+                <div>
+                  <span>
+                    OFFICE
+                  </span>
+
+                  <strong>
+                    Patna, Bihar
+                  </strong>
+
+                  <small>
+                    Serving Campaign Requirements Across Bihar
+                  </small>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            {/* =================================================
+                SERVICE AREA
+            ================================================= */}
+
+            <div className="contact-area">
+
+              <span>
+                SERVICE NETWORK
+              </span>
+
+              <h4>
+                Bihar में Campaign Support
+              </h4>
+
+              <div className="contact-area-list">
+
+                {serviceAreas.map((area) => (
+
+                  <div key={area}>
+                    <CheckCircle2 size={12} />
+                    {area}
+                  </div>
+
+                ))}
+
+              </div>
+
+              <small>
+                और अन्य बिहार क्षेत्र — services की availability
+                project scope, location, permissions और campaign
+                requirements के अनुसार तय की जाएगी।
+              </small>
+
+            </div>
+
+          </div>
+
+
+          {/* =================================================
+              RIGHT FORM
+          ================================================= */}
+
+          <div className="contact-form-wrapper">
+
+            <div className="contact-form-header">
+
+              <span>
+                SEND ENQUIRY
+              </span>
+
+              <h3>
+                Campaign Requirement
+              </h3>
+
+              <p>
+                नीचे अपनी basic requirement share करें।
+              </p>
+
+            </div>
+
+
+            <form
+              className="contact-form"
+              onSubmit={(e) => e.preventDefault()}
+            >
+
+              {/* NAME */}
+
+              <div className="contact-form-group">
+
+                <label htmlFor="name">
+                  Your Name
+                </label>
+
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Enter your name"
+                />
+
+              </div>
+
+
+              {/* PHONE */}
+
+              <div className="contact-form-group">
+
+                <label htmlFor="phone">
+                  Phone Number
+                </label>
+
+                <input
+                  id="phone"
+                  type="tel"
+                  placeholder="Enter phone number"
+                />
+
+              </div>
+
+
+              {/* LOCATION */}
+
+              <div className="contact-form-group">
+
+                <label htmlFor="location">
+                  Panchayat / Location
+                </label>
+
+                <input
+                  id="location"
+                  type="text"
+                  placeholder="Enter your location"
+                />
+
+              </div>
+
+
+              {/* SERVICE */}
+
+              <div className="contact-form-group">
+
+                <label htmlFor="service">
+                  Campaign Requirement
+                </label>
+
+                <select
+                  id="service"
+                  defaultValue=""
+                >
+
+                  <option
+                    value=""
+                    disabled
+                  >
+                    Select a service
+                  </option>
+
+                  {serviceOptions.map((service) => (
+
+                    <option
+                      key={service}
+                      value={service}
+                    >
+                      {service}
+                    </option>
+
+                  ))}
+
+                </select>
+
+              </div>
+
+
+              {/* MESSAGE */}
+
+              <div className="contact-form-group contact-form-full">
+
+                <label htmlFor="message">
+                  Requirement Details
+                </label>
+
+                <textarea
+                  id="message"
+                  rows="4"
+                  placeholder="Tell us about your campaign requirement..."
+                ></textarea>
+
+              </div>
+
+
+              {/* SUBMIT */}
+
+              <button
+                type="submit"
+                className="contact-submit"
+              >
+                Send Campaign Enquiry
+                <Send size={16} />
+              </button>
+
+              <small className="contact-form-note">
+                By submitting this form, you agree to be contacted
+                regarding your campaign enquiry.
+              </small>
+
+            </form>
+
+          </div>
 
         </div>
 
 
-        {/* =================================================
-            CONTACT BUTTONS
-        ================================================= */}
+        {/* =====================================================
+            FINAL CTA
+        ===================================================== */}
 
-        <div className="contact-actions">
+        <div className="contact-bottom">
 
-          {/* CALL */}
+          <div className="contact-bottom-icon">
+            <MessageCircle size={20} />
+          </div>
 
-          <a
-            href="tel:+919820280493"
-            className="contact-call-btn"
-          >
-
-            <Phone size={18} />
+          <div className="contact-bottom-content">
 
             <span>
-              98202 80493
+              NEED QUICK SUPPORT?
             </span>
 
-          </a>
+            <h3>
+              WhatsApp पर
+              <strong>
+                Campaign Discuss करें।
+              </strong>
+            </h3>
 
-
-          {/* WHATSAPP */}
+          </div>
 
           <a
-            href={whatsappUrl}
+            href="https://wa.me/919820280493"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             className="contact-whatsapp-btn"
           >
-
-            <MessageCircle size={18} />
-
-            <span>
-              WhatsApp Enquiry
-            </span>
-
-            <ArrowUpRight size={17} />
-
+            WhatsApp Now
+            <ArrowUpRight size={16} />
           </a>
 
         </div>
 
-
       </div>
-
     </section>
   );
 }

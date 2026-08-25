@@ -1,0 +1,1631 @@
+/* =====================================================
+   GROUND CAMPAIGN SECTION
+===================================================== */
+
+.ground-section {
+  position: relative;
+  padding: 110px 30px;
+  background: #f7f8f5;
+  overflow: hidden;
+}
+
+.ground-section::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  top: -300px;
+  right: -250px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(20, 83, 45, 0.065),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.ground-section::after {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  bottom: -270px;
+  left: -230px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 0, 0.055),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.ground-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.ground-header {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.ground-header .section-label {
+  color: var(--green, #14532d);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.ground-header h2 {
+  margin-top: 15px;
+  color: var(--green, #14532d);
+  font-size: clamp(38px, 4.5vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -2.5px;
+}
+
+.ground-header h2 span {
+  display: block;
+  margin-top: 7px;
+  color: var(--orange, #ff6b00);
+}
+
+.ground-header p {
+  max-width: 650px;
+  margin: 18px auto 0;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+
+/* =====================================================
+   FEATURE
+===================================================== */
+
+.ground-feature {
+  min-height: 455px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.95fr
+    1.05fr;
+
+  margin-bottom: 58px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--green, #14532d),
+      #092d18
+    );
+
+  border-radius: 21px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 55px
+    rgba(20, 83, 45, 0.12);
+}
+
+
+/* =====================================================
+   FEATURE CONTENT
+===================================================== */
+
+.ground-feature-content {
+  position: relative;
+  z-index: 3;
+
+  padding: 48px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ground-feature-label {
+  color: #ff9955;
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+}
+
+.ground-feature-content h3 {
+  margin-top: 16px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(36px, 4vw, 54px);
+
+  line-height: 1.02;
+  letter-spacing: -2px;
+}
+
+.ground-feature-content h3 span {
+  display: block;
+  color: #ff9955;
+}
+
+.ground-feature-content > p {
+  max-width: 500px;
+
+  margin-top: 19px;
+
+  color:
+    rgba(255, 255, 255, 0.58);
+
+  font-size: 10px;
+  line-height: 1.85;
+}
+
+
+/* =====================================================
+   FEATURE POINTS
+===================================================== */
+
+.ground-feature-points {
+  margin-top: 25px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ground-feature-points div {
+  min-height: 34px;
+
+  padding: 0 11px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color:
+    rgba(255, 255, 255, 0.8);
+
+  background:
+    rgba(255, 255, 255, 0.065);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 7px;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.ground-feature-points svg {
+  color: #ff9955;
+}
+
+
+/* =====================================================
+   FEATURE VISUAL
+===================================================== */
+
+.ground-feature-visual {
+  position: relative;
+
+  min-height: 455px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #153d24,
+      #062613
+    );
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   GRID LINES
+===================================================== */
+
+.ground-grid-lines {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.4;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    42px 42px;
+}
+
+
+/* =====================================================
+   LOCATION CARD
+===================================================== */
+
+.ground-location-card {
+  position: relative;
+  z-index: 4;
+
+  width: 320px;
+  min-height: 350px;
+
+  padding: 18px;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 30px 70px
+    rgba(0, 0, 0, 0.25);
+
+  transform: rotate(3deg);
+
+  transition:
+    transform 0.35s ease;
+}
+
+.ground-feature:hover
+.ground-location-card {
+  transform:
+    rotate(0deg)
+    translateY(-5px);
+}
+
+
+/* =====================================================
+   LOCATION TOP
+===================================================== */
+
+.ground-location-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 12px;
+
+  border-bottom:
+    1px solid #e7ebe6;
+}
+
+.ground-location-top span {
+  color:
+    var(--green, #14532d);
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.ground-location-top svg {
+  color:
+    var(--orange, #ff6b00);
+}
+
+
+/* =====================================================
+   MAP
+===================================================== */
+
+.ground-map {
+  position: relative;
+
+  height: 235px;
+
+  margin-top: 13px;
+
+  background:
+    #edf4ee;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   MAP ROAD LINES
+===================================================== */
+
+.ground-map::before,
+.ground-map::after {
+  content: "";
+
+  position: absolute;
+
+  background:
+    rgba(20, 83, 45, 0.08);
+}
+
+.ground-map::before {
+  width: 100%;
+  height: 18px;
+
+  top: 105px;
+  left: 0;
+
+  transform: rotate(-15deg);
+}
+
+.ground-map::after {
+  width: 18px;
+  height: 100%;
+
+  top: 0;
+  left: 145px;
+
+  transform: rotate(22deg);
+}
+
+
+/* =====================================================
+   ROUTES
+===================================================== */
+
+.ground-route {
+  position: absolute;
+
+  height: 3px;
+
+  background:
+    var(--orange, #ff6b00);
+
+  border-radius: 20px;
+
+  opacity: 0.75;
+}
+
+.route-one {
+  width: 155px;
+
+  top: 80px;
+  left: 45px;
+
+  transform:
+    rotate(25deg);
+}
+
+.route-two {
+  width: 135px;
+
+  top: 140px;
+  right: 25px;
+
+  transform:
+    rotate(-35deg);
+}
+
+.route-three {
+  width: 100px;
+
+  bottom: 45px;
+  left: 65px;
+
+  transform:
+    rotate(-18deg);
+}
+
+
+/* =====================================================
+   MAP PINS
+===================================================== */
+
+.ground-pin {
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  background:
+    var(--green, #14532d);
+
+  border:
+    3px solid #ffffff;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 3px 10px
+    rgba(0, 0, 0, 0.15);
+}
+
+.pin-one {
+  top: 55px;
+  left: 65px;
+}
+
+.pin-two {
+  top: 122px;
+  right: 50px;
+}
+
+.pin-three {
+  bottom: 38px;
+  left: 120px;
+}
+
+
+/* =====================================================
+   LOCATION BOTTOM
+===================================================== */
+
+.ground-location-bottom {
+  margin-top: 13px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.ground-location-bottom strong {
+  color:
+    var(--green, #14532d);
+
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.ground-location-bottom span {
+  margin-top: 4px;
+
+  color: #888;
+
+  font-size: 7px;
+}
+
+
+/* =====================================================
+   SERVICES HEADING
+===================================================== */
+
+.ground-services-heading {
+  margin-bottom: 25px;
+}
+
+.ground-services-heading > span {
+  color:
+    var(--orange, #ff6b00);
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+}
+
+.ground-services-heading h3 {
+  margin-top: 7px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.ground-services-heading h3 strong {
+  margin-left: 6px;
+
+  color:
+    var(--orange, #ff6b00);
+}
+
+
+/* =====================================================
+   SERVICES GRID
+===================================================== */
+
+.ground-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+
+/* =====================================================
+   GROUND CARD
+===================================================== */
+
+.ground-card {
+  min-height: 220px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e3e8e2;
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.ground-card:hover {
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(255, 107, 0, 0.2);
+
+  box-shadow:
+    0 17px 38px
+    rgba(0, 0, 0, 0.065);
+}
+
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.ground-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ground-number {
+  color: #b7bdb7;
+
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.ground-icon {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color:
+    var(--orange, #ff6b00);
+
+  background:
+    #fff3e9;
+
+  border-radius: 9px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ground-card:hover .ground-icon {
+  color: #ffffff;
+
+  background:
+    var(--orange, #ff6b00);
+
+  transform:
+    rotate(-4deg);
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.ground-card h4 {
+  margin-top: 18px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 15px;
+  font-weight: 900;
+
+  line-height: 1.3;
+}
+
+.ground-hindi {
+  margin-top: 4px;
+
+  color:
+    var(--orange, #ff6b00);
+
+  font-family:
+    "Noto Sans Devanagari",
+    "Poppins",
+    sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.ground-card p {
+  margin-top: 10px;
+
+  color: #777;
+
+  font-size: 8px;
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   CARD LINK
+===================================================== */
+
+.ground-card-link {
+  width: fit-content;
+
+  margin-top: auto;
+  padding-top: 14px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 8px;
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ground-card-link:hover {
+  color:
+    var(--orange, #ff6b00);
+
+  transform:
+    translateX(3px);
+}
+
+
+/* =====================================================
+   EVENT BLOCK
+===================================================== */
+
+.ground-event-block {
+  margin-top: 18px;
+
+  padding: 30px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.75fr 1.25fr;
+
+  gap: 30px;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e3e8e2;
+
+  border-radius: 16px;
+}
+
+.ground-event-heading > span {
+  color:
+    var(--orange, #ff6b00);
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.ground-event-heading h3 {
+  margin-top: 8px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 25px;
+  line-height: 1.15;
+}
+
+.ground-event-heading h3 strong {
+  display: block;
+
+  color:
+    var(--orange, #ff6b00);
+}
+
+.ground-event-heading p {
+  margin-top: 12px;
+
+  color: #777;
+
+  font-size: 9px;
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   EVENT GRID
+===================================================== */
+
+.ground-event-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
+
+  align-content: center;
+}
+
+.ground-event-item {
+  min-height: 48px;
+
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  background:
+    #f7f8f5;
+
+  border:
+    1px solid #e7ebe6;
+
+  border-radius: 8px;
+
+  color: #666;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ground-event-item:hover {
+  border-color:
+    rgba(255, 107, 0, 0.22);
+
+  transform:
+    translateY(-2px);
+}
+
+.ground-event-icon {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color:
+    var(--orange, #ff6b00);
+
+  background:
+    #fff3e9;
+
+  border-radius: 7px;
+}
+
+
+/* =====================================================
+   FLOW
+===================================================== */
+
+.ground-flow {
+  margin-top: 18px;
+
+  padding: 30px;
+
+  background:
+    #f7f8f5;
+
+  border:
+    1px solid #e3e8e2;
+
+  border-radius: 16px;
+}
+
+.ground-flow-heading > span {
+  color:
+    var(--orange, #ff6b00);
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.ground-flow-heading h3 {
+  margin-top: 8px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 25px;
+
+  line-height: 1.15;
+}
+
+.ground-flow-heading h3 strong {
+  margin-left: 5px;
+
+  color:
+    var(--orange, #ff6b00);
+}
+
+
+/* =====================================================
+   FLOW ITEMS
+===================================================== */
+
+.ground-flow-items {
+  margin-top: 25px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 45px 1fr 45px 1fr;
+
+  align-items: center;
+}
+
+.ground-flow-item {
+  min-height: 105px;
+
+  padding: 17px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e3e8e2;
+
+  border-radius: 10px;
+}
+
+.ground-flow-item > span {
+  color:
+    #b5bbb5;
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.ground-flow-item strong {
+  margin-top: 6px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 15px;
+
+  font-weight: 900;
+}
+
+.ground-flow-item small {
+  margin-top: 5px;
+
+  color: #888;
+
+  font-size: 7px;
+}
+
+.ground-flow-arrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color:
+    var(--orange, #ff6b00);
+
+  font-size: 18px;
+
+  font-weight: 900;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.ground-cta {
+  position: relative;
+
+  margin-top: 18px;
+
+  padding: 30px 33px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--green, #14532d),
+      #092d18
+    );
+
+  border-radius: 16px;
+
+  overflow: hidden;
+}
+
+.ground-cta::before {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  right: -170px;
+  top: -220px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+
+  border-radius: 50%;
+}
+
+.ground-cta > div {
+  position: relative;
+
+  z-index: 2;
+}
+
+.ground-cta > div > span {
+  color: #ff9955;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+.ground-cta h3 {
+  margin-top: 7px;
+
+  color: #ffffff;
+
+  font-size: 27px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.ground-cta h3 strong {
+  color: #ff9955;
+
+  margin-left: 5px;
+}
+
+.ground-cta p {
+  max-width: 600px;
+
+  margin-top: 8px;
+
+  color:
+    rgba(255, 255, 255, 0.52);
+
+  font-size: 9px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   CTA BUTTON
+===================================================== */
+
+.ground-cta-btn {
+  position: relative;
+
+  z-index: 3;
+
+  flex-shrink: 0;
+
+  min-height: 43px;
+
+  padding: 0 17px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  color:
+    var(--green, #14532d);
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ground-cta-btn:hover {
+  color: #ffffff;
+
+  background:
+    var(--orange, #ff6b00);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .ground-section {
+    padding:
+      90px 25px;
+  }
+
+  .ground-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .ground-section {
+    padding:
+      80px 22px;
+  }
+
+  .ground-feature {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .ground-feature-content {
+    padding: 38px;
+  }
+
+  .ground-feature-visual {
+    min-height: 390px;
+  }
+
+  .ground-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .ground-event-block {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL TABLET
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .ground-section {
+    padding:
+      70px 18px;
+  }
+
+  .ground-header {
+    margin-bottom: 35px;
+  }
+
+  .ground-header h2 {
+    font-size:
+      clamp(33px, 9vw, 47px);
+
+    letter-spacing: -1.5px;
+  }
+
+  .ground-header p {
+    font-size: 10px;
+  }
+
+  .ground-feature-content {
+    padding:
+      30px 25px;
+  }
+
+  .ground-feature-content h3 {
+    font-size: 37px;
+
+    letter-spacing: -1.3px;
+  }
+
+  .ground-feature-visual {
+    min-height: 350px;
+  }
+
+  .ground-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .ground-card {
+    min-height: 215px;
+
+    padding: 18px;
+  }
+
+  .ground-event-block {
+    padding: 25px;
+  }
+
+  .ground-flow {
+    padding: 25px;
+  }
+
+  .ground-flow-items {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .ground-flow-arrow {
+    height: 20px;
+
+    transform: rotate(90deg);
+  }
+
+  .ground-cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 25px;
+  }
+
+  .ground-cta-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 560px) {
+
+  .ground-section {
+    padding:
+      65px 16px;
+  }
+
+
+  /* Header */
+
+  .ground-header h2 {
+    font-size:
+      clamp(31px, 9.5vw, 42px);
+
+    line-height: 1.08;
+  }
+
+  .ground-header h2 span {
+    margin-top: 5px;
+  }
+
+  .ground-header p {
+    margin-top: 14px;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+  }
+
+
+  /* Feature */
+
+  .ground-feature {
+    margin-bottom: 45px;
+
+    border-radius: 15px;
+  }
+
+  .ground-feature-content {
+    padding:
+      26px 20px;
+  }
+
+  .ground-feature-label {
+    font-size: 7px;
+  }
+
+  .ground-feature-content h3 {
+    margin-top: 13px;
+
+    font-size:
+      clamp(30px, 9vw, 38px);
+  }
+
+  .ground-feature-content > p {
+    margin-top: 14px;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+  }
+
+  .ground-feature-points {
+    margin-top: 19px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .ground-feature-points div {
+    min-height: 31px;
+
+    font-size: 8px;
+  }
+
+
+  /* Visual */
+
+  .ground-feature-visual {
+    min-height: 310px;
+  }
+
+  .ground-location-card {
+    width: 235px;
+
+    min-height: 275px;
+
+    padding: 13px;
+  }
+
+  .ground-map {
+    height: 180px;
+  }
+
+  .ground-location-bottom strong {
+    font-size: 13px;
+  }
+
+
+  /* Heading */
+
+  .ground-services-heading {
+    margin-bottom: 18px;
+  }
+
+  .ground-services-heading h3 {
+    font-size: 23px;
+  }
+
+
+  /* Cards */
+
+  .ground-grid {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+  .ground-card {
+    min-height: 175px;
+
+    padding:
+      18px;
+
+    border-radius: 13px;
+  }
+
+  .ground-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  .ground-card h4 {
+    margin-top: 14px;
+
+    font-size: 16px;
+  }
+
+  .ground-hindi {
+    font-size: 8px;
+  }
+
+  .ground-card p {
+    font-size: 8px;
+  }
+
+
+  /* Event */
+
+  .ground-event-block {
+    margin-top: 12px;
+
+    padding:
+      21px 18px;
+
+    border-radius: 14px;
+  }
+
+  .ground-event-heading h3 {
+    font-size: 21px;
+  }
+
+  .ground-event-heading p {
+    font-size: 8px;
+  }
+
+  .ground-event-grid {
+    grid-template-columns: 1fr;
+
+    gap: 6px;
+  }
+
+  .ground-event-item {
+    min-height: 42px;
+
+    font-size: 8px;
+  }
+
+
+  /* Flow */
+
+  .ground-flow {
+    margin-top: 12px;
+
+    padding:
+      21px 18px;
+
+    border-radius: 14px;
+  }
+
+  .ground-flow-heading h3 {
+    font-size: 21px;
+  }
+
+  .ground-flow-heading h3 strong {
+    display: block;
+
+    margin-left: 0;
+
+    margin-top: 3px;
+  }
+
+  .ground-flow-items {
+    margin-top: 18px;
+  }
+
+  .ground-flow-item {
+    min-height: 90px;
+
+    padding: 15px;
+  }
+
+
+  /* CTA */
+
+  .ground-cta {
+    margin-top: 12px;
+
+    padding:
+      21px 18px;
+
+    border-radius: 14px;
+  }
+
+  .ground-cta > div > span {
+    font-size: 7px;
+  }
+
+  .ground-cta h3 {
+    font-size: 21px;
+
+    line-height: 1.15;
+  }
+
+  .ground-cta p {
+    font-size: 8px;
+  }
+
+  .ground-cta-btn {
+    min-height: 42px;
+
+    font-size: 8px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .ground-section {
+    padding:
+      55px 14px;
+  }
+
+  .ground-feature-content {
+    padding:
+      23px 17px;
+  }
+
+  .ground-feature-content h3 {
+    font-size: 29px;
+  }
+
+  .ground-feature-visual {
+    min-height: 280px;
+  }
+
+  .ground-location-card {
+    width: 215px;
+
+    min-height: 250px;
+  }
+
+  .ground-map {
+    height: 160px;
+  }
+
+  .ground-card {
+    padding:
+      17px;
+  }
+
+  .ground-event-block {
+    padding:
+      19px 16px;
+  }
+
+  .ground-flow {
+    padding:
+      19px 16px;
+  }
+
+  .ground-cta {
+    padding:
+      20px 16px;
+  }
+
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+.ground-card-link:focus-visible,
+.ground-cta-btn:focus-visible {
+  outline:
+    3px solid
+    rgba(255, 107, 0, 0.3);
+
+  outline-offset: 3px;
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ground-card,
+  .ground-icon,
+  .ground-card-link,
+  .ground-location-card,
+  .ground-cta-btn {
+    transition: none;
+  }
+
+  .ground-card:hover {
+    transform: none;
+  }
+
+  .ground-feature:hover
+  .ground-location-card {
+    transform: rotate(3deg);
+  }
+
+}

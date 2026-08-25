@@ -1,15 +1,22 @@
 import { useState } from "react";
 
 import Hero from "../components/Hero";
+import About from "../components/About";
 import ProductCard from "../components/ProductCard";
-import WhyChoose from "../components/WhyChoose";
+
 import Services from "../components/Services";
+import PrintingServices from "../components/PrintingServices";
+import GraphicDesign from "../components/GraphicDesign";
+import DigitalCampaign from "../components/DigitalCampaign";
+
 import BoothPacket from "../components/BoothPacket";
+import GroundCampaign from "../components/GroundCampaign";
 import CampaignVehicles from "../components/CampaignVehicles";
+import EventManagement from "../components/EventManagement";
+import Documentation from "../components/Documentation";
+
 import Gallery from "../components/Gallery";
-import FinalCTA from "../components/FinalCTA";
 import Contact from "../components/Contact";
-import Footer from "../components/Footer";
 
 import products from "../data/products";
 
@@ -36,10 +43,14 @@ const categories = [
 ];
 
 
+/* =====================================================
+   HOME
+===================================================== */
+
 export default function Home() {
 
   /* =====================================================
-     STATES
+     PRODUCT STATES
   ===================================================== */
 
   const [activeCategory, setActiveCategory] =
@@ -85,7 +96,7 @@ export default function Home() {
 
 
   /* =====================================================
-     HOME
+     RETURN
   ===================================================== */
 
   return (
@@ -97,6 +108,13 @@ export default function Home() {
       ================================================= */}
 
       <Hero />
+
+
+      {/* =================================================
+          ABOUT
+      ================================================= */}
+
+      <About />
 
 
       {/* =================================================
@@ -118,18 +136,21 @@ export default function Home() {
           <div className="products-header">
 
             <div className="section-label">
-              Our Products
+              Campaign Products
             </div>
 
             <h2>
-              Campaign Ko Banaye
-              <span> Powerful</span>
+              चुनाव प्रचार के लिए
+              <span>
+                Complete Campaign Materials
+              </span>
             </h2>
 
             <p>
-              चुनाव प्रचार के लिए आपकी जरूरत का हर material —
-              quality products aur attractive customization
-              ke saath.
+              बिहार मुखिया चुनाव के लिए पोस्टर, पंपलेट,
+              झंडे, गमछा, टोपी, टी-शर्ट, बैज, स्टिकर,
+              पेन और अन्य promotional campaign materials
+              उपलब्ध हैं।
             </p>
 
           </div>
@@ -155,9 +176,7 @@ export default function Home() {
                   handleCategoryChange(category)
                 }
               >
-
                 {category}
-
               </button>
 
             ))}
@@ -229,21 +248,44 @@ export default function Home() {
 
           )}
 
+
+          {/* =================================================
+              PRODUCT CTA
+          ================================================= */}
+
+          <div className="products-bottom">
+
+            <div className="products-bottom-content">
+
+              <span>
+                COMPLETE CAMPAIGN KIT
+              </span>
+
+              <h3>
+                Campaign की जरूरत के अनुसार
+                <strong>
+                  अपना Kit तैयार करें।
+                </strong>
+              </h3>
+
+              <p>
+                Basic Campaign Kit, Team Campaign Kit
+                और Booth / Area Kit आवश्यकता के अनुसार
+                तैयार किया जा सकता है।
+              </p>
+
+            </div>
+
+            <a
+              href="#contact"
+              className="products-bottom-btn"
+            >
+              Campaign Enquiry
+            </a>
+
+          </div>
+
         </div>
-
-      </section>
-
-
-      {/* =================================================
-          ABOUT / WHY ELECTION KART
-      ================================================= */}
-
-      <section
-        id="about"
-        className="about-section"
-      >
-
-        <WhyChoose />
 
       </section>
 
@@ -256,10 +298,38 @@ export default function Home() {
 
 
       {/* =================================================
-          BOOTH PACKET
+          PRINTING SERVICES
+      ================================================= */}
+
+      <PrintingServices />
+
+
+      {/* =================================================
+          GRAPHIC DESIGN
+      ================================================= */}
+
+      <GraphicDesign />
+
+
+      {/* =================================================
+          DIGITAL ELECTION CAMPAIGN
+      ================================================= */}
+
+      <DigitalCampaign />
+
+
+      {/* =================================================
+          BOOTH / AREA CAMPAIGN KIT
       ================================================= */}
 
       <BoothPacket />
+
+
+      {/* =================================================
+          GROUND CAMPAIGN
+      ================================================= */}
+
+      <GroundCampaign />
 
 
       {/* =================================================
@@ -270,6 +340,20 @@ export default function Home() {
 
 
       {/* =================================================
+          EVENT MANAGEMENT
+      ================================================= */}
+
+      <EventManagement />
+
+
+      {/* =================================================
+          DOCUMENTATION
+      ================================================= */}
+
+      <Documentation />
+
+
+      {/* =================================================
           GALLERY
       ================================================= */}
 
@@ -277,24 +361,10 @@ export default function Home() {
 
 
       {/* =================================================
-          FINAL CTA
-      ================================================= */}
-
-      <FinalCTA />
-
-
-      {/* =================================================
           CONTACT
       ================================================= */}
 
       <Contact />
-
-
-      {/* =================================================
-          FOOTER
-      ================================================= */}
-
-      <Footer />
 
 
     </div>

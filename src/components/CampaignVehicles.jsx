@@ -1,313 +1,330 @@
 import {
   ArrowUpRight,
-  Bike,
   CarFront,
-  Lightbulb,
+  CirclePlay,
+  Megaphone,
+  MonitorPlay,
+  Speaker,
+  Zap,
 } from "lucide-react";
 
 import campaignVehicles from "../data/campaignVehicles";
 
 import "../styles/campaignVehicles.css";
 
-
-/* =====================================================
-   ICON MAP
-===================================================== */
-
-const iconMap = {
-  "BIKE CAMPAIGN": Bike,
-  "LED PROMOTION": Lightbulb,
-  "CAMPAIGN VEHICLE": CarFront,
-};
-
-
-/* =====================================================
-   WHATSAPP ENQUIRY
-===================================================== */
-
-const getWhatsAppUrl = (vehicleName = "Campaign Vehicle") => {
-  const message = encodeURIComponent(
-    `Hello Election Kart, mujhe "${vehicleName}" ke baare mein enquiry karni hai.`
-  );
-
-  return `https://wa.me/919820280493?text=${message}`;
-};
-
+const vehicleServices = [
+  {
+    icon: MonitorPlay,
+    title: "LED Van",
+    hindi: "एलईडी वैन",
+    items: [
+      "LED Screen",
+      "Generator",
+      "Vehicle Branding",
+      "Video Playback",
+    ],
+  },
+  {
+    icon: Speaker,
+    title: "Audio Promotion Vehicle",
+    hindi: "ऑडियो प्रचार वाहन",
+    items: [
+      "Sound System",
+      "Amplifier",
+      "Speakers",
+      "Generator",
+    ],
+  },
+  {
+    icon: CarFront,
+    title: "Mobile Branding",
+    hindi: "मोबाइल ब्रांडिंग",
+    items: [
+      "Auto Branding",
+      "E-rickshaw Branding",
+      "Vehicle Stickers",
+      "Mobile Banners",
+    ],
+  },
+];
 
 export default function CampaignVehicles() {
   return (
     <section
       id="campaign-vehicles"
-      className="campaign-section"
+      className="campaign-vehicles-section"
     >
+      <div className="campaign-vehicles-container">
 
-      <div className="campaign-container">
-
-
-        {/* =================================================
+        {/* =====================================================
             HEADER
-        ================================================= */}
+        ===================================================== */}
 
-        <div className="campaign-header">
+        <div className="campaign-vehicles-header">
 
           <div className="section-label">
-            Campaign Vehicles
+            Mobile Promotion
           </div>
 
           <h2>
-            Campaign Ko
-            <span> Move Karein</span>
+            प्रचार वाहन एवं
+            <span>
+              Mobile Campaign Solutions
+            </span>
           </h2>
 
           <p>
-            Ground-level election promotion ke liye
-            campaign bike, LED promotion aur vehicle-based
-            campaign options.
+            पंचायत क्षेत्र में campaign communication के लिए
+            LED, audio और branded mobile promotion solutions
+            उपलब्ध कराए जा सकते हैं।
           </p>
 
         </div>
 
 
-        {/* =================================================
-            FEATURED CAMPAIGN
-        ================================================= */}
+        {/* =====================================================
+            MAIN FEATURE
+        ===================================================== */}
 
-        <div className="campaign-featured">
+        <div className="campaign-vehicle-feature">
 
+          <div className="campaign-vehicle-feature-content">
 
-          {/* =================================================
-              LEFT CONTENT
-          ================================================= */}
-
-          <div className="campaign-featured-content">
-
-            <span className="campaign-featured-label">
-              GROUND CAMPAIGN
+            <span className="campaign-vehicle-feature-label">
+              CAMPAIGN VEHICLES
             </span>
 
-
             <h3>
-              Apna Campaign
-              <br />
+              Campaign को
               <span>
-                Har Jagah Le Jayein.
+                हर क्षेत्र तक पहुंचाएं।
               </span>
             </h3>
 
-
             <p>
-              Mobile campaign setup ke through aapka
-              campaign message ground level par different
-              locations tak reach kar sakta hai.
+              Mobile campaign solutions के माध्यम से
+              campaign message, video और audio content को
+              अलग-अलग locations तक पहुंचाने में सहायता की
+              जा सकती है।
             </p>
 
 
-            {/* =================================================
-                FEATURE POINTS
-            ================================================= */}
-
-            <div className="campaign-featured-points">
+            <div className="campaign-vehicle-points">
 
               <div>
-                <span>01</span>
-                Bike Campaign
-              </div>
-
-              <div>
-                <span>02</span>
+                <Zap size={14} />
                 LED Promotion
               </div>
 
               <div>
-                <span>03</span>
-                Campaign Vehicle
+                <Megaphone size={14} />
+                Audio Promotion
+              </div>
+
+              <div>
+                <CarFront size={14} />
+                Vehicle Branding
               </div>
 
             </div>
 
 
-            {/* =================================================
-                ENQUIRY BUTTON
-            ================================================= */}
-
             <a
-              href={getWhatsAppUrl("Campaign Vehicle")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="campaign-featured-btn"
+              href="#contact"
+              className="campaign-vehicle-btn"
             >
-              Campaign Enquiry
-
-              <ArrowUpRight
-                size={17}
-              />
+              Vehicle Enquiry
+              <ArrowUpRight size={16} />
             </a>
 
           </div>
 
 
           {/* =================================================
-              FEATURED IMAGE
+              FEATURE VISUAL
           ================================================= */}
 
-          <div className="campaign-featured-visual">
+          <div className="campaign-vehicle-feature-visual">
 
-            <div className="campaign-visual-glow"></div>
+            <div className="campaign-vehicle-glow"></div>
 
-            <img
-              src={
-                campaignVehicles[0]?.image
-              }
-              alt={
-                campaignVehicles[0]
-                  ? `${campaignVehicles[0].title} - ${campaignVehicles[0].hindi}`
-                  : "Campaign Vehicle"
-              }
-              className="campaign-featured-image"
-              loading="lazy"
-            />
+            <div className="campaign-vehicle-circle circle-one"></div>
+
+            <div className="campaign-vehicle-circle circle-two"></div>
+
+            <div className="campaign-vehicle-visual-card">
+
+              <CarFront size={48} />
+
+              <strong>
+                Campaign Vehicle
+              </strong>
+
+              <span>
+                LED • Audio • Branding
+              </span>
+
+            </div>
 
           </div>
 
         </div>
 
 
-        {/* =================================================
-            VEHICLE CARDS
-        ================================================= */}
+        {/* =====================================================
+            VEHICLE SERVICE TYPES
+        ===================================================== */}
 
-        <div className="campaign-grid">
+        <div className="campaign-vehicle-services">
 
-          {campaignVehicles.length > 0 ? (
+          {vehicleServices.map((service) => {
 
-            campaignVehicles.map((vehicle) => {
+            const Icon = service.icon;
 
-              const Icon =
-                iconMap[vehicle.tag] ||
-                CarFront;
+            return (
+              <article
+                className="campaign-vehicle-service-card"
+                key={service.title}
+              >
 
-              return (
-                <article
-                  className="campaign-card"
-                  key={vehicle.id}
+                <div className="campaign-vehicle-service-icon">
+                  <Icon size={20} />
+                </div>
+
+                <h3>
+                  {service.title}
+                </h3>
+
+                <div className="campaign-vehicle-service-hindi">
+                  {service.hindi}
+                </div>
+
+                <div className="campaign-vehicle-service-list">
+
+                  {service.items.map((item) => (
+
+                    <div key={item}>
+                      <span></span>
+                      {item}
+                    </div>
+
+                  ))}
+
+                </div>
+
+              </article>
+            );
+
+          })}
+
+        </div>
+
+
+        {/* =====================================================
+            VEHICLE GALLERY
+        ===================================================== */}
+
+        <div className="campaign-vehicle-gallery">
+
+          {campaignVehicles.map((vehicle) => (
+
+            <article
+              className="campaign-vehicle-card"
+              key={vehicle.id}
+            >
+
+              <div className="campaign-vehicle-image">
+
+                <img
+                  src={vehicle.image}
+                  alt={vehicle.title}
+                  loading="lazy"
+                />
+
+                <div className="campaign-vehicle-image-overlay"></div>
+
+                <span className="campaign-vehicle-tag">
+                  {vehicle.tag}
+                </span>
+
+                <div className="campaign-vehicle-image-icon">
+                  <CirclePlay size={18} />
+                </div>
+
+              </div>
+
+
+              <div className="campaign-vehicle-card-content">
+
+                <h3>
+                  {vehicle.title}
+                </h3>
+
+                <div className="campaign-vehicle-card-hindi">
+                  {vehicle.hindi}
+                </div>
+
+                <p>
+                  {vehicle.description}
+                </p>
+
+                <a
+                  href="#contact"
+                  className="campaign-vehicle-card-link"
                 >
+                  Enquiry Karein
+                  <ArrowUpRight size={15} />
+                </a>
+
+              </div>
+
+            </article>
+
+          ))}
+
+        </div>
 
 
-                  {/* =================================================
-                      IMAGE
-                  ================================================= */}
+        {/* =====================================================
+            BOTTOM CTA
+        ===================================================== */}
 
-                  <div className="campaign-card-image">
+        <div className="campaign-vehicle-bottom">
 
-                    <img
-                      src={vehicle.image}
-                      alt={`${vehicle.title} - ${vehicle.hindi}`}
-                      className="campaign-card-img"
-                      loading="lazy"
-                    />
+          <div>
 
+            <span>
+              MOBILE CAMPAIGN SUPPORT
+            </span>
 
-                    {/* Tag */}
+            <h3>
+              LED • Audio •
+              <strong>
+                Vehicle Branding
+              </strong>
+            </h3>
 
-                    <span className="campaign-tag">
-                      {vehicle.tag}
-                    </span>
+            <p>
+              Campaign requirements और location के अनुसार
+              mobile promotion solution तय किया जा सकता है।
+            </p>
 
-                  </div>
-
-
-                  {/* =================================================
-                      CONTENT
-                  ================================================= */}
-
-                  <div className="campaign-card-content">
+          </div>
 
 
-                    {/* Icon */}
-
-                    <div className="campaign-card-icon">
-
-                      <Icon
-                        size={18}
-                      />
-
-                    </div>
-
-
-                    {/* Title */}
-
-                    <h3>
-                      {vehicle.title}
-                    </h3>
-
-
-                    {/* Hindi */}
-
-                    <div className="campaign-card-hindi">
-                      {vehicle.hindi}
-                    </div>
-
-
-                    {/* Description */}
-
-                    <p>
-                      {vehicle.description}
-                    </p>
-
-
-                    {/* =================================================
-                        WHATSAPP ENQUIRY
-                    ================================================= */}
-
-                    <a
-                      href={getWhatsAppUrl(
-                        vehicle.title
-                      )}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="campaign-card-link"
-                    >
-                      Enquiry Karein
-
-                      <ArrowUpRight
-                        size={15}
-                      />
-
-                    </a>
-
-                  </div>
-
-                </article>
-              );
-
-            })
-
-          ) : (
-
-            /* =================================================
-               EMPTY STATE
-            ================================================= */
-
-            <div className="campaign-empty">
-
-              <CarFront size={30} />
-
-              <h3>
-                Campaign Vehicles
-              </h3>
-
-              <p>
-                Vehicle options will be added here.
-              </p>
-
-            </div>
-
-          )}
+          <a
+            href="https://wa.me/919820280493"
+            target="_blank"
+            rel="noreferrer"
+            className="campaign-vehicle-bottom-btn"
+          >
+            Get Vehicle Details
+            <ArrowUpRight size={17} />
+          </a>
 
         </div>
 
       </div>
-
     </section>
   );
 }

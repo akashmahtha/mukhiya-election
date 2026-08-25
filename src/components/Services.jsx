@@ -1,11 +1,21 @@
 import {
-  Printer,
-  BadgeCheck,
-  Package,
-  Bike,
-  Palette,
-  Megaphone,
   ArrowUpRight,
+  BarChart3,
+  Brush,
+  CarFront,
+  ClipboardCheck,
+  Flag,
+  Image,
+  Megaphone,
+  Package,
+  Printer,
+  Radio,
+  Settings,
+  ShieldCheck,
+  Smartphone,
+  Sparkles,
+  Users,
+  Video,
 } from "lucide-react";
 
 import "../styles/services.css";
@@ -14,56 +24,307 @@ const services = [
   {
     id: 1,
     number: "01",
-    icon: Printer,
-    title: "Printing",
-    hindi: "प्रिंटिंग सर्विस",
+    icon: ClipboardCheck,
+    title: "Campaign Planning",
+    hindi: "चुनावी कैंपेन प्लानिंग",
     description:
-      "Pamphlet, Flex Banner, Pole Banner, Poster aur campaign printing requirements ke liye customised solutions.",
+      "Campaign planning, क्षेत्रवार schedule, प्रचार सामग्री planning, ground activity और campaign coordination.",
+    items: [
+      "Campaign Planning",
+      "Area-wise Schedule",
+      "Ground Activity Planning",
+      "Daily Campaign Schedule",
+      "Campaign Reporting",
+    ],
   },
+
   {
     id: 2,
     number: "02",
-    icon: BadgeCheck,
-    title: "Campaign Branding",
-    hindi: "चुनाव प्रचार ब्रांडिंग",
+    icon: Printer,
+    title: "Election Printing",
+    hindi: "चुनावी प्रचार सामग्री",
     description:
-      "Badge, Cap, Flag, Patka, Gamcha, T-Shirt aur other campaign branding materials.",
+      "मुखिया एवं पंचायत चुनाव के लिए posters, banners, flex, pamphlets और अन्य printed materials.",
+    items: [
+      "Poster & Banner",
+      "Flex & Vinyl",
+      "Pamphlet & Handbill",
+      "Hoarding",
+      "Sunboard & ACP Board",
+    ],
   },
+
   {
     id: 3,
     number: "03",
-    icon: Package,
-    title: "Booth Packet",
-    hindi: "बूथ पैकेट",
+    icon: Flag,
+    title: "Election Branding",
+    hindi: "फ्लैग एवं ब्रांडिंग",
     description:
-      "Booth ke liye required campaign materials ko organised packet ke form mein prepare karne ka option.",
+      "Campaign visibility बढ़ाने के लिए flags, banners, poles, stage branding और event branding.",
+    items: [
+      "Election Flags",
+      "Flag Poles",
+      "Banner Poles",
+      "Roadside Flags",
+      "Stage Backdrop",
+    ],
   },
+
   {
     id: 4,
     number: "04",
-    icon: Bike,
-    title: "Campaign Vehicles",
-    hindi: "प्रचार वाहन",
+    icon: Package,
+    title: "Campaign Merchandise",
+    hindi: "पहनने योग्य प्रचार सामग्री",
     description:
-      "Bike promotion aur LED vehicle jaise ground-level campaign promotion options.",
+      "Candidate और authorized campaign volunteers के लिए branded promotional merchandise.",
+    items: [
+      "Gamcha & Patka",
+      "Cap & T-Shirt",
+      "Jacket & Scarf",
+      "Badge & Button",
+      "ID Card & Lanyard",
+    ],
   },
+
   {
     id: 5,
     number: "05",
-    icon: Palette,
-    title: "Custom Design",
-    hindi: "कस्टम डिजाइन",
+    icon: Package,
+    title: "Campaign Kits",
+    hindi: "संपूर्ण प्रचार किट",
     description:
-      "Campaign requirements ke according customised artwork, branding aur promotional designs.",
+      "Basic, Team और Booth/Area requirements के अनुसार complete campaign kits तैयार की जा सकती हैं.",
+    items: [
+      "Basic Campaign Kit",
+      "Team Campaign Kit",
+      "Booth / Area Kit",
+      "Volunteer Kit",
+      "Campaign Stationery",
+    ],
   },
+
   {
     id: 6,
     number: "06",
-    icon: Megaphone,
-    title: "Promotion",
-    hindi: "प्रचार एवं प्रमोशन",
+    icon: Smartphone,
+    title: "Digital Campaign",
+    hindi: "डिजिटल चुनाव प्रचार",
     description:
-      "Ground campaign visibility ke liye multiple promotional material aur campaign support options.",
+      "Campaign के लिए social media creatives, WhatsApp content, reels, videos और digital communication.",
+    items: [
+      "Facebook Creatives",
+      "Instagram Creatives",
+      "WhatsApp Posters",
+      "Reels & Short Videos",
+      "Campaign Graphics",
+    ],
+  },
+
+  {
+    id: 7,
+    number: "07",
+    icon: Radio,
+    title: "WhatsApp & SMS",
+    hindi: "डिजिटल कम्युनिकेशन सपोर्ट",
+    description:
+      "Authorized campaign communication के लिए WhatsApp, SMS और voice communication support.",
+    items: [
+      "WhatsApp Creative",
+      "WhatsApp Video",
+      "SMS Content",
+      "Bulk SMS Coordination",
+      "Voice Message",
+    ],
+  },
+
+  {
+    id: 8,
+    number: "08",
+    icon: Brush,
+    title: "Graphic Design",
+    hindi: "ग्राफिक्स एवं डिजाइन",
+    description:
+      "Professional campaign creatives और branding designs आपकी campaign identity के अनुसार.",
+    items: [
+      "Candidate Poster",
+      "Election Poster",
+      "Banner & Flex Design",
+      "Social Media Post",
+      "LED Screen Content",
+    ],
+  },
+
+  {
+    id: 9,
+    number: "09",
+    icon: Printer,
+    title: "Printing Services",
+    hindi: "प्रोफेशनल प्रिंटिंग",
+    description:
+      "Different campaign requirements के लिए large-format और commercial printing solutions.",
+    items: [
+      "Flex Printing",
+      "Star Flex",
+      "Vinyl Printing",
+      "UV Printing",
+      "Digital & Offset Printing",
+    ],
+  },
+
+  {
+    id: 10,
+    number: "10",
+    icon: Users,
+    title: "Ground Campaign",
+    hindi: "जनसंपर्क एवं ग्राउंड सपोर्ट",
+    description:
+      "Authorized campaign teams के लिए ground-level campaign activities का operational coordination.",
+    items: [
+      "Door-to-Door Coordination",
+      "Public Meeting",
+      "Nukkad Sabha",
+      "Roadshow Coordination",
+      "Volunteer Coordination",
+    ],
+  },
+
+  {
+    id: 11,
+    number: "11",
+    icon: CarFront,
+    title: "Campaign Vehicles",
+    hindi: "प्रचार वाहन",
+    description:
+      "Panchayat area में mobile campaign communication के लिए LED, audio और branded vehicle solutions.",
+    items: [
+      "LED Van",
+      "LED Screen",
+      "Audio Vehicle",
+      "Auto Branding",
+      "Vehicle Stickers",
+    ],
+  },
+
+  {
+    id: 12,
+    number: "12",
+    icon: Settings,
+    title: "Event Management",
+    hindi: "सभा एवं कार्यक्रम प्रबंधन",
+    description:
+      "छोटी meeting से लेकर बड़े public events तक आवश्यक event infrastructure coordination.",
+    items: [
+      "Stage & Backdrop",
+      "Sound System",
+      "LED Screen",
+      "Lighting & Generator",
+      "Chairs & Tent",
+    ],
+  },
+
+  {
+    id: 13,
+    number: "13",
+    icon: Megaphone,
+    title: "Nukkad Sabha",
+    hindi: "स्थानीय कार्यक्रम",
+    description:
+      "Local-level campaign events के लिए portable setup, branding और basic event support.",
+    items: [
+      "Portable Stage",
+      "Sound System",
+      "Chairs",
+      "Backdrop",
+      "Event Branding",
+    ],
+  },
+
+  {
+    id: 14,
+    number: "14",
+    icon: Video,
+    title: "Photo & Video",
+    hindi: "फोटोग्राफी एवं वीडियोग्राफी",
+    description:
+      "Campaign और events का professional visual documentation और content production.",
+    items: [
+      "Event Photography",
+      "Candidate Photography",
+      "Video Coverage",
+      "Reels",
+      "Event Highlights",
+    ],
+  },
+
+  {
+    id: 15,
+    number: "15",
+    icon: BarChart3,
+    title: "Campaign Reporting",
+    hindi: "डॉक्यूमेंटेशन एवं रिपोर्टिंग",
+    description:
+      "Campaign activities, events और material movement को व्यवस्थित रखने के लिए documentation support.",
+    items: [
+      "Daily Activity Report",
+      "Event Report",
+      "Photo Documentation",
+      "Material Dispatch Report",
+      "Area-wise Activity Report",
+    ],
+  },
+
+  {
+    id: 16,
+    number: "16",
+    icon: Sparkles,
+    title: "Campaign Merchandise",
+    hindi: "प्रमोशनल मर्चेंडाइज",
+    description:
+      "Campaign requirements के अनुसार branded promotional products और merchandise.",
+    items: [
+      "Pen & Diary",
+      "Calendar",
+      "Keychain & Bag",
+      "Badge & Button",
+      "Cap & T-Shirt",
+    ],
+  },
+
+  {
+    id: 17,
+    number: "17",
+    icon: Image,
+    title: "Campaign Office",
+    hindi: "चुनावी कार्यालय सपोर्ट",
+    description:
+      "Campaign office के लिए branding, stationery, information boards और operational setup support.",
+    items: [
+      "Office Branding",
+      "Reception Board",
+      "Information Board",
+      "Campaign Files",
+      "Stationery",
+    ],
+  },
+
+  {
+    id: 18,
+    number: "18",
+    icon: ShieldCheck,
+    title: "Election Day Support",
+    hindi: "निर्वाचन दिवस सपोर्ट",
+    description:
+      "निर्वाचन दिवस पर कानूनी एवं प्रशासनिक रूप से अनुमत operational और communication coordination.",
+    items: [
+      "Team Coordination",
+      "Authorized Personnel",
+      "Transport Coordination",
+      "Information Desk",
+      "Documentation",
+    ],
   },
 ];
 
@@ -75,9 +336,9 @@ export default function Services() {
     >
       <div className="services-container">
 
-        {/* =================================================
+        {/* =====================================================
             HEADER
-        ================================================= */}
+        ===================================================== */}
 
         <div className="services-header">
 
@@ -86,22 +347,71 @@ export default function Services() {
           </div>
 
           <h2>
-            Campaign Ko
-            <span> Strong Banaye</span>
+            आपकी Campaign की
+            <span>
+              हर जरूरत का समाधान
+            </span>
           </h2>
 
           <p>
-            चुनाव प्रचार की planning se lekar
-            campaign materials aur promotion tak,
-            multiple services ek hi platform par.
+            Strategy से लेकर Design, Printing, Branding,
+            Digital, Ground Campaign और Documentation तक —
+            एक ही जगह complete campaign support.
           </p>
 
         </div>
 
 
-        {/* =================================================
+        {/* =====================================================
+            CAMPAIGN FLOW
+        ===================================================== */}
+
+        <div className="services-flow">
+
+          <div className="services-flow-item">
+            <span>01</span>
+            <strong>PLAN</strong>
+            <small>Campaign Strategy</small>
+          </div>
+
+          <div className="services-flow-line"></div>
+
+          <div className="services-flow-item">
+            <span>02</span>
+            <strong>DESIGN</strong>
+            <small>Creative Production</small>
+          </div>
+
+          <div className="services-flow-line"></div>
+
+          <div className="services-flow-item">
+            <span>03</span>
+            <strong>PRINT</strong>
+            <small>Campaign Materials</small>
+          </div>
+
+          <div className="services-flow-line"></div>
+
+          <div className="services-flow-item">
+            <span>04</span>
+            <strong>DIGITAL</strong>
+            <small>Digital Content</small>
+          </div>
+
+          <div className="services-flow-line"></div>
+
+          <div className="services-flow-item">
+            <span>05</span>
+            <strong>GROUND</strong>
+            <small>Campaign Execution</small>
+          </div>
+
+        </div>
+
+
+        {/* =====================================================
             SERVICES GRID
-        ================================================= */}
+        ===================================================== */}
 
         <div className="services-grid">
 
@@ -115,22 +425,22 @@ export default function Services() {
                 key={service.id}
               >
 
-                {/* Number */}
+                {/* Card Top */}
 
-                <div className="service-top">
+                <div className="service-card-top">
 
                   <span className="service-number">
                     {service.number}
                   </span>
 
                   <div className="service-icon">
-                    <Icon size={21} />
+                    <Icon size={19} />
                   </div>
 
                 </div>
 
 
-                {/* Content */}
+                {/* Title */}
 
                 <h3>
                   {service.title}
@@ -140,64 +450,78 @@ export default function Services() {
                   {service.hindi}
                 </div>
 
+
+                {/* Description */}
+
                 <p>
                   {service.description}
                 </p>
 
 
-                {/* Bottom */}
+                {/* Items */}
 
-                <div className="service-bottom">
+                <div className="service-items">
 
-                  <span>
-                    Explore Service
-                  </span>
+                  {service.items.map((item) => (
 
-                  <ArrowUpRight size={15} />
+                    <div
+                      key={item}
+                    >
+                      <span></span>
+                      {item}
+                    </div>
+
+                  ))}
 
                 </div>
 
+
+                {/* Bottom */}
+
+                <a
+                  href="#contact"
+                  className="service-link"
+                >
+                  Enquiry Karein
+                  <ArrowUpRight size={15} />
+                </a>
+
               </article>
             );
-
           })}
 
         </div>
 
 
-        {/* =================================================
-            CTA
-        ================================================= */}
+        {/* =====================================================
+            BOTTOM CTA
+        ===================================================== */}
 
         <div className="services-cta">
 
           <div>
 
             <span>
-              NEED CAMPAIGN SUPPORT?
+              COMPLETE CAMPAIGN SUPPORT
             </span>
 
             <h3>
-              Apni requirement
+              Strategy से
               <strong>
-                share karein.
+                Ground Execution तक।
               </strong>
             </h3>
 
           </div>
 
-
           <a
             href="https://wa.me/919820280493"
             target="_blank"
-            rel="noopener noreferrer"
-            className="services-cta-button"
+            rel="noreferrer"
+            className="services-cta-btn"
           >
-
-            WhatsApp Enquiry
-
-            <ArrowUpRight size={16} />
-
+            Campaign Enquiry
+            <ArrowUpRight size={17} />
           </a>
 
         </div>

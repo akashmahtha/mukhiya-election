@@ -1,5 +1,5 @@
 /* =====================================================
-   BOOTH PACKET SECTION
+   BOOTH / CAMPAIGN KIT SECTION
 ===================================================== */
 
 .booth-section {
@@ -12,8 +12,64 @@
   overflow: hidden;
 }
 
+.booth-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 480px;
+  height: 480px;
+
+  top: -260px;
+  left: -200px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(20, 83, 45, 0.055),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.booth-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  right: -180px;
+  bottom: -220px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 107, 0, 0.045),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
 .booth-container {
+  position: relative;
+
+  z-index: 2;
+
   width: 100%;
+
   max-width: 1400px;
 
   margin: 0 auto;
@@ -25,27 +81,44 @@
 ===================================================== */
 
 .booth-header {
-  max-width: 720px;
+  max-width: 760px;
 
   margin: 0 auto 55px;
 
   text-align: center;
 }
 
+.booth-header .section-label {
+  color: var(--green, #14532d);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+
+  text-transform: uppercase;
+}
+
 .booth-header h2 {
   margin-top: 15px;
 
-  color: var(--green);
+  color: var(--green, #14532d);
 
-  font-size: clamp(36px, 4vw, 58px);
+  font-size:
+    clamp(38px, 4.5vw, 60px);
 
-  line-height: 1.1;
+  line-height: 1.05;
 
-  letter-spacing: -2px;
+  letter-spacing: -2.5px;
 }
 
 .booth-header h2 span {
-  color: var(--orange);
+  display: block;
+
+  margin-top: 7px;
+
+  color: var(--orange, #ff6b00);
 }
 
 .booth-header p {
@@ -55,294 +128,49 @@
 
   color: #777;
 
-  font-size: 14px;
+  font-size: 12px;
 
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
 
 /* =====================================================
-   MAIN LAYOUT
+   KIT GRID
 ===================================================== */
 
-.booth-main {
-  display: grid;
-
-  grid-template-columns:
-    minmax(280px, 0.85fr)
-    minmax(0, 1.65fr);
-
-  gap: 28px;
-
-  align-items: stretch;
-}
-
-
-/* =====================================================
-   LEFT INTRO
-===================================================== */
-
-.booth-intro {
-  position: relative;
-
-  min-height: 100%;
-
-  padding: 35px;
-
-  display: flex;
-  flex-direction: column;
-
-  background:
-    linear-gradient(
-      145deg,
-      var(--green),
-      #0b321a
-    );
-
-  border-radius: 20px;
-
-  overflow: hidden;
-
-  color: #ffffff;
-}
-
-.booth-intro::before {
-  content: "";
-
-  position: absolute;
-
-  width: 260px;
-  height: 260px;
-
-  right: -130px;
-  top: -120px;
-
-  border-radius: 50%;
-
-  border: 1px solid
-    rgba(255, 255, 255, 0.08);
-}
-
-.booth-intro::after {
-  content: "";
-
-  position: absolute;
-
-  width: 180px;
-  height: 180px;
-
-  left: -100px;
-  bottom: -100px;
-
-  border-radius: 50%;
-
-  background:
-    rgba(255, 107, 0, 0.09);
-}
-
-
-/* =====================================================
-   BOOTH ICON
-===================================================== */
-
-.booth-icon {
-  position: relative;
-  z-index: 2;
-
-  width: 52px;
-  height: 52px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: var(--green);
-
-  background: #ffffff;
-
-  border-radius: 13px;
-
-  box-shadow:
-    0 8px 25px rgba(0, 0, 0, 0.12);
-}
-
-
-/* =====================================================
-   SMALL TITLE
-===================================================== */
-
-.booth-small-title {
-  position: relative;
-  z-index: 2;
-
-  margin-top: 28px;
-
-  color: #ff9955;
-
-  font-size: 9px;
-
-  font-weight: 800;
-
-  letter-spacing: 1.7px;
-}
-
-
-/* =====================================================
-   INTRO HEADING
-===================================================== */
-
-.booth-intro h3 {
-  position: relative;
-  z-index: 2;
-
-  margin-top: 12px;
-
-  color: #ffffff;
-
-  font-size: clamp(32px, 3vw, 46px);
-
-  line-height: 1.05;
-
-  letter-spacing: -1.5px;
-}
-
-.booth-intro h3 span {
-  color: #ff9955;
-}
-
-
-/* =====================================================
-   INTRO DESCRIPTION
-===================================================== */
-
-.booth-intro > p {
-  position: relative;
-  z-index: 2;
-
-  max-width: 410px;
-
-  margin-top: 20px;
-
-  color: rgba(255, 255, 255, 0.62);
-
-  font-size: 11px;
-
-  line-height: 1.8;
-}
-
-
-/* =====================================================
-   CHECK LIST
-===================================================== */
-
-.booth-check-list {
-  position: relative;
-  z-index: 2;
-
-  margin-top: 27px;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 12px;
-}
-
-.booth-check-list > div {
-  display: flex;
-  align-items: center;
-
-  gap: 9px;
-
-  color: rgba(255, 255, 255, 0.78);
-
-  font-size: 10px;
-
-  font-weight: 600;
-}
-
-.booth-check-list svg {
-  flex-shrink: 0;
-
-  color: #ff9955;
-}
-
-
-/* =====================================================
-   BOOTH ENQUIRY BUTTON
-===================================================== */
-
-.booth-enquiry {
-  position: relative;
-  z-index: 2;
-
-  width: fit-content;
-
-  min-height: 44px;
-
-  margin-top: auto;
-  padding: 0 17px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 8px;
-
-  color: var(--green);
-
-  background: #ffffff;
-
-  border-radius: 8px;
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  text-decoration: none;
-
-  transition:
-    color 0.25s ease,
-    background 0.25s ease,
-    transform 0.25s ease;
-}
-
-.booth-enquiry:hover {
-  color: #ffffff;
-
-  background: var(--orange);
-
-  transform: translateY(-2px);
-}
-
-
-/* =====================================================
-   BOOTH ITEMS GRID
-===================================================== */
-
-.booth-items {
+.booth-grid {
   display: grid;
 
   grid-template-columns:
     repeat(3, minmax(0, 1fr));
 
-  gap: 14px;
+  gap: 18px;
 }
 
 
 /* =====================================================
-   BOOTH ITEM
+   KIT CARD
 ===================================================== */
 
-.booth-item {
+.booth-card {
   position: relative;
 
   min-width: 0;
 
+  min-height: 430px;
+
+  padding: 27px;
+
+  display: flex;
+
+  flex-direction: column;
+
   background: #ffffff;
 
-  border: 1px solid #e8e9e5;
+  border:
+    1px solid #e5e9e4;
 
-  border-radius: 15px;
+  border-radius: 18px;
 
   overflow: hidden;
 
@@ -352,198 +180,594 @@
     border-color 0.3s ease;
 }
 
-.booth-item:hover {
-  transform: translateY(-5px);
+.booth-card::before {
+  content: "";
 
-  border-color:
-    rgba(255, 107, 0, 0.25);
-
-  box-shadow:
-    0 15px 35px
-    rgba(0, 0, 0, 0.07);
-}
-
-
-/* =====================================================
-   ITEM IMAGE
-===================================================== */
-
-.booth-item-image {
-  position: relative;
-
-  width: 100%;
-
-  height: 145px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background:
-    linear-gradient(
-      145deg,
-      #f7f8f5,
-      #edf2ed
-    );
-
-  overflow: hidden;
-}
-
-.booth-item-image img {
-  width: 82%;
-  height: 82%;
-
-  object-fit: contain;
-
-  display: block;
-
-  transition:
-    transform 0.4s ease;
-}
-
-.booth-item:hover
-.booth-item-image img {
-  transform: scale(1.08);
-}
-
-
-/* =====================================================
-   ITEM NUMBER
-===================================================== */
-
-.booth-item-image > span {
   position: absolute;
 
-  top: 9px;
-  right: 9px;
+  width: 180px;
+  height: 180px;
 
-  width: 25px;
-  height: 25px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #ffffff;
-
-  background: var(--green);
+  top: -120px;
+  right: -100px;
 
   border-radius: 50%;
 
-  font-size: 8px;
+  background:
+    rgba(20, 83, 45, 0.045);
 
-  font-weight: 800;
+  transition:
+    transform 0.35s ease;
+}
+
+.booth-card:hover {
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(255, 107, 0, 0.22);
+
+  box-shadow:
+    0 20px 45px
+    rgba(0, 0, 0, 0.075);
+}
+
+.booth-card:hover::before {
+  transform:
+    scale(1.5);
 }
 
 
 /* =====================================================
-   IMAGE FALLBACK
+   CARD TOP
 ===================================================== */
 
-.booth-image-error {
-  background:
-    linear-gradient(
-      145deg,
-      #f4f7f4,
-      #e8eee9
-    );
+.booth-card-top {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
 }
 
-.booth-image-error::before {
-  content: "Election Kart";
+.booth-number {
+  color:
+    rgba(20, 83, 45, 0.25);
 
-  color: var(--green);
-
-  font-size: 13px;
+  font-size: 10px;
 
   font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.booth-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color:
+    var(--orange, #ff6b00);
+
+  background:
+    #fff3e9;
+
+  border-radius: 10px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.booth-card:hover .booth-icon {
+  color: #ffffff;
+
+  background:
+    var(--orange, #ff6b00);
+
+  transform:
+    rotate(-4deg);
 }
 
 
 /* =====================================================
-   ITEM CONTENT
+   TITLE
 ===================================================== */
 
-.booth-item-content {
-  padding: 14px 15px 16px;
+.booth-card h3 {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 22px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 21px;
+
+  font-weight: 900;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.4px;
 }
 
-.booth-item-content h4 {
-  margin: 0;
+.booth-hindi {
+  position: relative;
 
-  color: var(--green);
+  z-index: 2;
+
+  margin-top: 4px;
+
+  color:
+    var(--orange, #ff6b00);
 
   font-family:
     "Noto Sans Devanagari",
     "Poppins",
     sans-serif;
 
-  font-size: 14px;
+  font-size: 9px;
 
-  font-weight: 800;
-
-  line-height: 1.35;
+  font-weight: 700;
 }
 
-.booth-item-content p {
-  margin-top: 3px;
 
-  color: var(--orange);
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.booth-card p {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 13px;
+
+  color: #777;
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   KIT ITEMS
+===================================================== */
+
+.booth-items {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 18px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 7px 12px;
+}
+
+.booth-items div {
+  min-height: 27px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #606661;
 
   font-size: 8px;
 
   font-weight: 700;
+}
+
+.booth-items div span {
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  background:
+    var(--orange, #ff6b00);
+
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   CARD LINK
+===================================================== */
+
+.booth-card-link {
+  position: relative;
+
+  z-index: 2;
+
+  width: fit-content;
+
+  margin-top: auto;
+
+  padding-top: 19px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.booth-card-link:hover {
+  color:
+    var(--orange, #ff6b00);
+
+  transform:
+    translateX(3px);
+}
+
+
+/* =====================================================
+   HIGHLIGHTS
+===================================================== */
+
+.booth-highlights {
+  margin-top: 22px;
+
+  padding: 34px 38px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.65fr
+    1.35fr;
+
+  align-items: center;
+
+  gap: 45px;
+
+  background:
+    #f6f8f4;
+
+  border:
+    1px solid #e4e8e2;
+
+  border-radius: 18px;
+}
+
+
+/* =====================================================
+   HIGHLIGHTS HEADING
+===================================================== */
+
+.booth-highlights-heading > span {
+  color:
+    var(--orange, #ff6b00);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.booth-highlights-heading h3 {
+  margin-top: 9px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 26px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.booth-highlights-heading h3 strong {
+  display: block;
+
+  color:
+    var(--orange, #ff6b00);
+}
+
+
+/* =====================================================
+   HIGHLIGHTS GRID
+===================================================== */
+
+.booth-highlights-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 9px;
+}
+
+
+/* =====================================================
+   HIGHLIGHT ITEM
+===================================================== */
+
+.booth-highlight {
+  min-height: 68px;
+
+  padding: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e7ebe6;
+
+  border-radius: 9px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.booth-highlight:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(255, 107, 0, 0.2);
+}
+
+
+/* =====================================================
+   HIGHLIGHT ICON
+===================================================== */
+
+.booth-highlight-icon {
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color:
+    var(--orange, #ff6b00);
+
+  background:
+    #fff3e9;
+
+  border-radius: 8px;
+}
+
+.booth-highlight > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.booth-highlight strong {
+  color:
+    var(--green, #14532d);
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+.booth-highlight span {
+  margin-top: 4px;
+
+  color: #888;
+
+  font-size: 7px;
 
   line-height: 1.5;
 }
 
 
 /* =====================================================
-   EMPTY STATE
+   CTA
 ===================================================== */
 
-.booth-empty {
-  grid-column: 1 / -1;
+.booth-cta {
+  position: relative;
 
-  min-height: 300px;
+  margin-top: 22px;
+
+  padding: 30px 34px;
 
   display: flex;
-  flex-direction: column;
 
   align-items: center;
-  justify-content: center;
 
-  padding: 30px;
+  justify-content: space-between;
 
-  color: #777;
+  gap: 30px;
 
-  background: #f7f8f5;
+  color: #ffffff;
 
-  border: 1px dashed #d9ddd8;
+  background:
+    linear-gradient(
+      135deg,
+      var(--green, #14532d),
+      #092c17
+    );
 
-  border-radius: 16px;
+  border-radius: 18px;
 
-  text-align: center;
+  overflow: hidden;
 }
 
-.booth-empty svg {
-  color: var(--orange);
+.booth-cta::before {
+  content: "";
 
-  margin-bottom: 12px;
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  right: -180px;
+  top: -220px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
 }
 
-.booth-empty h3 {
-  margin: 0;
+.booth-cta::after {
+  content: "";
 
-  color: var(--green);
+  position: absolute;
 
-  font-size: 18px;
+  width: 250px;
+  height: 250px;
+
+  left: -150px;
+  bottom: -190px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.05);
+
+  border-radius: 50%;
 }
 
-.booth-empty p {
+.booth-cta > div {
+  position: relative;
+
+  z-index: 2;
+}
+
+.booth-cta > div > span {
+  color:
+    #ff9955;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
+}
+
+.booth-cta h3 {
   margin-top: 7px;
 
-  font-size: 11px;
+  color: #ffffff;
+
+  font-size: 27px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.booth-cta h3 strong {
+  color:
+    #ff9955;
+}
+
+.booth-cta p {
+  max-width: 580px;
+
+  margin-top: 9px;
+
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-size: 9px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   CTA BUTTON
+===================================================== */
+
+.booth-cta-btn {
+  position: relative;
+
+  z-index: 2;
+
+  flex-shrink: 0;
+
+  min-height: 44px;
+
+  padding: 0 17px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  color:
+    var(--green, #14532d);
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.booth-cta-btn:hover {
+  color: #ffffff;
+
+  background:
+    var(--orange, #ff6b00);
+
+  transform:
+    translateY(-2px);
 }
 
 
@@ -553,24 +777,21 @@
 
 @media (max-width: 1100px) {
 
-  .booth-main {
+  .booth-section {
+    padding:
+      90px 25px;
+  }
+
+  .booth-grid {
     grid-template-columns:
-      minmax(250px, 0.8fr)
-      minmax(0, 1.6fr);
-
-    gap: 20px;
+      repeat(2, minmax(0, 1fr));
   }
 
-  .booth-intro {
-    padding: 28px;
-  }
+  .booth-highlights {
+    grid-template-columns:
+      1fr;
 
-  .booth-items {
-    gap: 12px;
-  }
-
-  .booth-item-image {
-    height: 130px;
+    gap: 25px;
   }
 
 }
@@ -580,44 +801,31 @@
    TABLET
 ===================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
 
   .booth-section {
-    padding: 85px 22px;
+    padding:
+      80px 22px;
   }
 
-  .booth-main {
-    grid-template-columns: 1fr;
-
-    gap: 20px;
+  .booth-header {
+    margin-bottom: 42px;
   }
 
-  .booth-intro {
-    min-height: auto;
+  .booth-card {
+    min-height: 410px;
 
-    padding: 30px;
+    padding: 23px;
   }
 
-  .booth-intro > p {
-    max-width: 600px;
+  .booth-highlights {
+    padding:
+      28px;
   }
 
-  .booth-check-list {
-    display: grid;
-
-    grid-template-columns:
-      repeat(3, 1fr);
-
-    gap: 10px;
-  }
-
-  .booth-enquiry {
-    margin-top: 28px;
-  }
-
-  .booth-items {
-    grid-template-columns:
-      repeat(3, minmax(0, 1fr));
+  .booth-cta {
+    padding:
+      27px;
   }
 
 }
@@ -627,39 +835,78 @@
    SMALL TABLET
 ===================================================== */
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
+
+  .booth-section {
+    padding:
+      70px 18px;
+  }
 
   .booth-header {
-    margin-bottom: 38px;
+    margin-bottom: 35px;
   }
 
   .booth-header h2 {
-    font-size: clamp(
-      32px,
-      7vw,
-      45px
-    );
+    font-size:
+      clamp(33px, 9vw, 47px);
 
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
   }
 
   .booth-header p {
-    font-size: 13px;
+    font-size: 10px;
+
+    line-height: 1.8;
   }
 
-  .booth-check-list {
+  .booth-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .booth-card {
+    min-height: auto;
+
+    padding: 24px;
+
+    border-radius: 15px;
+  }
+
+  .booth-card h3 {
+    font-size: 20px;
+  }
+
+  .booth-card p {
+    font-size: 9px;
+  }
+
+  .booth-highlights {
+    padding:
+      25px 22px;
+
+    gap: 22px;
+
+    border-radius: 15px;
+  }
+
+  .booth-highlights-grid {
     grid-template-columns: 1fr;
   }
 
-  .booth-items {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+  .booth-cta {
+    flex-direction: column;
 
-    gap: 14px;
+    align-items: flex-start;
+
+    padding:
+      25px 22px;
+
+    border-radius: 15px;
   }
 
-  .booth-item-image {
-    height: 155px;
+  .booth-cta-btn {
+    width: 100%;
   }
 
 }
@@ -672,126 +919,148 @@
 @media (max-width: 560px) {
 
   .booth-section {
-    padding: 70px 16px;
+    padding:
+      65px 16px;
   }
 
-  .booth-header {
-    margin-bottom: 32px;
-  }
+
+  /* Header */
 
   .booth-header h2 {
-    font-size: clamp(
-      30px,
-      9vw,
-      42px
-    );
+    font-size:
+      clamp(31px, 9.5vw, 42px);
 
-    line-height: 1.12;
+    line-height: 1.08;
+  }
 
-    letter-spacing: -1px;
+  .booth-header h2 span {
+    margin-top: 5px;
   }
 
   .booth-header p {
     margin-top: 14px;
 
-    font-size: 12px;
+    font-size: 9px;
+  }
+
+
+  /* Cards */
+
+  .booth-card {
+    padding:
+      21px 18px;
+
+    border-radius: 14px;
+  }
+
+  .booth-number {
+    font-size: 8px;
+  }
+
+  .booth-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .booth-card h3 {
+    margin-top: 17px;
+
+    font-size: 18px;
+  }
+
+  .booth-hindi {
+    font-size: 8px;
+  }
+
+  .booth-card p {
+    margin-top: 10px;
+
+    font-size: 9px;
 
     line-height: 1.75;
   }
 
+  .booth-items {
+    margin-top: 14px;
 
-  /* Intro */
-
-  .booth-intro {
-    padding: 25px 20px;
-
-    border-radius: 16px;
+    gap: 5px 10px;
   }
 
-  .booth-icon {
-    width: 48px;
-    height: 48px;
-  }
-
-  .booth-small-title {
-    margin-top: 23px;
+  .booth-items div {
+    min-height: 24px;
 
     font-size: 8px;
   }
 
-  .booth-intro h3 {
-    margin-top: 10px;
+  .booth-card-link {
+    padding-top: 16px;
 
-    font-size: 34px;
+    font-size: 8px;
   }
 
-  .booth-intro > p {
-    margin-top: 16px;
 
-    font-size: 10px;
+  /* Highlights */
+
+  .booth-highlights {
+    margin-top: 14px;
+
+    padding:
+      22px 18px;
+
+    border-radius: 14px;
   }
 
-  .booth-check-list {
-    margin-top: 21px;
-
-    gap: 10px;
+  .booth-highlights-heading h3 {
+    font-size: 22px;
   }
 
-  .booth-check-list > div {
-    font-size: 9px;
+  .booth-highlight {
+    min-height: 61px;
+
+    padding: 9px;
   }
 
-  .booth-enquiry {
-    width: 100%;
+  .booth-highlight-icon {
+    width: 32px;
+    height: 32px;
+  }
 
-    margin-top: 24px;
+  .booth-highlight strong {
+    font-size: 8px;
+  }
 
+  .booth-highlight span {
+    font-size: 7px;
+  }
+
+
+  /* CTA */
+
+  .booth-cta {
+    margin-top: 14px;
+
+    padding:
+      22px 18px;
+
+    border-radius: 14px;
+  }
+
+  .booth-cta > div > span {
+    font-size: 7px;
+  }
+
+  .booth-cta h3 {
+    font-size: 21px;
+  }
+
+  .booth-cta p {
+    font-size: 8px;
+  }
+
+  .booth-cta-btn {
     min-height: 42px;
-  }
 
-
-  /* Items */
-
-  .booth-items {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-
-    gap: 10px;
-  }
-
-  .booth-item {
-    border-radius: 13px;
-  }
-
-  .booth-item-image {
-    height: 135px;
-  }
-
-  .booth-item-image img {
-    width: 78%;
-    height: 78%;
-  }
-
-  .booth-item-image > span {
-    width: 23px;
-    height: 23px;
-
-    top: 7px;
-    right: 7px;
-
-    font-size: 7px;
-  }
-
-  .booth-item-content {
-    padding: 11px 12px 13px;
-  }
-
-  .booth-item-content h4 {
-    font-size: 12px;
-  }
-
-  .booth-item-content p {
-    font-size: 7px;
+    font-size: 8px;
   }
 
 }
@@ -801,35 +1070,38 @@
    VERY SMALL MOBILE
 ===================================================== */
 
-@media (max-width: 380px) {
+@media (max-width: 360px) {
 
   .booth-section {
-    padding-left: 14px;
-    padding-right: 14px;
+    padding:
+      55px 14px;
   }
 
-  .booth-intro {
-    padding: 22px 17px;
+  .booth-card {
+    padding:
+      19px 16px;
   }
 
-  .booth-intro h3 {
-    font-size: 31px;
+  .booth-card h3 {
+    font-size: 17px;
   }
 
   .booth-items {
-    gap: 8px;
+    grid-template-columns: 1fr;
   }
 
-  .booth-item-image {
-    height: 120px;
+  .booth-highlights {
+    padding:
+      20px 16px;
   }
 
-  .booth-item-content {
-    padding: 10px;
+  .booth-cta {
+    padding:
+      20px 16px;
   }
 
-  .booth-item-content h4 {
-    font-size: 11px;
+  .booth-cta h3 {
+    font-size: 20px;
   }
 
 }
@@ -839,8 +1111,10 @@
    ACCESSIBILITY
 ===================================================== */
 
-.booth-enquiry:focus-visible {
-  outline: 3px solid
+.booth-card-link:focus-visible,
+.booth-cta-btn:focus-visible {
+  outline:
+    3px solid
     rgba(255, 107, 0, 0.3);
 
   outline-offset: 3px;
@@ -853,18 +1127,19 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-  .booth-item,
-  .booth-item-image img,
-  .booth-enquiry {
+  .booth-card,
+  .booth-icon,
+  .booth-card-link,
+  .booth-highlight,
+  .booth-cta-btn {
     transition: none;
   }
 
-  .booth-item:hover {
+  .booth-card:hover {
     transform: none;
   }
 
-  .booth-item:hover
-  .booth-item-image img {
+  .booth-highlight:hover {
     transform: none;
   }
 

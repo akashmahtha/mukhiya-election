@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import {
   Menu,
   X,
@@ -10,63 +11,235 @@ import {
 
 import "../styles/navbar.css";
 
-const productLinks = [
+
+/* =====================================================
+   SERVICES DROPDOWN
+===================================================== */
+
+const serviceLinks = [
   {
-    label: "All Products",
+    label: "Campaign Planning",
+    target: "services",
+  },
+  {
+    label: "Digital Campaign",
+    target: "digital-campaign",
+  },
+  {
+    label: "Graphic Design",
+    target: "graphic-design",
+  },
+  {
+    label: "Printing Services",
+    target: "printing-services",
+  },
+  {
+    label: "Ground Campaign",
+    target: "ground-campaign",
+  },
+  {
+    label: "Event Management",
+    target: "event-management",
+  },
+  {
+    label: "Photography & Videography",
+    target: "documentation",
+  },
+  {
+    label: "Campaign Documentation",
+    target: "documentation",
+  },
+];
+
+
+/* =====================================================
+   CAMPAIGN MATERIALS DROPDOWN
+===================================================== */
+
+const campaignMaterialLinks = [
+  {
+    label: "All Campaign Products",
     target: "products",
   },
   {
-    label: "Badges",
+    label: "Posters & Banners",
     target: "products",
   },
   {
-    label: "Caps & Topi",
+    label: "Flags & Branding",
     target: "products",
   },
   {
-    label: "Flags",
+    label: "Cap & Patka",
     target: "products",
   },
   {
-    label: "Printing",
+    label: "Gamcha & T-Shirt",
+    target: "products",
+  },
+  {
+    label: "Badges & ID Cards",
+    target: "products",
+  },
+  {
+    label: "Campaign Kits",
+    target: "booth-packet",
+  },
+  {
+    label: "Promotional Merchandise",
     target: "products",
   },
 ];
 
+
+/* =====================================================
+   CAMPAIGN SUPPORT DROPDOWN
+===================================================== */
+
+const campaignSupportLinks = [
+  {
+    label: "Booth / Area Support",
+    target: "booth-packet",
+  },
+  {
+    label: "प्रचार वाहन",
+    target: "campaign-vehicles",
+  },
+  {
+    label: "LED Van",
+    target: "campaign-vehicles",
+  },
+  {
+    label: "WhatsApp & SMS Campaign",
+    target: "digital-campaign",
+  },
+  {
+    label: "Public Meeting",
+    target: "event-management",
+  },
+  {
+    label: "Roadshow",
+    target: "ground-campaign",
+  },
+  {
+    label: "Nukkad Sabha",
+    target: "ground-campaign",
+  },
+  {
+    label: "Election Day Support",
+    target: "ground-campaign",
+  },
+];
+
+
 export default function Navbar() {
+
   const [menuOpen, setMenuOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
+
+  const [openDropdown, setOpenDropdown] =
+    useState(null);
+
 
   /* =====================================================
-     CLOSE MOBILE MENU
+     CLOSE MENU
   ===================================================== */
 
   const closeMenu = () => {
+
     setMenuOpen(false);
-    setProductsOpen(false);
+
+    setOpenDropdown(null);
+
   };
+
+
+  /* =====================================================
+     TOGGLE DROPDOWN
+  ===================================================== */
+
+  const toggleDropdown = (name) => {
+
+    setOpenDropdown(
+      openDropdown === name
+        ? null
+        : name
+    );
+
+  };
+
 
   /* =====================================================
      SCROLL TO SECTION
   ===================================================== */
 
   const scrollToSection = (id) => {
+
     closeMenu();
 
-    const element = document.getElementById(id);
+    const element =
+      document.getElementById(id);
 
     if (!element) {
-      console.warn(`Section with id="${id}" was not found.`);
+
+      console.warn(
+        `Section with id="${id}" was not found.`
+      );
+
       return;
+
     }
 
     setTimeout(() => {
+
       element.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
+
     }, 50);
+
   };
+
+
+  /* =====================================================
+     RENDER DROPDOWN
+  ===================================================== */
+
+  const renderDropdown = (
+    items,
+    dropdownName
+  ) => {
+
+    return (
+      <div
+        className={`nav-dropdown-menu ${
+          openDropdown === dropdownName
+            ? "dropdown-visible"
+            : ""
+        }`}
+      >
+
+        {items.map((item) => (
+
+          <button
+            key={item.label}
+            type="button"
+            onClick={() =>
+              scrollToSection(item.target)
+            }
+          >
+
+            {item.label}
+
+          </button>
+
+        ))}
+
+      </div>
+    );
+
+  };
+
 
   return (
     <header className="navbar">
@@ -77,6 +250,7 @@ export default function Navbar() {
 
       <div className="navbar-container">
 
+
         {/* =================================================
             LOGO
         ================================================= */}
@@ -84,18 +258,30 @@ export default function Navbar() {
         <button
           type="button"
           className="navbar-logo"
-          onClick={() => scrollToSection("top")}
+          onClick={() =>
+            scrollToSection("top")
+          }
           aria-label="Mukhiya Election Home"
         >
+
           <div className="logo-mark">
             ME
           </div>
 
           <div className="logo-text">
-            <strong>MUKHIYA</strong>
-            <span>ELECTION</span>
+
+            <strong>
+              MUKHIYA
+            </strong>
+
+            <span>
+              ELECTION
+            </span>
+
           </div>
+
         </button>
+
 
         {/* =================================================
             DESKTOP NAVIGATION
@@ -103,129 +289,202 @@ export default function Navbar() {
 
         <nav className="desktop-nav">
 
+
           {/* HOME */}
 
           <button
             type="button"
-            onClick={() => scrollToSection("top")}
+            onClick={() =>
+              scrollToSection("top")
+            }
           >
             Home
           </button>
+
 
           {/* ABOUT */}
 
           <button
             type="button"
-            onClick={() => scrollToSection("about")}
+            onClick={() =>
+              scrollToSection("about")
+            }
           >
             About
           </button>
 
+
           {/* =================================================
-              PRODUCTS DROPDOWN
+              SERVICES DROPDOWN
           ================================================= */}
 
           <div
             className="nav-dropdown"
-            onMouseEnter={() => setProductsOpen(true)}
-            onMouseLeave={() => setProductsOpen(false)}
+            onMouseEnter={() =>
+              setOpenDropdown("services")
+            }
+            onMouseLeave={() =>
+              setOpenDropdown(null)
+            }
           >
 
             <button
               type="button"
               className="nav-dropdown-trigger"
-              onClick={() => setProductsOpen(!productsOpen)}
+              onClick={() =>
+                toggleDropdown("services")
+              }
             >
-              Products
+
+              Services
 
               <ChevronDown
                 size={14}
                 className={
-                  productsOpen
+                  openDropdown === "services"
                     ? "rotate-arrow"
                     : ""
                 }
               />
+
             </button>
 
-            <div
-              className={`nav-dropdown-menu ${
-                productsOpen
-                  ? "dropdown-visible"
-                  : ""
-              }`}
-            >
-              {productLinks.map((item) => (
-                <button
-                  type="button"
-                  key={item.label}
-                  onClick={() =>
-                    scrollToSection(item.target)
-                  }
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
+            {renderDropdown(
+              serviceLinks,
+              "services"
+            )}
 
           </div>
 
-          {/* SERVICES */}
 
-          <button
-            type="button"
-            onClick={() => scrollToSection("services")}
-          >
-            Services
-          </button>
+          {/* =================================================
+              CAMPAIGN MATERIALS
+          ================================================= */}
 
-          {/* BOOTH PACKET */}
-
-          <button
-            type="button"
-            onClick={() =>
-              scrollToSection("booth-packet")
+          <div
+            className="nav-dropdown"
+            onMouseEnter={() =>
+              setOpenDropdown(
+                "campaign-materials"
+              )
+            }
+            onMouseLeave={() =>
+              setOpenDropdown(null)
             }
           >
-            Booth Packet
-          </button>
 
-          {/* CAMPAIGN VEHICLES */}
+            <button
+              type="button"
+              className="nav-dropdown-trigger"
+              onClick={() =>
+                toggleDropdown(
+                  "campaign-materials"
+                )
+              }
+            >
 
-          <button
-            type="button"
-            onClick={() =>
-              scrollToSection("campaign-vehicles")
+              Campaign Materials
+
+              <ChevronDown
+                size={14}
+                className={
+                  openDropdown ===
+                  "campaign-materials"
+                    ? "rotate-arrow"
+                    : ""
+                }
+              />
+
+            </button>
+
+            {renderDropdown(
+              campaignMaterialLinks,
+              "campaign-materials"
+            )}
+
+          </div>
+
+
+          {/* =================================================
+              CAMPAIGN SUPPORT
+          ================================================= */}
+
+          <div
+            className="nav-dropdown"
+            onMouseEnter={() =>
+              setOpenDropdown(
+                "campaign-support"
+              )
+            }
+            onMouseLeave={() =>
+              setOpenDropdown(null)
             }
           >
-            Campaign Vehicles
-          </button>
+
+            <button
+              type="button"
+              className="nav-dropdown-trigger"
+              onClick={() =>
+                toggleDropdown(
+                  "campaign-support"
+                )
+              }
+            >
+
+              Campaign Support
+
+              <ChevronDown
+                size={14}
+                className={
+                  openDropdown ===
+                  "campaign-support"
+                    ? "rotate-arrow"
+                    : ""
+                }
+              />
+
+            </button>
+
+            {renderDropdown(
+              campaignSupportLinks,
+              "campaign-support"
+            )}
+
+          </div>
+
 
           {/* GALLERY */}
 
           <button
             type="button"
-            onClick={() => scrollToSection("gallery")}
+            onClick={() =>
+              scrollToSection("gallery")
+            }
           >
             Gallery
           </button>
+
 
           {/* CONTACT */}
 
           <button
             type="button"
-            onClick={() => scrollToSection("contact")}
+            onClick={() =>
+              scrollToSection("contact")
+            }
           >
             Contact
           </button>
 
         </nav>
 
+
         {/* =================================================
             DESKTOP ACTIONS
         ================================================= */}
 
         <div className="navbar-actions">
+
 
           {/* CALL */}
 
@@ -234,26 +493,32 @@ export default function Navbar() {
             className="navbar-call"
             aria-label="Call Mukhiya Election"
           >
+
             <Phone size={16} />
 
             <span>
               Call Now
             </span>
+
           </a>
+
 
           {/* WHATSAPP */}
 
           <a
             href="https://wa.me/919820280493"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="navbar-whatsapp"
             aria-label="WhatsApp Mukhiya Election"
           >
+
             <MessageCircle size={16} />
+
           </a>
 
         </div>
+
 
         {/* =================================================
             MOBILE MENU BUTTON
@@ -262,7 +527,9 @@ export default function Navbar() {
         <button
           type="button"
           className="mobile-menu-button"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() =>
+            setMenuOpen(!menuOpen)
+          }
           aria-label={
             menuOpen
               ? "Close menu"
@@ -270,14 +537,17 @@ export default function Navbar() {
           }
           aria-expanded={menuOpen}
         >
+
           {menuOpen ? (
             <X size={23} />
           ) : (
             <Menu size={23} />
           )}
+
         </button>
 
       </div>
+
 
       {/* =================================================
           MOBILE NAVIGATION
@@ -293,26 +563,33 @@ export default function Navbar() {
 
         <div className="mobile-nav-inner">
 
+
           {/* HOME */}
 
           <button
             type="button"
-            onClick={() => scrollToSection("top")}
+            onClick={() =>
+              scrollToSection("top")
+            }
           >
             Home
           </button>
+
 
           {/* ABOUT */}
 
           <button
             type="button"
-            onClick={() => scrollToSection("about")}
+            onClick={() =>
+              scrollToSection("about")
+            }
           >
             About
           </button>
 
+
           {/* =================================================
-              MOBILE PRODUCTS
+              MOBILE SERVICES
           ================================================= */}
 
           <div className="mobile-product-wrapper">
@@ -321,77 +598,184 @@ export default function Navbar() {
               type="button"
               className="mobile-product-trigger"
               onClick={() =>
-                setProductsOpen(!productsOpen)
+                toggleDropdown("services")
               }
             >
+
               <span>
-                Products
+                Services
               </span>
 
               <ChevronDown
                 size={17}
                 className={
-                  productsOpen
+                  openDropdown === "services"
                     ? "rotate-arrow"
                     : ""
                 }
               />
+
             </button>
+
 
             <div
               className={`mobile-product-menu ${
-                productsOpen
+                openDropdown === "services"
                   ? "mobile-product-menu-open"
                   : ""
               }`}
             >
-              {productLinks.map((item) => (
+
+              {serviceLinks.map((item) => (
+
                 <button
-                  type="button"
                   key={item.label}
+                  type="button"
                   onClick={() =>
-                    scrollToSection(item.target)
+                    scrollToSection(
+                      item.target
+                    )
                   }
                 >
                   {item.label}
                 </button>
+
               ))}
+
             </div>
 
           </div>
 
-          {/* SERVICES */}
 
-          <button
-            type="button"
-            onClick={() =>
-              scrollToSection("services")
-            }
-          >
-            Services
-          </button>
+          {/* =================================================
+              MOBILE CAMPAIGN MATERIALS
+          ================================================= */}
 
-          {/* BOOTH PACKET */}
+          <div className="mobile-product-wrapper">
 
-          <button
-            type="button"
-            onClick={() =>
-              scrollToSection("booth-packet")
-            }
-          >
-            Booth Packet
-          </button>
+            <button
+              type="button"
+              className="mobile-product-trigger"
+              onClick={() =>
+                toggleDropdown(
+                  "campaign-materials"
+                )
+              }
+            >
 
-          {/* CAMPAIGN VEHICLES */}
+              <span>
+                Campaign Materials
+              </span>
 
-          <button
-            type="button"
-            onClick={() =>
-              scrollToSection("campaign-vehicles")
-            }
-          >
-            Campaign Vehicles
-          </button>
+              <ChevronDown
+                size={17}
+                className={
+                  openDropdown ===
+                  "campaign-materials"
+                    ? "rotate-arrow"
+                    : ""
+                }
+              />
+
+            </button>
+
+
+            <div
+              className={`mobile-product-menu ${
+                openDropdown ===
+                "campaign-materials"
+                  ? "mobile-product-menu-open"
+                  : ""
+              }`}
+            >
+
+              {campaignMaterialLinks.map(
+                (item) => (
+
+                  <button
+                    key={item.label}
+                    type="button"
+                    onClick={() =>
+                      scrollToSection(
+                        item.target
+                      )
+                    }
+                  >
+                    {item.label}
+                  </button>
+
+                )
+              )}
+
+            </div>
+
+          </div>
+
+
+          {/* =================================================
+              MOBILE CAMPAIGN SUPPORT
+          ================================================= */}
+
+          <div className="mobile-product-wrapper">
+
+            <button
+              type="button"
+              className="mobile-product-trigger"
+              onClick={() =>
+                toggleDropdown(
+                  "campaign-support"
+                )
+              }
+            >
+
+              <span>
+                Campaign Support
+              </span>
+
+              <ChevronDown
+                size={17}
+                className={
+                  openDropdown ===
+                  "campaign-support"
+                    ? "rotate-arrow"
+                    : ""
+                }
+              />
+
+            </button>
+
+
+            <div
+              className={`mobile-product-menu ${
+                openDropdown ===
+                "campaign-support"
+                  ? "mobile-product-menu-open"
+                  : ""
+              }`}
+            >
+
+              {campaignSupportLinks.map(
+                (item) => (
+
+                  <button
+                    key={item.label}
+                    type="button"
+                    onClick={() =>
+                      scrollToSection(
+                        item.target
+                      )
+                    }
+                  >
+                    {item.label}
+                  </button>
+
+                )
+              )}
+
+            </div>
+
+          </div>
+
 
           {/* GALLERY */}
 
@@ -404,6 +788,7 @@ export default function Navbar() {
             Gallery
           </button>
 
+
           {/* CONTACT */}
 
           <button
@@ -415,11 +800,13 @@ export default function Navbar() {
             Contact
           </button>
 
+
           {/* =================================================
               MOBILE ACTIONS
           ================================================= */}
 
           <div className="mobile-nav-actions">
+
 
             {/* CALL */}
 
@@ -427,23 +814,29 @@ export default function Navbar() {
               href="tel:+919820280493"
               className="mobile-call"
             >
+
               <Phone size={17} />
+
               Call Now
+
             </a>
+
 
             {/* WHATSAPP */}
 
             <a
               href="https://wa.me/919820280493"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="mobile-whatsapp"
             >
+
               <MessageCircle size={17} />
 
               WhatsApp
 
               <ArrowUpRight size={15} />
+
             </a>
 
           </div>

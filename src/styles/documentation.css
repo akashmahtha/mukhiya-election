@@ -1,43 +1,55 @@
 /* =====================================================
-   CAMPAIGN VEHICLES SECTION
+   DOCUMENTATION SECTION
 ===================================================== */
 
-.campaign-vehicles-section {
+.documentation-section {
   position: relative;
   padding: 110px 30px;
   background: #ffffff;
   overflow: hidden;
 }
 
-.campaign-vehicles-section::before {
+.documentation-section::before {
   content: "";
   position: absolute;
+
   width: 520px;
   height: 520px;
+
   top: -280px;
   right: -250px;
+
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(20, 83, 45, 0.06),
-    transparent 70%
-  );
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(20, 83, 45, 0.06),
+      transparent 70%
+    );
+
   pointer-events: none;
 }
 
-.campaign-vehicles-section::after {
+.documentation-section::after {
   content: "";
   position: absolute;
+
   width: 430px;
   height: 430px;
-  bottom: -260px;
+
+  bottom: -270px;
   left: -250px;
+
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 107, 0, 0.05),
-    transparent 70%
-  );
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 107, 0, 0.05),
+      transparent 70%
+    );
+
   pointer-events: none;
 }
 
@@ -46,7 +58,7 @@
    CONTAINER
 ===================================================== */
 
-.campaign-vehicles-container {
+.documentation-container {
   position: relative;
   z-index: 2;
 
@@ -61,7 +73,7 @@
    HEADER
 ===================================================== */
 
-.campaign-vehicles-header {
+.documentation-header {
   max-width: 780px;
 
   margin: 0 auto 55px;
@@ -69,7 +81,7 @@
   text-align: center;
 }
 
-.campaign-vehicles-header .section-label {
+.documentation-header .section-label {
   color: var(--green, #14532d);
 
   font-size: 9px;
@@ -80,7 +92,7 @@
   text-transform: uppercase;
 }
 
-.campaign-vehicles-header h2 {
+.documentation-header h2 {
   margin-top: 15px;
 
   color: var(--green, #14532d);
@@ -93,7 +105,7 @@
   letter-spacing: -2.5px;
 }
 
-.campaign-vehicles-header h2 span {
+.documentation-header h2 span {
   display: block;
 
   margin-top: 7px;
@@ -101,8 +113,8 @@
   color: var(--orange, #ff6b00);
 }
 
-.campaign-vehicles-header p {
-  max-width: 650px;
+.documentation-header p {
+  max-width: 660px;
 
   margin: 18px auto 0;
 
@@ -115,10 +127,10 @@
 
 
 /* =====================================================
-   MAIN FEATURE
+   FEATURE
 ===================================================== */
 
-.campaign-vehicle-feature {
+.documentation-feature {
   min-height: 465px;
 
   display: grid;
@@ -151,7 +163,7 @@
    FEATURE CONTENT
 ===================================================== */
 
-.campaign-vehicle-feature-content {
+.documentation-feature-content {
   position: relative;
   z-index: 3;
 
@@ -163,7 +175,7 @@
   justify-content: center;
 }
 
-.campaign-vehicle-feature-label {
+.documentation-feature-label {
   color: #ff9955;
 
   font-size: 8px;
@@ -172,7 +184,7 @@
   letter-spacing: 1.8px;
 }
 
-.campaign-vehicle-feature-content h3 {
+.documentation-feature-content h3 {
   margin-top: 16px;
 
   color: #ffffff;
@@ -185,13 +197,13 @@
   letter-spacing: -2px;
 }
 
-.campaign-vehicle-feature-content h3 span {
+.documentation-feature-content h3 span {
   display: block;
 
   color: #ff9955;
 }
 
-.campaign-vehicle-feature-content > p {
+.documentation-feature-content > p {
   max-width: 510px;
 
   margin-top: 20px;
@@ -209,7 +221,7 @@
    FEATURE POINTS
 ===================================================== */
 
-.campaign-vehicle-points {
+.documentation-points {
   margin-top: 25px;
 
   display: flex;
@@ -219,7 +231,7 @@
   gap: 8px;
 }
 
-.campaign-vehicle-points div {
+.documentation-points div {
   min-height: 34px;
 
   padding: 0 11px;
@@ -247,7 +259,7 @@
   font-weight: 700;
 }
 
-.campaign-vehicle-points svg {
+.documentation-points svg {
   color: #ff9955;
 }
 
@@ -256,7 +268,7 @@
    FEATURE BUTTON
 ===================================================== */
 
-.campaign-vehicle-btn {
+.documentation-btn {
   width: fit-content;
 
   margin-top: 25px;
@@ -292,7 +304,7 @@
     transform 0.25s ease;
 }
 
-.campaign-vehicle-btn:hover {
+.documentation-btn:hover {
   color: #ffffff;
 
   background:
@@ -307,7 +319,7 @@
    FEATURE VISUAL
 ===================================================== */
 
-.campaign-vehicle-feature-visual {
+.documentation-feature-visual {
   position: relative;
 
   min-height: 465px;
@@ -333,11 +345,11 @@
    GLOW
 ===================================================== */
 
-.campaign-vehicle-glow {
+.documentation-glow {
   position: absolute;
 
-  width: 330px;
-  height: 330px;
+  width: 350px;
+  height: 350px;
 
   border-radius: 50%;
 
@@ -356,7 +368,7 @@
    CIRCLES
 ===================================================== */
 
-.campaign-vehicle-circle {
+.documentation-circle {
   position: absolute;
 
   border:
@@ -366,52 +378,46 @@
   border-radius: 50%;
 }
 
-.circle-one {
-  width: 420px;
-  height: 420px;
+.documentation-circle-one {
+  width: 430px;
+  height: 430px;
 }
 
-.circle-two {
-  width: 290px;
-  height: 290px;
+.documentation-circle-two {
+  width: 295px;
+  height: 295px;
 }
 
 
 /* =====================================================
-   VISUAL CARD
+   DASHBOARD
 ===================================================== */
 
-.campaign-vehicle-visual-card {
+.documentation-dashboard {
   position: relative;
+
   z-index: 5;
 
-  width: 310px;
-  height: 300px;
+  width: 335px;
 
-  display: flex;
+  min-height: 310px;
 
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
+  padding: 20px;
 
   background:
-    rgba(255, 255, 255, 0.07);
+    rgba(255, 255, 255, 0.08);
 
   border:
     1px solid
-    rgba(255, 255, 255, 0.12);
+    rgba(255, 255, 255, 0.13);
 
-  border-radius: 18px;
+  border-radius: 17px;
 
   backdrop-filter: blur(12px);
 
   box-shadow:
     0 30px 70px
-    rgba(0, 0, 0, 0.22);
+    rgba(0, 0, 0, 0.25);
 
   transform: rotate(3deg);
 
@@ -419,56 +425,256 @@
     transform 0.35s ease;
 }
 
-.campaign-vehicle-feature:hover
-.campaign-vehicle-visual-card {
+.documentation-feature:hover
+.documentation-dashboard {
   transform:
     rotate(0deg)
     translateY(-6px);
 }
 
-.campaign-vehicle-visual-card svg {
-  color: #ff9955;
 
-  margin-bottom: 22px;
-}
+/* =====================================================
+   DASHBOARD TOP
+===================================================== */
 
-.campaign-vehicle-visual-card strong {
-  color: #ffffff;
+.documentation-dashboard-top {
+  display: flex;
 
-  font-size: 22px;
+  align-items: center;
+
+  justify-content: space-between;
+
+  color:
+    rgba(255, 255, 255, 0.62);
+
+  font-size: 7px;
 
   font-weight: 900;
 
-  letter-spacing: -0.7px;
+  letter-spacing: 1.4px;
 }
 
-.campaign-vehicle-visual-card span {
-  margin-top: 8px;
-
-  color:
-    rgba(255, 255, 255, 0.5);
-
-  font-size: 8px;
-
-  letter-spacing: 1px;
-
-  text-transform: uppercase;
+.documentation-dashboard-top svg {
+  color: #ff9955;
 }
 
 
 /* =====================================================
-   SERVICE TYPES
+   DASHBOARD MAIN
 ===================================================== */
 
-.campaign-vehicle-services {
+.documentation-dashboard-main {
+  margin-top: 22px;
+
+  padding: 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  background:
+    rgba(255, 255, 255, 0.055);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 10px;
+}
+
+.documentation-camera-box {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff9955,
+      #d95d0b
+    );
+
+  border-radius: 10px;
+}
+
+.documentation-dashboard-main > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.documentation-dashboard-main strong {
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+.documentation-dashboard-main span {
+  margin-top: 4px;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+
+  font-size: 7px;
+}
+
+
+/* =====================================================
+   DASHBOARD LINES
+===================================================== */
+
+.documentation-dashboard-lines {
+  margin-top: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.documentation-dashboard-lines span {
+  height: 7px;
+
+  display: block;
+
+  background:
+    rgba(255, 255, 255, 0.09);
+
+  border-radius: 5px;
+}
+
+.documentation-dashboard-lines span:nth-child(1) {
+  width: 88%;
+}
+
+.documentation-dashboard-lines span:nth-child(2) {
+  width: 68%;
+}
+
+.documentation-dashboard-lines span:nth-child(3) {
+  width: 78%;
+}
+
+
+/* =====================================================
+   DASHBOARD BOTTOM
+===================================================== */
+
+.documentation-dashboard-bottom {
+  margin-top: 22px;
+
   display: grid;
 
   grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+    repeat(3, 1fr);
 
-  gap: 12px;
+  gap: 7px;
+}
 
-  margin-bottom: 18px;
+.documentation-dashboard-bottom div {
+  min-height: 60px;
+
+  padding: 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  background:
+    rgba(255, 255, 255, 0.055);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 8px;
+}
+
+.documentation-dashboard-bottom strong {
+  color: #ff9955;
+
+  font-size: 8px;
+
+  font-weight: 900;
+}
+
+.documentation-dashboard-bottom small {
+  margin-top: 4px;
+
+  color:
+    rgba(255, 255, 255, 0.4);
+
+  font-size: 6px;
+}
+
+
+/* =====================================================
+   SERVICES HEADING
+===================================================== */
+
+.documentation-services-heading {
+  margin-bottom: 25px;
+}
+
+.documentation-services-heading > span {
+  color:
+    var(--orange, #ff6b00);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+.documentation-services-heading h3 {
+  margin-top: 7px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 28px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.documentation-services-heading h3 strong {
+  margin-left: 6px;
+
+  color:
+    var(--orange, #ff6b00);
+}
+
+
+/* =====================================================
+   SERVICES GRID
+===================================================== */
+
+.documentation-services-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 10px;
 }
 
 
@@ -476,17 +682,21 @@
    SERVICE CARD
 ===================================================== */
 
-.campaign-vehicle-service-card {
-  min-height: 250px;
+.documentation-service-card {
+  min-height: 210px;
 
-  padding: 25px;
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
 
   background: #ffffff;
 
   border:
     1px solid #e3e8e2;
 
-  border-radius: 15px;
+  border-radius: 13px;
 
   transition:
     transform 0.3s ease,
@@ -494,7 +704,7 @@
     border-color 0.3s ease;
 }
 
-.campaign-vehicle-service-card:hover {
+.documentation-service-card:hover {
   transform:
     translateY(-5px);
 
@@ -502,18 +712,36 @@
     rgba(255, 107, 0, 0.2);
 
   box-shadow:
-    0 18px 40px
-    rgba(0, 0, 0, 0.07);
+    0 17px 38px
+    rgba(0, 0, 0, 0.065);
 }
 
 
 /* =====================================================
-   SERVICE ICON
+   SERVICE TOP
 ===================================================== */
 
-.campaign-vehicle-service-icon {
-  width: 43px;
-  height: 43px;
+.documentation-service-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.documentation-service-top > span {
+  color: #b7bdb7;
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.documentation-service-icon {
+  width: 38px;
+  height: 38px;
 
   display: flex;
 
@@ -527,16 +755,16 @@
   background:
     #fff3e9;
 
-  border-radius: 10px;
+  border-radius: 9px;
 
   transition:
-    background 0.25s ease,
     color 0.25s ease,
+    background 0.25s ease,
     transform 0.25s ease;
 }
 
-.campaign-vehicle-service-card:hover
-.campaign-vehicle-service-icon {
+.documentation-service-card:hover
+.documentation-service-icon {
   color: #ffffff;
 
   background:
@@ -551,263 +779,20 @@
    SERVICE CONTENT
 ===================================================== */
 
-.campaign-vehicle-service-card h3 {
-  margin-top: 18px;
+.documentation-service-card h4 {
+  margin-top: 16px;
 
   color:
     var(--green, #14532d);
 
-  font-size: 17px;
+  font-size: 14px;
 
   font-weight: 900;
 
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
-.campaign-vehicle-service-hindi {
-  margin-top: 4px;
-
-  color:
-    var(--orange, #ff6b00);
-
-  font-family:
-    "Noto Sans Devanagari",
-    "Poppins",
-    sans-serif;
-
-  font-size: 8px;
-
-  font-weight: 700;
-}
-
-
-/* =====================================================
-   SERVICE LIST
-===================================================== */
-
-.campaign-vehicle-service-list {
-  margin-top: 18px;
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 8px;
-}
-
-.campaign-vehicle-service-list div {
-  display: flex;
-
-  align-items: center;
-
-  gap: 7px;
-
-  color: #777;
-
-  font-size: 8px;
-
-  line-height: 1.4;
-}
-
-.campaign-vehicle-service-list div span {
-  width: 5px;
-  height: 5px;
-
-  flex-shrink: 0;
-
-  background:
-    var(--orange, #ff6b00);
-
-  border-radius: 50%;
-}
-
-
-/* =====================================================
-   VEHICLE GALLERY
-===================================================== */
-
-.campaign-vehicle-gallery {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 12px;
-}
-
-
-/* =====================================================
-   VEHICLE CARD
-===================================================== */
-
-.campaign-vehicle-card {
-  overflow: hidden;
-
-  background: #ffffff;
-
-  border:
-    1px solid #e3e8e2;
-
-  border-radius: 15px;
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.campaign-vehicle-card:hover {
-  transform:
-    translateY(-5px);
-
-  box-shadow:
-    0 18px 42px
-    rgba(0, 0, 0, 0.08);
-}
-
-
-/* =====================================================
-   VEHICLE IMAGE
-===================================================== */
-
-.campaign-vehicle-image {
-  position: relative;
-
-  height: 240px;
-
-  overflow: hidden;
-
-  background:
-    #e8ece7;
-}
-
-.campaign-vehicle-image img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
-
-  transition:
-    transform 0.55s ease;
-}
-
-.campaign-vehicle-card:hover
-.campaign-vehicle-image img {
-  transform:
-    scale(1.06);
-}
-
-
-/* =====================================================
-   IMAGE OVERLAY
-===================================================== */
-
-.campaign-vehicle-image-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.52),
-      rgba(0, 0, 0, 0.02) 65%
-    );
-}
-
-
-/* =====================================================
-   TAG
-===================================================== */
-
-.campaign-vehicle-tag {
-  position: absolute;
-
-  top: 13px;
-  left: 13px;
-
-  padding: 6px 9px;
-
-  color: #ffffff;
-
-  background:
-    rgba(20, 83, 45, 0.9);
-
-  border-radius: 6px;
-
-  font-size: 7px;
-
-  font-weight: 900;
-
-  letter-spacing: 0.8px;
-
-  text-transform: uppercase;
-}
-
-
-/* =====================================================
-   IMAGE ICON
-===================================================== */
-
-.campaign-vehicle-image-icon {
-  position: absolute;
-
-  right: 14px;
-  bottom: 14px;
-
-  width: 37px;
-  height: 37px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  color: #ffffff;
-
-  background:
-    var(--orange, #ff6b00);
-
-  border-radius: 50%;
-
-  box-shadow:
-    0 7px 20px
-    rgba(0, 0, 0, 0.18);
-
-  transition:
-    transform 0.25s ease;
-}
-
-.campaign-vehicle-card:hover
-.campaign-vehicle-image-icon {
-  transform:
-    scale(1.08);
-}
-
-
-/* =====================================================
-   CARD CONTENT
-===================================================== */
-
-.campaign-vehicle-card-content {
-  padding: 21px;
-}
-
-.campaign-vehicle-card-content h3 {
-  color:
-    var(--green, #14532d);
-
-  font-size: 17px;
-
-  font-weight: 900;
-
-  line-height: 1.25;
-}
-
-.campaign-vehicle-card-hindi {
+.documentation-service-hindi {
   margin-top: 4px;
 
   color:
@@ -818,25 +803,26 @@
   font-weight: 700;
 }
 
-.campaign-vehicle-card-content p {
-  margin-top: 10px;
+.documentation-service-card p {
+  margin-top: 9px;
 
   color: #777;
 
   font-size: 8px;
 
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 
 /* =====================================================
-   CARD LINK
+   SERVICE LINK
 ===================================================== */
 
-.campaign-vehicle-card-link {
+.documentation-service-link {
   width: fit-content;
 
-  margin-top: 17px;
+  margin-top: auto;
+  padding-top: 12px;
 
   display: inline-flex;
 
@@ -858,7 +844,7 @@
     transform 0.25s ease;
 }
 
-.campaign-vehicle-card-link:hover {
+.documentation-service-link:hover {
   color:
     var(--orange, #ff6b00);
 
@@ -868,10 +854,193 @@
 
 
 /* =====================================================
-   BOTTOM CTA
+   REPORTING SECTION
 ===================================================== */
 
-.campaign-vehicle-bottom {
+.documentation-reporting {
+  margin-top: 18px;
+
+  padding: 30px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.85fr 1.15fr;
+
+  gap: 35px;
+
+  background:
+    #f7f8f5;
+
+  border:
+    1px solid #e3e8e2;
+
+  border-radius: 16px;
+}
+
+
+/* =====================================================
+   REPORTING CONTENT
+===================================================== */
+
+.documentation-reporting-content > span {
+  color:
+    var(--orange, #ff6b00);
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+.documentation-reporting-content h3 {
+  margin-top: 8px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 27px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.documentation-reporting-content h3 strong {
+  display: block;
+
+  margin-top: 3px;
+
+  color:
+    var(--orange, #ff6b00);
+}
+
+.documentation-reporting-content > p {
+  max-width: 480px;
+
+  margin-top: 12px;
+
+  color: #777;
+
+  font-size: 9px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   REPORTING META
+===================================================== */
+
+.documentation-reporting-meta {
+  margin-top: 20px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.documentation-reporting-meta div {
+  min-height: 34px;
+
+  padding: 0 11px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color:
+    var(--green, #14532d);
+
+  background: #ffffff;
+
+  border:
+    1px solid #e3e8e2;
+
+  border-radius: 7px;
+
+  font-size: 8px;
+
+  font-weight: 800;
+}
+
+.documentation-reporting-meta svg {
+  color:
+    var(--orange, #ff6b00);
+}
+
+
+/* =====================================================
+   REPORTING LIST
+===================================================== */
+
+.documentation-reporting-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
+
+  align-content: center;
+}
+
+.documentation-reporting-item {
+  min-height: 45px;
+
+  padding: 0 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color:
+    #666;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e3e8e2;
+
+  border-radius: 8px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.documentation-reporting-item:hover {
+  border-color:
+    rgba(255, 107, 0, 0.2);
+
+  transform:
+    translateX(3px);
+}
+
+.documentation-reporting-item svg {
+  flex-shrink: 0;
+
+  color:
+    var(--orange, #ff6b00);
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.documentation-cta {
   position: relative;
 
   margin-top: 18px;
@@ -900,7 +1069,7 @@
   overflow: hidden;
 }
 
-.campaign-vehicle-bottom::before {
+.documentation-cta::before {
   content: "";
 
   position: absolute;
@@ -918,13 +1087,13 @@
   border-radius: 50%;
 }
 
-.campaign-vehicle-bottom > div {
+.documentation-cta > div {
   position: relative;
 
   z-index: 2;
 }
 
-.campaign-vehicle-bottom > div > span {
+.documentation-cta > div > span {
   color: #ff9955;
 
   font-size: 8px;
@@ -934,7 +1103,7 @@
   letter-spacing: 1.6px;
 }
 
-.campaign-vehicle-bottom h3 {
+.documentation-cta h3 {
   margin-top: 7px;
 
   color: #ffffff;
@@ -946,13 +1115,13 @@
   letter-spacing: -1px;
 }
 
-.campaign-vehicle-bottom h3 strong {
+.documentation-cta h3 strong {
   margin-left: 5px;
 
   color: #ff9955;
 }
 
-.campaign-vehicle-bottom p {
+.documentation-cta p {
   max-width: 600px;
 
   margin-top: 8px;
@@ -967,10 +1136,10 @@
 
 
 /* =====================================================
-   BOTTOM BUTTON
+   CTA BUTTON
 ===================================================== */
 
-.campaign-vehicle-bottom-btn {
+.documentation-cta-btn {
   position: relative;
 
   z-index: 3;
@@ -1008,7 +1177,7 @@
     transform 0.25s ease;
 }
 
-.campaign-vehicle-bottom-btn:hover {
+.documentation-cta-btn:hover {
   color: #ffffff;
 
   background:
@@ -1025,17 +1194,12 @@
 
 @media (max-width: 1100px) {
 
-  .campaign-vehicles-section {
+  .documentation-section {
     padding:
       90px 25px;
   }
 
-  .campaign-vehicle-services {
-    grid-template-columns:
-      repeat(3, minmax(0, 1fr));
-  }
-
-  .campaign-vehicle-gallery {
+  .documentation-services-grid {
     grid-template-columns:
       repeat(3, minmax(0, 1fr));
   }
@@ -1049,33 +1213,32 @@
 
 @media (max-width: 850px) {
 
-  .campaign-vehicles-section {
+  .documentation-section {
     padding:
       80px 22px;
   }
 
-  .campaign-vehicle-feature {
+  .documentation-feature {
     grid-template-columns: 1fr;
 
     min-height: auto;
   }
 
-  .campaign-vehicle-feature-content {
+  .documentation-feature-content {
     padding: 40px;
   }
 
-  .campaign-vehicle-feature-visual {
+  .documentation-feature-visual {
     min-height: 390px;
   }
 
-  .campaign-vehicle-services {
+  .documentation-services-grid {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
   }
 
-  .campaign-vehicle-gallery {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+  .documentation-reporting {
+    grid-template-columns: 1fr;
   }
 
 }
@@ -1087,56 +1250,55 @@
 
 @media (max-width: 650px) {
 
-  .campaign-vehicles-section {
+  .documentation-section {
     padding:
       70px 18px;
   }
 
-  .campaign-vehicles-header {
+  .documentation-header {
     margin-bottom: 35px;
   }
 
-  .campaign-vehicles-header h2 {
+  .documentation-header h2 {
     font-size:
       clamp(33px, 9vw, 47px);
 
     letter-spacing: -1.5px;
   }
 
-  .campaign-vehicles-header p {
+  .documentation-header p {
     font-size: 10px;
   }
 
-  .campaign-vehicle-feature-content {
+  .documentation-feature-content {
     padding:
       30px 25px;
   }
 
-  .campaign-vehicle-feature-content h3 {
+  .documentation-feature-content h3 {
     font-size: 37px;
 
     letter-spacing: -1.3px;
   }
 
-  .campaign-vehicle-feature-visual {
+  .documentation-feature-visual {
     min-height: 350px;
   }
 
-  .campaign-vehicle-services {
+  .documentation-services-grid {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
 
-    gap: 10px;
+    gap: 9px;
   }
 
-  .campaign-vehicle-gallery {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+  .documentation-reporting {
+    padding: 25px;
 
-    gap: 10px;
+    gap: 25px;
   }
 
-  .campaign-vehicle-bottom {
+  .documentation-cta {
     flex-direction: column;
 
     align-items: flex-start;
@@ -1144,7 +1306,7 @@
     padding: 25px;
   }
 
-  .campaign-vehicle-bottom-btn {
+  .documentation-cta-btn {
     width: 100%;
   }
 
@@ -1157,7 +1319,7 @@
 
 @media (max-width: 560px) {
 
-  .campaign-vehicles-section {
+  .documentation-section {
     padding:
       65px 16px;
   }
@@ -1165,18 +1327,18 @@
 
   /* Header */
 
-  .campaign-vehicles-header h2 {
+  .documentation-header h2 {
     font-size:
       clamp(30px, 9.5vw, 42px);
 
     line-height: 1.08;
   }
 
-  .campaign-vehicles-header h2 span {
+  .documentation-header h2 span {
     margin-top: 5px;
   }
 
-  .campaign-vehicles-header p {
+  .documentation-header p {
     margin-top: 14px;
 
     font-size: 9px;
@@ -1187,29 +1349,29 @@
 
   /* Feature */
 
-  .campaign-vehicle-feature {
-    margin-bottom: 42px;
+  .documentation-feature {
+    margin-bottom: 40px;
 
     border-radius: 15px;
   }
 
-  .campaign-vehicle-feature-content {
+  .documentation-feature-content {
     padding:
       26px 20px;
   }
 
-  .campaign-vehicle-feature-label {
+  .documentation-feature-label {
     font-size: 7px;
   }
 
-  .campaign-vehicle-feature-content h3 {
+  .documentation-feature-content h3 {
     margin-top: 13px;
 
     font-size:
       clamp(30px, 9vw, 38px);
   }
 
-  .campaign-vehicle-feature-content > p {
+  .documentation-feature-content > p {
     margin-top: 14px;
 
     font-size: 9px;
@@ -1217,7 +1379,7 @@
     line-height: 1.8;
   }
 
-  .campaign-vehicle-points {
+  .documentation-points {
     margin-top: 18px;
 
     flex-direction: column;
@@ -1225,13 +1387,13 @@
     align-items: flex-start;
   }
 
-  .campaign-vehicle-points div {
+  .documentation-points div {
     min-height: 31px;
 
     font-size: 8px;
   }
 
-  .campaign-vehicle-btn {
+  .documentation-btn {
     margin-top: 19px;
 
     min-height: 41px;
@@ -1242,110 +1404,158 @@
 
   /* Visual */
 
-  .campaign-vehicle-feature-visual {
-    min-height: 310px;
+  .documentation-feature-visual {
+    min-height: 320px;
   }
 
-  .campaign-vehicle-circle.circle-one {
+  .documentation-circle-one {
     width: 310px;
     height: 310px;
   }
 
-  .campaign-vehicle-circle.circle-two {
+  .documentation-circle-two {
     width: 220px;
     height: 220px;
   }
 
-  .campaign-vehicle-glow {
+  .documentation-glow {
     width: 270px;
     height: 270px;
   }
 
-  .campaign-vehicle-visual-card {
-    width: 230px;
-    height: 230px;
+  .documentation-dashboard {
+    width: 245px;
 
-    border-radius: 15px;
+    min-height: 275px;
+
+    padding: 14px;
+
+    border-radius: 14px;
   }
 
-  .campaign-vehicle-visual-card svg {
-    width: 38px;
-    height: 38px;
+  .documentation-dashboard-main {
+    margin-top: 17px;
 
-    margin-bottom: 16px;
+    padding: 11px;
   }
 
-  .campaign-vehicle-visual-card strong {
-    font-size: 18px;
+  .documentation-camera-box {
+    width: 42px;
+    height: 42px;
   }
 
-  .campaign-vehicle-visual-card span {
-    font-size: 7px;
+  .documentation-dashboard-main strong {
+    font-size: 10px;
+  }
+
+  .documentation-dashboard-bottom {
+    margin-top: 17px;
+  }
+
+  .documentation-dashboard-bottom div {
+    min-height: 52px;
+
+    padding: 8px;
   }
 
 
   /* Services */
 
-  .campaign-vehicle-services {
+  .documentation-services-heading {
+    margin-bottom: 18px;
+  }
+
+  .documentation-services-heading h3 {
+    font-size: 23px;
+  }
+
+  .documentation-services-heading h3 strong {
+    display: block;
+
+    margin-left: 0;
+
+    margin-top: 3px;
+  }
+
+  .documentation-services-grid {
     grid-template-columns: 1fr;
 
-    gap: 9px;
+    gap: 8px;
   }
 
-  .campaign-vehicle-service-card {
-    min-height: 190px;
+  .documentation-service-card {
+    min-height: 175px;
 
-    padding: 20px;
+    padding: 18px;
 
-    border-radius: 13px;
+    border-radius: 12px;
   }
 
-  .campaign-vehicle-service-icon {
-    width: 40px;
-    height: 40px;
+  .documentation-service-icon {
+    width: 36px;
+    height: 36px;
   }
 
-  .campaign-vehicle-service-card h3 {
-    margin-top: 15px;
-
-    font-size: 16px;
-  }
-
-  .campaign-vehicle-service-list {
+  .documentation-service-card h4 {
     margin-top: 14px;
+
+    font-size: 15px;
+  }
+
+  .documentation-service-card p {
+    font-size: 8px;
+  }
+
+
+  /* Reporting */
+
+  .documentation-reporting {
+    margin-top: 12px;
+
+    padding:
+      21px 18px;
+
+    gap: 20px;
+
+    border-radius: 14px;
+  }
+
+  .documentation-reporting-content h3 {
+    font-size: 21px;
+  }
+
+  .documentation-reporting-content h3 strong {
+    margin-top: 3px;
+  }
+
+  .documentation-reporting-content > p {
+    font-size: 8px;
+  }
+
+  .documentation-reporting-meta {
+    margin-top: 16px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .documentation-reporting-list {
+    grid-template-columns: 1fr;
 
     gap: 7px;
   }
 
+  .documentation-reporting-item {
+    min-height: 42px;
 
-  /* Gallery */
-
-  .campaign-vehicle-gallery {
-    grid-template-columns: 1fr;
-
-    gap: 10px;
-  }
-
-  .campaign-vehicle-image {
-    height: 230px;
-  }
-
-  .campaign-vehicle-card-content {
-    padding: 19px;
-  }
-
-  .campaign-vehicle-card-content h3 {
-    font-size: 16px;
-  }
-
-  .campaign-vehicle-card-content p {
     font-size: 8px;
   }
 
 
   /* CTA */
 
-  .campaign-vehicle-bottom {
+  .documentation-cta {
     margin-top: 12px;
 
     padding:
@@ -1354,17 +1564,17 @@
     border-radius: 14px;
   }
 
-  .campaign-vehicle-bottom > div > span {
+  .documentation-cta > div > span {
     font-size: 7px;
   }
 
-  .campaign-vehicle-bottom h3 {
+  .documentation-cta h3 {
     font-size: 21px;
 
     line-height: 1.15;
   }
 
-  .campaign-vehicle-bottom h3 strong {
+  .documentation-cta h3 strong {
     display: block;
 
     margin-left: 0;
@@ -1372,11 +1582,11 @@
     margin-top: 3px;
   }
 
-  .campaign-vehicle-bottom p {
+  .documentation-cta p {
     font-size: 8px;
   }
 
-  .campaign-vehicle-bottom-btn {
+  .documentation-cta-btn {
     min-height: 42px;
 
     font-size: 8px;
@@ -1391,39 +1601,45 @@
 
 @media (max-width: 360px) {
 
-  .campaign-vehicles-section {
+  .documentation-section {
     padding:
       55px 14px;
   }
 
-  .campaign-vehicle-feature-content {
+  .documentation-feature-content {
     padding:
       23px 17px;
   }
 
-  .campaign-vehicle-feature-content h3 {
+  .documentation-feature-content h3 {
     font-size: 29px;
   }
 
-  .campaign-vehicle-feature-visual {
-    min-height: 280px;
+  .documentation-feature-visual {
+    min-height: 285px;
   }
 
-  .campaign-vehicle-visual-card {
-    width: 210px;
-    height: 210px;
+  .documentation-dashboard {
+    width: 220px;
+
+    min-height: 250px;
   }
 
-  .campaign-vehicle-service-card {
+  .documentation-dashboard-main {
+    margin-top: 14px;
+  }
+
+  .documentation-service-card {
     padding:
-      18px;
+      17px;
   }
 
-  .campaign-vehicle-image {
-    height: 215px;
+  .documentation-reporting {
+    padding:
+      19px 16px;
   }
 
-  .campaign-vehicle-bottom {
+  .documentation-cta {
     padding:
       20px 16px;
   }
@@ -1435,9 +1651,9 @@
    ACCESSIBILITY
 ===================================================== */
 
-.campaign-vehicle-btn:focus-visible,
-.campaign-vehicle-card-link:focus-visible,
-.campaign-vehicle-bottom-btn:focus-visible {
+.documentation-btn:focus-visible,
+.documentation-service-link:focus-visible,
+.documentation-cta-btn:focus-visible {
   outline:
     3px solid
     rgba(255, 107, 0, 0.3);
@@ -1452,25 +1668,22 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-  .campaign-vehicle-service-card,
-  .campaign-vehicle-service-icon,
-  .campaign-vehicle-card,
-  .campaign-vehicle-image img,
-  .campaign-vehicle-image-icon,
-  .campaign-vehicle-visual-card,
-  .campaign-vehicle-btn,
-  .campaign-vehicle-card-link,
-  .campaign-vehicle-bottom-btn {
+  .documentation-service-card,
+  .documentation-service-icon,
+  .documentation-dashboard,
+  .documentation-btn,
+  .documentation-service-link,
+  .documentation-reporting-item,
+  .documentation-cta-btn {
     transition: none;
   }
 
-  .campaign-vehicle-service-card:hover,
-  .campaign-vehicle-card:hover {
+  .documentation-service-card:hover {
     transform: none;
   }
 
-  .campaign-vehicle-feature:hover
-  .campaign-vehicle-visual-card {
+  .documentation-feature:hover
+  .documentation-dashboard {
     transform: rotate(3deg);
   }
 

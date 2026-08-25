@@ -1,240 +1,319 @@
 import {
   ArrowUpRight,
-  CheckCircle2,
-  Package,
+  BadgeCheck,
+  ClipboardList,
+  FileText,
+  Flag,
+  PackageCheck,
+  PenLine,
+  Shirt,
+  Sticker,
 } from "lucide-react";
-
-import boothPacketItems from "../data/boothPacket";
 
 import "../styles/boothPacket.css";
 
+const campaignKits = [
+  {
+    id: 1,
+    number: "01",
+    title: "Basic Campaign Kit",
+    hindi: "बेसिक प्रचार किट",
+    icon: PackageCheck,
+    description:
+      "Campaign की basic promotional requirements के लिए compact campaign kit.",
+    items: [
+      "Poster",
+      "Pamphlet",
+      "Sticker",
+      "Flag",
+      "Badge",
+      "Cap",
+      "Gamcha",
+      "Visiting Card",
+    ],
+  },
+
+  {
+    id: 2,
+    number: "02",
+    title: "Team Campaign Kit",
+    hindi: "टीम कैंपेन किट",
+    icon: Shirt,
+    description:
+      "Campaign volunteers और authorized team members के लिए branded team kit.",
+    items: [
+      "ID Card",
+      "T-Shirt",
+      "Cap",
+      "Gamcha",
+      "Badge",
+      "Campaign Folder",
+      "Diary",
+      "Pen",
+    ],
+  },
+
+  {
+    id: 3,
+    number: "03",
+    title: "Booth / Area Kit",
+    hindi: "बूथ एवं एरिया किट",
+    icon: ClipboardList,
+    description:
+      "Area-wise campaign activities के लिए आवश्यक material और stationery को व्यवस्थित रूप से तैयार किया जा सकता है.",
+    items: [
+      "Area Posters",
+      "Pamphlets",
+      "Stickers",
+      "Flags",
+      "Volunteer ID Cards",
+      "Reporting Sheets",
+      "Stationery",
+      "Campaign Material",
+    ],
+  },
+];
+
+const kitHighlights = [
+  {
+    icon: FileText,
+    title: "Printed Materials",
+    text: "Poster, pamphlet, sticker & campaign literature",
+  },
+  {
+    icon: Flag,
+    title: "Campaign Branding",
+    text: "Flags, badges, caps & branded materials",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Team Identity",
+    text: "ID cards, T-shirts, lanyards & volunteer branding",
+  },
+  {
+    icon: PenLine,
+    title: "Campaign Stationery",
+    text: "Diary, pen, reporting sheets & required stationery",
+  },
+];
+
 export default function BoothPacket() {
-  /* =====================================================
-     WHATSAPP ENQUIRY
-  ===================================================== */
-
-  const whatsappMessage = encodeURIComponent(
-    "Hello Election Kart, mujhe Booth Packet ke baare mein enquiry karni hai."
-  );
-
-  const whatsappUrl =
-    `https://wa.me/919820280493?text=${whatsappMessage}`;
-
-
-  /* =====================================================
-     IMAGE FALLBACK
-  ===================================================== */
-
-  const handleImageError = (event) => {
-    event.currentTarget.style.display = "none";
-
-    event.currentTarget.parentElement.classList.add(
-      "booth-image-error"
-    );
-  };
-
-
   return (
     <section
       id="booth-packet"
       className="booth-section"
     >
-
       <div className="booth-container">
 
-
-        {/* =================================================
+        {/* =====================================================
             HEADER
-        ================================================= */}
+        ===================================================== */}
 
         <div className="booth-header">
 
           <div className="section-label">
-            Booth Packet
+            Campaign Kits
           </div>
 
           <h2>
-            Booth Ki Preparation,
-            <span> Ek Jagah Par</span>
+            Campaign Kit
+            <span>
+              आपकी जरूरत के अनुसार
+            </span>
           </h2>
 
           <p>
-            Booth Packet ke liye PDF mein listed required
-            items ko ek organised collection ke form mein
-            present kiya gaya hai.
+            Basic campaign requirements से लेकर Team और
+            Booth/Area level material तक — campaign kit को
+            आपकी आवश्यकता के अनुसार organise किया जा सकता है।
           </p>
 
         </div>
 
 
-        {/* =================================================
-            MAIN CONTENT
-        ================================================= */}
+        {/* =====================================================
+            KIT CARDS
+        ===================================================== */}
 
-        <div className="booth-main">
+        <div className="booth-grid">
+
+          {campaignKits.map((kit) => {
+
+            const Icon = kit.icon;
+
+            return (
+              <article
+                className="booth-card"
+                key={kit.id}
+              >
+
+                {/* Top */}
+
+                <div className="booth-card-top">
+
+                  <span className="booth-number">
+                    {kit.number}
+                  </span>
+
+                  <div className="booth-icon">
+                    <Icon size={20} />
+                  </div>
+
+                </div>
 
 
-          {/* =================================================
-              LEFT INTRO
-          ================================================= */}
+                {/* Title */}
 
-          <div className="booth-intro">
+                <h3>
+                  {kit.title}
+                </h3>
 
-            <div className="booth-icon">
-              <Package size={28} />
-            </div>
+                <div className="booth-hindi">
+                  {kit.hindi}
+                </div>
 
 
-            <span className="booth-small-title">
-              COMPLETE BOOTH PACKET
+                {/* Description */}
+
+                <p>
+                  {kit.description}
+                </p>
+
+
+                {/* Items */}
+
+                <div className="booth-items">
+
+                  {kit.items.map((item) => (
+
+                    <div
+                      key={item}
+                    >
+                      <span></span>
+                      {item}
+                    </div>
+
+                  ))}
+
+                </div>
+
+
+                {/* Link */}
+
+                <a
+                  href="#contact"
+                  className="booth-card-link"
+                >
+                  Kit Enquiry
+                  <ArrowUpRight size={15} />
+                </a>
+
+              </article>
+            );
+          })}
+
+        </div>
+
+
+        {/* =====================================================
+            HIGHLIGHTS
+        ===================================================== */}
+
+        <div className="booth-highlights">
+
+          <div className="booth-highlights-heading">
+
+            <span>
+              WHAT'S INCLUDED
             </span>
 
-
             <h3>
-              {boothPacketItems.length || 12}
-              <br />
-              <span>Essential Items</span>
+              Campaign की
+              <strong>
+                जरूरी सामग्री।
+              </strong>
             </h3>
-
-
-            <p>
-              चुनाव से जुड़े booth preparation ke liye
-              listed materials ko ek single packet concept
-              mein organise kiya gaya hai.
-            </p>
-
-
-            {/* =================================================
-                CHECK LIST
-            ================================================= */}
-
-            <div className="booth-check-list">
-
-              <div>
-                <CheckCircle2 size={17} />
-
-                <span>
-                  {boothPacketItems.length || 12}
-                  {" "}
-                  Listed Items
-                </span>
-              </div>
-
-
-              <div>
-                <CheckCircle2 size={17} />
-
-                <span>
-                  Organised Collection
-                </span>
-              </div>
-
-
-              <div>
-                <CheckCircle2 size={17} />
-
-                <span>
-                  Campaign Requirement
-                </span>
-              </div>
-
-            </div>
-
-
-            {/* =================================================
-                ENQUIRY BUTTON
-            ================================================= */}
-
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="booth-enquiry"
-            >
-              Booth Packet Enquiry
-
-              <ArrowUpRight size={17} />
-            </a>
 
           </div>
 
 
-          {/* =================================================
-              RIGHT — BOOTH ITEMS
-          ================================================= */}
+          <div className="booth-highlights-grid">
 
-          <div className="booth-items">
+            {kitHighlights.map((item) => {
 
-            {boothPacketItems.length > 0 ? (
+              const Icon = item.icon;
 
-              boothPacketItems.map((item) => (
-
-                <article
-                  className="booth-item"
-                  key={item.id}
+              return (
+                <div
+                  className="booth-highlight"
+                  key={item.title}
                 >
 
+                  <div className="booth-highlight-icon">
+                    <Icon size={17} />
+                  </div>
 
-                  {/* IMAGE */}
+                  <div>
 
-                  <div className="booth-item-image">
-
-                    <img
-                      src={item.image}
-                      alt={`${item.name} - ${item.englishName}`}
-                      loading="lazy"
-                      onError={handleImageError}
-                    />
+                    <strong>
+                      {item.title}
+                    </strong>
 
                     <span>
-                      {item.number}
+                      {item.text}
                     </span>
 
                   </div>
 
-
-                  {/* CONTENT */}
-
-                  <div className="booth-item-content">
-
-                    <h4>
-                      {item.name}
-                    </h4>
-
-                    <p>
-                      {item.englishName}
-                    </p>
-
-                  </div>
-
-                </article>
-
-              ))
-
-            ) : (
-
-              <div className="booth-empty">
-
-                <Package size={28} />
-
-                <h3>
-                  Booth Packet Items
-                </h3>
-
-                <p>
-                  Items details will be added here.
-                </p>
-
-              </div>
-
-            )}
+                </div>
+              );
+            })}
 
           </div>
 
         </div>
 
-      </div>
 
+        {/* =====================================================
+            CTA
+        ===================================================== */}
+
+        <div className="booth-cta">
+
+          <div>
+
+            <span>
+              CUSTOM CAMPAIGN KIT
+            </span>
+
+            <h3>
+              आपकी requirement,
+              <strong>
+                आपका Campaign Kit.
+              </strong>
+            </h3>
+
+            <p>
+              Campaign scope और material requirements के
+              अनुसार customised kit तैयार की जा सकती है।
+            </p>
+
+          </div>
+
+
+          <a
+            href="https://wa.me/919820280493"
+            target="_blank"
+            rel="noreferrer"
+            className="booth-cta-btn"
+          >
+            Get Kit Details
+            <ArrowUpRight size={17} />
+          </a>
+
+        </div>
+
+      </div>
     </section>
   );
 }

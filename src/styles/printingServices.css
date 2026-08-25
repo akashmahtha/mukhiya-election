@@ -1,0 +1,1411 @@
+/* =====================================================
+   PRINTING SERVICES SECTION
+===================================================== */
+
+.printing-section {
+  position: relative;
+  padding: 110px 30px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.printing-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -280px;
+  left: -240px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 0, 0.055),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.printing-section::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  right: -260px;
+  bottom: -260px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(20, 83, 45, 0.055),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.printing-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.printing-header {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.printing-header .section-label {
+  color: var(--green, #14532d);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.printing-header h2 {
+  margin-top: 15px;
+  color: var(--green, #14532d);
+  font-size: clamp(38px, 4.5vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -2.5px;
+}
+
+.printing-header h2 span {
+  display: block;
+  margin-top: 7px;
+  color: var(--orange, #ff6b00);
+}
+
+.printing-header p {
+  max-width: 650px;
+  margin: 18px auto 0;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+
+/* =====================================================
+   FEATURE
+===================================================== */
+
+.printing-feature {
+  min-height: 455px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.95fr
+    1.05fr;
+
+  margin-bottom: 58px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--green, #14532d),
+      #092d18
+    );
+
+  border-radius: 21px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 55px
+    rgba(20, 83, 45, 0.12);
+}
+
+
+/* =====================================================
+   FEATURE CONTENT
+===================================================== */
+
+.printing-feature-content {
+  position: relative;
+  z-index: 3;
+
+  padding: 48px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.printing-feature-label {
+  color: #ff9955;
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+}
+
+.printing-feature-content h3 {
+  margin-top: 16px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(36px, 4vw, 54px);
+
+  line-height: 1.02;
+  letter-spacing: -2px;
+}
+
+.printing-feature-content h3 span {
+  display: block;
+  color: #ff9955;
+}
+
+.printing-feature-content > p {
+  max-width: 500px;
+
+  margin-top: 19px;
+
+  color:
+    rgba(255, 255, 255, 0.58);
+
+  font-size: 10px;
+  line-height: 1.85;
+}
+
+
+/* =====================================================
+   FEATURE POINTS
+===================================================== */
+
+.printing-feature-points {
+  margin-top: 25px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.printing-feature-points div {
+  min-height: 34px;
+
+  padding: 0 11px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color:
+    rgba(255, 255, 255, 0.8);
+
+  background:
+    rgba(255, 255, 255, 0.065);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 7px;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.printing-feature-points svg {
+  color: #ff9955;
+}
+
+
+/* =====================================================
+   FEATURE VISUAL
+===================================================== */
+
+.printing-feature-visual {
+  position: relative;
+
+  min-height: 455px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #153d24,
+      #062613
+    );
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   PAPER CARDS
+===================================================== */
+
+.printing-paper {
+  position: absolute;
+
+  width: 225px;
+  height: 300px;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 25px 55px
+    rgba(0, 0, 0, 0.22);
+}
+
+.printing-paper-one {
+  transform:
+    translateX(-95px)
+    rotate(-12deg);
+
+  background:
+    linear-gradient(
+      145deg,
+      #f2f5ef,
+      #dce5dc
+    );
+
+  opacity: 0.65;
+}
+
+.printing-paper-two {
+  transform:
+    translateX(95px)
+    rotate(12deg);
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff3e9,
+      #f6d8c3
+    );
+
+  opacity: 0.7;
+}
+
+.printing-paper span {
+  position: absolute;
+
+  left: 20px;
+  bottom: 20px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   MAIN PAPER
+===================================================== */
+
+.printing-paper-three {
+  position: relative;
+
+  z-index: 4;
+
+  width: 275px;
+  height: 350px;
+
+  padding: 18px;
+
+  background: #ffffff;
+
+  transform:
+    rotate(-3deg);
+
+  transition:
+    transform 0.35s ease;
+}
+
+.printing-feature:hover
+.printing-paper-three {
+  transform:
+    rotate(0deg)
+    translateY(-5px);
+}
+
+
+/* =====================================================
+   PAPER TOP
+===================================================== */
+
+.printing-paper-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 12px;
+
+  border-bottom:
+    1px solid #e7ebe6;
+}
+
+.printing-paper-top span {
+  position: static;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.printing-paper-top small {
+  color:
+    var(--orange, #ff6b00);
+
+  font-size: 6px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   PAPER MAIN
+===================================================== */
+
+.printing-paper-main {
+  min-height: 215px;
+
+  margin-top: 13px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #edf4ee,
+      #f8faf7
+    );
+
+  border-radius: 9px;
+}
+
+.printing-paper-main svg {
+  color:
+    var(--orange, #ff6b00);
+
+  margin-bottom: 15px;
+}
+
+.printing-paper-main strong {
+  color:
+    var(--green, #14532d);
+
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.printing-paper-main span {
+  position: static;
+
+  margin-top: 6px;
+
+  color: #888;
+
+  font-size: 7px;
+}
+
+
+/* =====================================================
+   PAPER LINES
+===================================================== */
+
+.printing-paper-lines {
+  margin-top: 13px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.printing-paper-lines span {
+  position: static;
+
+  display: block;
+
+  width: 100%;
+  height: 5px;
+
+  background: #edf0ec;
+
+  border-radius: 20px;
+}
+
+.printing-paper-lines span:first-child {
+  width: 80px;
+}
+
+.printing-paper-lines span:nth-child(2) {
+  width: 140px;
+}
+
+.printing-paper-lines span:last-child {
+  width: 110px;
+}
+
+
+/* =====================================================
+   SERVICES HEADING
+===================================================== */
+
+.printing-services-heading {
+  margin-bottom: 25px;
+}
+
+.printing-services-heading > span {
+  color:
+    var(--orange, #ff6b00);
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+}
+
+.printing-services-heading h3 {
+  margin-top: 7px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.printing-services-heading h3 strong {
+  margin-left: 6px;
+
+  color:
+    var(--orange, #ff6b00);
+}
+
+
+/* =====================================================
+   PRINTING GRID
+===================================================== */
+
+.printing-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+
+/* =====================================================
+   PRINTING CARD
+===================================================== */
+
+.printing-card {
+  min-height: 225px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e3e8e2;
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.printing-card:hover {
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(255, 107, 0, 0.2);
+
+  box-shadow:
+    0 17px 38px
+    rgba(0, 0, 0, 0.065);
+}
+
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.printing-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.printing-number {
+  color: #b7bdb7;
+
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.printing-icon {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color:
+    var(--orange, #ff6b00);
+
+  background:
+    #fff3e9;
+
+  border-radius: 9px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.printing-card:hover .printing-icon {
+  color: #ffffff;
+
+  background:
+    var(--orange, #ff6b00);
+
+  transform:
+    rotate(-4deg);
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.printing-card h4 {
+  margin-top: 18px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 15px;
+  font-weight: 900;
+
+  line-height: 1.3;
+}
+
+.printing-hindi {
+  margin-top: 4px;
+
+  color:
+    var(--orange, #ff6b00);
+
+  font-family:
+    "Noto Sans Devanagari",
+    "Poppins",
+    sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.printing-card p {
+  margin-top: 10px;
+
+  color: #777;
+
+  font-size: 8px;
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   CARD LINK
+===================================================== */
+
+.printing-card-link {
+  width: fit-content;
+
+  margin-top: auto;
+  padding-top: 14px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 8px;
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.printing-card-link:hover {
+  color:
+    var(--orange, #ff6b00);
+
+  transform:
+    translateX(3px);
+}
+
+
+/* =====================================================
+   MATERIALS SECTION
+===================================================== */
+
+.printing-materials {
+  margin-top: 18px;
+
+  padding: 30px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.8fr 1.2fr;
+
+  gap: 30px;
+
+  background:
+    #f7f8f5;
+
+  border:
+    1px solid #e3e8e2;
+
+  border-radius: 16px;
+}
+
+.printing-materials-heading > span {
+  color:
+    var(--orange, #ff6b00);
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.printing-materials-heading h3 {
+  margin-top: 8px;
+
+  color:
+    var(--green, #14532d);
+
+  font-size: 25px;
+  line-height: 1.15;
+}
+
+.printing-materials-heading h3 strong {
+  display: block;
+
+  color:
+    var(--orange, #ff6b00);
+}
+
+
+/* =====================================================
+   MATERIAL LIST
+===================================================== */
+
+.printing-material-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
+
+  align-content: center;
+}
+
+.printing-material-item {
+  min-height: 43px;
+
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #666;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e7ebe6;
+
+  border-radius: 8px;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.printing-material-item > span {
+  width: 22px;
+  height: 22px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color:
+    #ffffff;
+
+  background:
+    var(--green, #14532d);
+
+  border-radius: 6px;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.printing-cta {
+  position: relative;
+
+  margin-top: 18px;
+
+  padding: 30px 33px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--green, #14532d),
+      #092d18
+    );
+
+  border-radius: 16px;
+
+  overflow: hidden;
+}
+
+.printing-cta::before {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  right: -170px;
+  top: -220px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+
+  border-radius: 50%;
+}
+
+.printing-cta > div {
+  position: relative;
+
+  z-index: 2;
+}
+
+.printing-cta > div > span {
+  color: #ff9955;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+.printing-cta h3 {
+  margin-top: 7px;
+
+  color: #ffffff;
+
+  font-size: 27px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.printing-cta h3 strong {
+  color: #ff9955;
+
+  margin-left: 5px;
+}
+
+.printing-cta p {
+  max-width: 600px;
+
+  margin-top: 8px;
+
+  color:
+    rgba(255, 255, 255, 0.52);
+
+  font-size: 9px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   CTA BUTTON
+===================================================== */
+
+.printing-cta-btn {
+  position: relative;
+
+  z-index: 3;
+
+  flex-shrink: 0;
+
+  min-height: 43px;
+
+  padding: 0 17px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  color:
+    var(--green, #14532d);
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.printing-cta-btn:hover {
+  color: #ffffff;
+
+  background:
+    var(--orange, #ff6b00);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .printing-section {
+    padding:
+      90px 25px;
+  }
+
+  .printing-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .printing-section {
+    padding:
+      80px 22px;
+  }
+
+  .printing-feature {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .printing-feature-content {
+    padding: 38px;
+  }
+
+  .printing-feature-visual {
+    min-height: 390px;
+  }
+
+  .printing-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .printing-materials {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL TABLET
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .printing-section {
+    padding:
+      70px 18px;
+  }
+
+  .printing-header {
+    margin-bottom: 35px;
+  }
+
+  .printing-header h2 {
+    font-size:
+      clamp(33px, 9vw, 47px);
+
+    letter-spacing: -1.5px;
+  }
+
+  .printing-header p {
+    font-size: 10px;
+  }
+
+  .printing-feature-content {
+    padding:
+      30px 25px;
+  }
+
+  .printing-feature-content h3 {
+    font-size: 37px;
+
+    letter-spacing: -1.3px;
+  }
+
+  .printing-feature-visual {
+    min-height: 350px;
+  }
+
+  .printing-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .printing-card {
+    min-height: 210px;
+
+    padding: 18px;
+  }
+
+  .printing-materials {
+    padding: 25px;
+  }
+
+  .printing-cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 25px;
+  }
+
+  .printing-cta-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 560px) {
+
+  .printing-section {
+    padding:
+      65px 16px;
+  }
+
+
+  /* Header */
+
+  .printing-header h2 {
+    font-size:
+      clamp(31px, 9.5vw, 42px);
+
+    line-height: 1.08;
+  }
+
+  .printing-header h2 span {
+    margin-top: 5px;
+  }
+
+  .printing-header p {
+    margin-top: 14px;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+  }
+
+
+  /* Feature */
+
+  .printing-feature {
+    margin-bottom: 45px;
+
+    border-radius: 15px;
+  }
+
+  .printing-feature-content {
+    padding:
+      26px 20px;
+  }
+
+  .printing-feature-label {
+    font-size: 7px;
+  }
+
+  .printing-feature-content h3 {
+    margin-top: 13px;
+
+    font-size:
+      clamp(30px, 9vw, 38px);
+  }
+
+  .printing-feature-content > p {
+    margin-top: 14px;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+  }
+
+  .printing-feature-points {
+    margin-top: 19px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .printing-feature-points div {
+    min-height: 31px;
+
+    font-size: 8px;
+  }
+
+
+  /* Visual */
+
+  .printing-feature-visual {
+    min-height: 300px;
+  }
+
+  .printing-paper {
+    width: 170px;
+    height: 230px;
+  }
+
+  .printing-paper-one {
+    transform:
+      translateX(-65px)
+      rotate(-12deg);
+  }
+
+  .printing-paper-two {
+    transform:
+      translateX(65px)
+      rotate(12deg);
+  }
+
+  .printing-paper-three {
+    width: 205px;
+    height: 265px;
+
+    padding: 13px;
+  }
+
+  .printing-paper-main {
+    min-height: 160px;
+  }
+
+  .printing-paper-main strong {
+    font-size: 14px;
+  }
+
+  .printing-paper-main svg {
+    width: 25px;
+    height: 25px;
+
+    margin-bottom: 10px;
+  }
+
+
+  /* Heading */
+
+  .printing-services-heading {
+    margin-bottom: 18px;
+  }
+
+  .printing-services-heading h3 {
+    font-size: 23px;
+  }
+
+
+  /* Cards */
+
+  .printing-grid {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+  .printing-card {
+    min-height: 165px;
+
+    padding:
+      18px;
+
+    border-radius: 13px;
+  }
+
+  .printing-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  .printing-card h4 {
+    margin-top: 14px;
+
+    font-size: 16px;
+  }
+
+  .printing-hindi {
+    font-size: 8px;
+  }
+
+  .printing-card p {
+    font-size: 8px;
+  }
+
+
+  /* Materials */
+
+  .printing-materials {
+    margin-top: 12px;
+
+    padding:
+      21px 18px;
+
+    border-radius: 14px;
+  }
+
+  .printing-materials-heading h3 {
+    font-size: 21px;
+  }
+
+  .printing-material-list {
+    margin-top: 17px;
+
+    grid-template-columns: 1fr;
+
+    gap: 6px;
+  }
+
+  .printing-material-item {
+    min-height: 38px;
+
+    font-size: 8px;
+  }
+
+
+  /* CTA */
+
+  .printing-cta {
+    margin-top: 12px;
+
+    padding:
+      21px 18px;
+
+    border-radius: 14px;
+  }
+
+  .printing-cta > div > span {
+    font-size: 7px;
+  }
+
+  .printing-cta h3 {
+    font-size: 21px;
+
+    line-height: 1.15;
+  }
+
+  .printing-cta p {
+    font-size: 8px;
+  }
+
+  .printing-cta-btn {
+    min-height: 42px;
+
+    font-size: 8px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .printing-section {
+    padding:
+      55px 14px;
+  }
+
+  .printing-feature-content {
+    padding:
+      23px 17px;
+  }
+
+  .printing-feature-content h3 {
+    font-size: 29px;
+  }
+
+  .printing-feature-visual {
+    min-height: 275px;
+  }
+
+  .printing-paper {
+    width: 150px;
+    height: 205px;
+  }
+
+  .printing-paper-three {
+    width: 190px;
+    height: 245px;
+  }
+
+  .printing-paper-main {
+    min-height: 145px;
+  }
+
+  .printing-card {
+    padding:
+      17px;
+  }
+
+  .printing-materials {
+    padding:
+      19px 16px;
+  }
+
+  .printing-cta {
+    padding:
+      20px 16px;
+  }
+
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+.printing-card-link:focus-visible,
+.printing-cta-btn:focus-visible {
+  outline:
+    3px solid
+    rgba(255, 107, 0, 0.3);
+
+  outline-offset: 3px;
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .printing-card,
+  .printing-icon,
+  .printing-card-link,
+  .printing-paper-three,
+  .printing-cta-btn {
+    transition: none;
+  }
+
+  .printing-card:hover {
+    transform: none;
+  }
+
+  .printing-feature:hover
+  .printing-paper-three {
+    transform: rotate(-3deg);
+  }
+
+}

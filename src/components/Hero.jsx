@@ -3,63 +3,144 @@ import {
   MessageCircle,
   Phone,
   ShieldCheck,
+  CheckCircle2,
+  Sparkles,
 } from "lucide-react";
 
 import "../styles/hero.css";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section
+      id="hero"
+      className="hero"
+    >
 
-      {/* ================= BACKGROUND ================= */}
+      {/* =====================================================
+          BACKGROUND
+      ===================================================== */}
 
       <div className="hero-background">
+        <div className="hero-background-pattern"></div>
         <div className="hero-overlay"></div>
       </div>
 
 
+      {/* =====================================================
+          HERO CONTAINER
+      ===================================================== */}
+
       <div className="hero-container">
 
-        {/* ================= LEFT CONTENT ================= */}
+
+        {/* =================================================
+            LEFT CONTENT
+        ================================================= */}
 
         <div className="hero-content">
 
+          {/* Badge */}
+
           <div className="hero-badge">
+
             <ShieldCheck size={17} />
-            <span>हर चुनाव का भरोसेमंद साथी</span>
+
+            <span>
+              बिहार मुखिया चुनाव 2026
+            </span>
+
           </div>
 
 
+          {/* Main Heading */}
+
           <h1>
-            मुखिया चुनाव
-            <span>प्रचार सामग्री</span>
+
+            बिहार मुखिया चुनाव
+
+            <span>
+              संपूर्ण चुनावी समाधान
+            </span>
+
           </h1>
 
 
+          {/* Subtitle */}
+
           <p className="hero-subtitle">
-            Mukhiya Election Campaign Materials
+            संपूर्ण चुनाव प्रचार एवं Campaign Support Services
           </p>
 
+
+          {/* Description */}
 
           <p className="hero-description">
-            आपके चुनाव प्रचार को बनाएं और भी दमदार।
+
+            रणनीति से लेकर प्रचार सामग्री और ग्राउंड
+            एक्सीक्यूशन तक — एक ही जगह संपूर्ण समाधान।
+
             <br />
-            From campaign products to digital promotion —
-            <strong> Election Kart </strong>
-            आपके campaign के लिए complete solution देता है।
+
+            Campaign Planning, Printing, Branding,
+            Digital Content, Ground Campaign,
+            Events और Documentation के लिए
+            professional campaign support।
+
           </p>
 
 
-          {/* ================= BUTTONS ================= */}
+          {/* =================================================
+              HIGHLIGHTS
+          ================================================= */}
+
+          <div className="hero-highlights">
+
+            <div>
+              <CheckCircle2 size={16} />
+              <span>
+                Campaign Planning
+              </span>
+            </div>
+
+            <div>
+              <CheckCircle2 size={16} />
+              <span>
+                Printing & Branding
+              </span>
+            </div>
+
+            <div>
+              <CheckCircle2 size={16} />
+              <span>
+                Digital Campaign
+              </span>
+            </div>
+
+            <div>
+              <CheckCircle2 size={16} />
+              <span>
+                Ground Support
+              </span>
+            </div>
+
+          </div>
+
+
+          {/* =================================================
+              BUTTONS
+          ================================================= */}
 
           <div className="hero-buttons">
 
             <a
-              href="#products"
+              href="#services"
               className="hero-primary-btn"
             >
-              Explore Products
-              <ArrowRight size={19} />
+
+              Explore Services
+
+              <ArrowRight size={18} />
+
             </a>
 
 
@@ -69,122 +150,217 @@ export default function Hero() {
               rel="noreferrer"
               className="hero-secondary-btn"
             >
-              <MessageCircle size={19} />
-              WhatsApp करें
+
+              <MessageCircle size={18} />
+
+              WhatsApp Enquiry
+
             </a>
 
           </div>
 
 
-          {/* ================= CONTACT ================= */}
+          {/* =================================================
+              CONTACT
+          ================================================= */}
 
           <div className="hero-contact">
 
-            <Phone size={17} />
+            <Phone size={16} />
+
+            <strong>
+              98202 80493
+            </strong>
 
             <span>
-              98202 80493
+              Quick Campaign Enquiry
             </span>
-
-            <small>
-              Quick Enquiry Available
-            </small>
 
           </div>
 
         </div>
 
 
-        {/* ================= RIGHT VISUAL ================= */}
+        {/* =================================================
+            RIGHT VISUAL
+        ================================================= */}
 
         <div className="hero-visual">
 
-          <div className="hero-card hero-card-main">
 
-            <div className="hero-card-top">
+          {/* Decorative Glow */}
 
-              <span>
-                Election
-              </span>
+          <div className="hero-glow hero-glow-one"></div>
 
-              <strong>
-                Kart
-              </strong>
+          <div className="hero-glow hero-glow-two"></div>
+
+
+          {/* Main Campaign Card */}
+
+          <div className="hero-main-card">
+
+
+            {/* Card Header */}
+
+            <div className="hero-card-header">
+
+              <div className="hero-card-brand">
+
+                <div className="hero-mini-logo">
+                  ME
+                </div>
+
+                <div>
+                  <strong>
+                    MUKHIYA
+                  </strong>
+
+                  <span>
+                    ELECTION
+                  </span>
+                </div>
+
+              </div>
+
+
+              <Sparkles
+                size={19}
+                className="hero-sparkle"
+              />
 
             </div>
 
 
-            <div className="hero-card-title">
+            {/* Card Main */}
 
-              <span>
+            <div className="hero-card-main">
+
+              <span className="hero-card-small">
+                BIHAR ELECTION 2026
+              </span>
+
+              <h2>
                 Campaign
-              </span>
+                <span>
+                  Ready.
+                </span>
+              </h2>
 
-              <span>
-                Ready?
-              </span>
-
-            </div>
-
-
-            <div className="hero-card-items">
-
-              <div>
-                🏳️ Flags
-              </div>
-
-              <div>
-                🎖️ Badges
-              </div>
-
-              <div>
-                👕 T-Shirts
-              </div>
-
-              <div>
-                📢 Banners
-              </div>
+              <p>
+                Strategy • Design • Print •
+                Brand • Digital • Ground
+              </p>
 
             </div>
 
 
-            <div className="hero-card-bottom">
+            {/* Campaign Steps */}
+
+            <div className="hero-card-services">
+
+              <div>
+                <span>
+                  01
+                </span>
+
+                <strong>
+                  PLAN
+                </strong>
+              </div>
+
+              <div>
+                <span>
+                  02
+                </span>
+
+                <strong>
+                  DESIGN
+                </strong>
+              </div>
+
+              <div>
+                <span>
+                  03
+                </span>
+
+                <strong>
+                  PRINT
+                </strong>
+              </div>
+
+              <div>
+                <span>
+                  04
+                </span>
+
+                <strong>
+                  DIGITAL
+                </strong>
+              </div>
+
+            </div>
+
+
+            {/* Card Footer */}
+
+            <div className="hero-card-footer">
 
               <span>
-                Campaign Materials
+                Complete Campaign Support
               </span>
+
+              <ArrowRight size={16} />
 
             </div>
 
           </div>
 
 
-          {/* ================= FLOATING CARD 1 ================= */}
+          {/* =================================================
+              FLOATING CARD 1
+          ================================================= */}
 
-          <div className="floating-card floating-card-one">
+          <div className="hero-floating-card hero-floating-one">
 
             <span>
-              20+
+              18+
             </span>
 
             <small>
-              Campaign Items
+              Campaign Services
             </small>
 
           </div>
 
 
-          {/* ================= FLOATING CARD 2 ================= */}
+          {/* =================================================
+              FLOATING CARD 2
+          ================================================= */}
 
-          <div className="floating-card floating-card-two">
+          <div className="hero-floating-card hero-floating-two">
 
             <span>
-              Fast
+              Bihar
             </span>
 
             <small>
-              Enquiry Support
+              Campaign Support
             </small>
+
+          </div>
+
+
+          {/* =================================================
+              FLOATING CARD 3
+          ================================================= */}
+
+          <div className="hero-floating-card hero-floating-three">
+
+            <CheckCircle2 size={17} />
+
+            <span>
+              Professional
+            </span>
 
           </div>
 
@@ -193,15 +369,20 @@ export default function Hero() {
       </div>
 
 
-      {/* ================= SCROLL ================= */}
+      {/* =====================================================
+          SCROLL INDICATOR
+      ===================================================== */}
 
-      <div className="hero-scroll">
+      <a
+        href="#about"
+        className="hero-scroll"
+      >
 
-        <span></span>
+        <span className="hero-scroll-line"></span>
 
         Scroll to explore
 
-      </div>
+      </a>
 
     </section>
   );
