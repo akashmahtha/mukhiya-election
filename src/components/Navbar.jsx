@@ -13,6 +13,22 @@ import "../styles/navbar.css";
 
 
 /* =====================================================
+   PHONE NUMBERS
+===================================================== */
+
+const phoneNumbers = [
+  {
+    number: "73525555",
+    href: "tel:+9173525555",
+  },
+  {
+    number: "9820280493",
+    href: "tel:+919820280493",
+  },
+];
+
+
+/* =====================================================
    SERVICES DROPDOWN
 ===================================================== */
 
@@ -145,11 +161,8 @@ export default function Navbar() {
   ===================================================== */
 
   const closeMenu = () => {
-
     setMenuOpen(false);
-
     setOpenDropdown(null);
-
   };
 
 
@@ -158,13 +171,11 @@ export default function Navbar() {
   ===================================================== */
 
   const toggleDropdown = (name) => {
-
     setOpenDropdown(
       openDropdown === name
         ? null
         : name
     );
-
   };
 
 
@@ -186,7 +197,6 @@ export default function Navbar() {
       );
 
       return;
-
     }
 
     setTimeout(() => {
@@ -197,7 +207,6 @@ export default function Navbar() {
       });
 
     }, 50);
-
   };
 
 
@@ -228,16 +237,13 @@ export default function Navbar() {
               scrollToSection(item.target)
             }
           >
-
             {item.label}
-
           </button>
 
         ))}
 
       </div>
     );
-
   };
 
 
@@ -315,7 +321,7 @@ export default function Navbar() {
 
 
           {/* =================================================
-              SERVICES DROPDOWN
+              SERVICES
           ================================================= */}
 
           <div
@@ -480,30 +486,30 @@ export default function Navbar() {
 
 
         {/* =================================================
-            DESKTOP ACTIONS
+            DESKTOP PHONE + WHATSAPP
         ================================================= */}
 
         <div className="navbar-actions">
 
+          {phoneNumbers.map((phone) => (
 
-          {/* CALL */}
+            <a
+              key={phone.number}
+              href={phone.href}
+              className="navbar-phone-number"
+              aria-label={`Call ${phone.number}`}
+            >
 
-          <a
-            href="tel:+919820280493"
-            className="navbar-call"
-            aria-label="Call Mukhiya Election"
-          >
+              <Phone size={14} />
 
-            <Phone size={16} />
+              <span>
+                {phone.number}
+              </span>
 
-            <span>
-              Call Now
-            </span>
+            </a>
 
-          </a>
+          ))}
 
-
-          {/* WHATSAPP */}
 
           <a
             href="https://wa.me/919820280493"
@@ -802,27 +808,27 @@ export default function Navbar() {
 
 
           {/* =================================================
-              MOBILE ACTIONS
+              MOBILE PHONE + WHATSAPP
           ================================================= */}
 
           <div className="mobile-nav-actions">
 
+            {phoneNumbers.map((phone) => (
 
-            {/* CALL */}
+              <a
+                key={phone.number}
+                href={phone.href}
+                className="mobile-call"
+              >
 
-            <a
-              href="tel:+919820280493"
-              className="mobile-call"
-            >
+                <Phone size={16} />
 
-              <Phone size={17} />
+                {phone.number}
 
-              Call Now
+              </a>
 
-            </a>
+            ))}
 
-
-            {/* WHATSAPP */}
 
             <a
               href="https://wa.me/919820280493"

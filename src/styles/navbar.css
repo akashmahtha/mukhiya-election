@@ -3,37 +3,46 @@
 ===================================================== */
 
 .navbar {
-  position: sticky;
+  position: fixed;
+
   top: 0;
   left: 0;
-  z-index: 1000;
+  right: 0;
+
+  z-index: 9999;
 
   width: 100%;
 
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.97);
 
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid rgba(20, 83, 45, 0.08);
 
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 6px 25px rgba(20, 83, 45, 0.06);
 }
 
 
 /* =====================================================
-   CONTAINER
+   NAVBAR CONTAINER
 ===================================================== */
 
 .navbar-container {
-  width: 100%;
-  max-width: 1450px;
+  width: min(1400px, calc(100% - 40px));
 
-  min-height: 76px;
+  min-height: 78px;
 
   margin: 0 auto;
-  padding: 0 30px;
 
   display: flex;
+
   align-items: center;
+
+  justify-content: space-between;
+
+  gap: 18px;
 }
 
 
@@ -43,88 +52,88 @@
 
 .navbar-logo {
   display: inline-flex;
+
   align-items: center;
 
   gap: 10px;
 
+  flex-shrink: 0;
+
   padding: 0;
 
-  border: none;
+  border: 0;
+
   background: transparent;
 
   cursor: pointer;
 
-  text-align: left;
+  font-family: inherit;
 
-  flex-shrink: 0;
+  text-decoration: none;
 }
 
 
-/* =====================================================
-   LOGO MARK
-===================================================== */
-
 .logo-mark {
-  width: 43px;
-  height: 43px;
+  width: 42px;
+  height: 42px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #14532d 0%,
+      #0d4325 100%
+    );
+
   color: #ffffff;
 
-  background: var(--green, #14532d);
+  font-size: 12px;
 
-  border-radius: 10px;
-
-  font-size: 13px;
-  font-weight: 900;
-
-  letter-spacing: -0.5px;
+  font-weight: 950;
 
   box-shadow:
-    0 8px 20px rgba(20, 83, 45, 0.16);
-
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease;
+    0 7px 18px rgba(20, 83, 45, 0.16);
 }
 
-.navbar-logo:hover .logo-mark {
-  transform: translateY(-2px);
-
-  background: var(--orange, #ff6b00);
-}
-
-
-/* =====================================================
-   LOGO TEXT
-===================================================== */
 
 .logo-text {
   display: flex;
+
   flex-direction: column;
+
+  align-items: flex-start;
 
   line-height: 1;
 }
 
+
 .logo-text strong {
-  color: var(--green, #14532d);
+  color: #14532d;
 
-  font-size: 15px;
-  font-weight: 900;
+  font-size: 16px;
 
-  letter-spacing: 0.7px;
+  font-weight: 950;
+
+  letter-spacing: -0.4px;
 }
+
 
 .logo-text span {
   margin-top: 4px;
 
-  color: var(--orange, #ff6b00);
+  color: #ff6b00;
 
-  font-size: 9px;
-  font-weight: 800;
+  font-size: 8px;
+
+  font-weight: 900;
 
   letter-spacing: 2px;
 }
@@ -135,35 +144,47 @@
 ===================================================== */
 
 .desktop-nav {
-  margin-left: auto;
-
   display: flex;
+
   align-items: center;
 
-  gap: 4px;
+  justify-content: center;
+
+  gap: 2px;
+
+  flex: 1;
+
+  min-width: 0;
 }
+
 
 .desktop-nav > button,
 .nav-dropdown-trigger {
   min-height: 40px;
 
-  padding: 0 10px;
-
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
 
   gap: 5px;
 
-  border: none;
+  padding: 0 10px;
+
+  border: 0;
+
+  border-radius: 8px;
+
   background: transparent;
 
-  color: #444;
+  color: #34483b;
 
   font-family: inherit;
 
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 12px;
+
+  font-weight: 750;
 
   white-space: nowrap;
 
@@ -174,9 +195,12 @@
     background 0.2s ease;
 }
 
+
 .desktop-nav > button:hover,
 .nav-dropdown-trigger:hover {
-  color: var(--green, #14532d);
+  color: #14532d;
+
+  background: #f1f7f2;
 }
 
 
@@ -190,13 +214,21 @@
 
 
 /* =====================================================
-   DROPDOWN ARROW
+   DROPDOWN TRIGGER
 ===================================================== */
 
-.nav-dropdown-trigger svg {
-  transition:
-    transform 0.25s ease;
+.nav-dropdown-trigger {
+  cursor: pointer;
 }
+
+
+.nav-dropdown-trigger svg {
+  flex-shrink: 0;
+
+  transition:
+    transform 0.2s ease;
+}
+
 
 .rotate-arrow {
   transform: rotate(180deg);
@@ -210,81 +242,89 @@
 .nav-dropdown-menu {
   position: absolute;
 
-  top: calc(100% + 9px);
+  top: calc(100% + 10px);
+
   left: 50%;
 
   width: 235px;
 
   padding: 8px;
 
-  display: flex;
-  flex-direction: column;
+  transform:
+    translateX(-50%)
+    translateY(-8px);
 
-  background: #ffffff;
+  border: 1px solid rgba(20, 83, 45, 0.08);
 
-  border: 1px solid #eeeeee;
+  border-radius: 13px;
 
-  border-radius: 12px;
+  background:
+    rgba(255, 255, 255, 0.98);
 
   box-shadow:
-    0 18px 45px rgba(0, 0, 0, 0.10);
+    0 18px 45px rgba(20, 83, 45, 0.14);
 
   opacity: 0;
+
   visibility: hidden;
 
-  transform:
-    translate(-50%, -7px);
+  pointer-events: none;
 
   transition:
     opacity 0.2s ease,
-    visibility 0.2s ease,
-    transform 0.2s ease;
-
-  pointer-events: none;
+    transform 0.2s ease,
+    visibility 0.2s ease;
 }
 
 
-/* =====================================================
-   DROPDOWN TOP LINE
-===================================================== */
+/* Dropdown small arrow */
 
 .nav-dropdown-menu::before {
   content: "";
 
   position: absolute;
 
-  top: -5px;
+  top: -6px;
+
   left: 50%;
 
-  width: 9px;
-  height: 9px;
+  width: 12px;
+  height: 12px;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
 
   background: #ffffff;
 
-  border-left: 1px solid #eeeeee;
-  border-top: 1px solid #eeeeee;
+  border-left:
+    1px solid rgba(20, 83, 45, 0.08);
 
-  transform: translateX(-50%) rotate(45deg);
+  border-top:
+    1px solid rgba(20, 83, 45, 0.08);
 }
 
 
 /* =====================================================
-   VISIBLE DROPDOWN
+   SHOW DROPDOWN
 ===================================================== */
 
+.nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown-menu.dropdown-visible {
   opacity: 1;
+
   visibility: visible;
 
-  transform:
-    translate(-50%, 0);
-
   pointer-events: auto;
+
+  transform:
+    translateX(-50%)
+    translateY(0);
 }
 
 
 /* =====================================================
-   DROPDOWN BUTTON
+   DROPDOWN ITEMS
 ===================================================== */
 
 .nav-dropdown-menu button {
@@ -292,22 +332,27 @@
 
   min-height: 38px;
 
-  padding: 8px 12px;
-
   display: flex;
+
   align-items: center;
 
-  border: none;
-  border-radius: 7px;
+  justify-content: flex-start;
+
+  padding: 0 12px;
+
+  border: 0;
+
+  border-radius: 8px;
 
   background: transparent;
 
-  color: #555;
+  color: #4b5a50;
 
   font-family: inherit;
 
-  font-size: 10px;
-  font-weight: 600;
+  font-size: 11px;
+
+  font-weight: 700;
 
   text-align: left;
 
@@ -319,105 +364,133 @@
     padding-left 0.2s ease;
 }
 
+
 .nav-dropdown-menu button:hover {
-  color: var(--green, #14532d);
-
-  background: #f4f7f4;
-
   padding-left: 16px;
+
+  background: #f2f8f3;
+
+  color: #14532d;
 }
 
 
 /* =====================================================
-   DESKTOP ACTIONS
+   NAVBAR ACTIONS
 ===================================================== */
 
 .navbar-actions {
-  margin-left: 17px;
-
   display: flex;
+
   align-items: center;
 
-  gap: 7px;
-}
-
-
-/* =====================================================
-   CALL BUTTON
-===================================================== */
-
-.navbar-call {
-  min-height: 39px;
-
-  padding: 0 13px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 
   gap: 6px;
 
-  color: var(--green, #14532d);
-
-  background: #f3f7f3;
-
-  border: 1px solid #e4ebe5;
-
-  border-radius: 8px;
-
-  font-size: 10px;
-  font-weight: 800;
-
-  text-decoration: none;
-
-  transition:
-    color 0.25s ease,
-    background 0.25s ease,
-    transform 0.25s ease;
-}
-
-.navbar-call:hover {
-  color: #ffffff;
-
-  background: var(--green, #14532d);
-
-  transform: translateY(-2px);
+  flex-shrink: 0;
 }
 
 
 /* =====================================================
-   WHATSAPP BUTTON
+   PHONE NUMBER BUTTON
 ===================================================== */
 
-.navbar-whatsapp {
-  width: 39px;
-  height: 39px;
+.navbar-phone-number {
+  min-height: 38px;
 
-  display: flex;
+  display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
 
-  color: #ffffff;
+  gap: 5px;
 
-  background: var(--orange, #ff6b00);
+  padding: 0 8px;
+
+  border:
+    1px solid rgba(20, 83, 45, 0.12);
 
   border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #14532d;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 850;
+
+  white-space: nowrap;
 
   text-decoration: none;
 
   transition:
-    background 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.navbar-whatsapp:hover {
-  background: var(--green, #14532d);
 
+.navbar-phone-number svg {
+  color: #ff6b00;
+
+  flex-shrink: 0;
+}
+
+
+.navbar-phone-number:hover {
+  color: #ff6b00;
+
+  background: #f4f8f5;
+
+  border-color:
+    rgba(20, 83, 45, 0.2);
+
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.navbar-whatsapp {
+  width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 9px;
+
+  background: #14532d;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.navbar-whatsapp:hover {
   transform: translateY(-2px);
 
+  background: #0d4325;
+
   box-shadow:
-    0 8px 20px rgba(20, 83, 45, 0.18);
+    0 8px 20px rgba(20, 83, 45, 0.2);
 }
 
 
@@ -434,30 +507,30 @@
   align-items: center;
   justify-content: center;
 
-  margin-left: auto;
+  flex-shrink: 0;
 
-  border: 1px solid #e5e5e5;
+  border:
+    1px solid rgba(20, 83, 45, 0.1);
 
   border-radius: 9px;
 
   background: #ffffff;
 
-  color: var(--green, #14532d);
+  color: #14532d;
 
   cursor: pointer;
 
   transition:
-    color 0.2s ease,
     background 0.2s ease,
     border-color 0.2s ease;
 }
 
+
 .mobile-menu-button:hover {
-  color: #ffffff;
+  background: #f3f8f4;
 
-  background: var(--green, #14532d);
-
-  border-color: var(--green, #14532d);
+  border-color:
+    rgba(20, 83, 45, 0.2);
 }
 
 
@@ -471,274 +544,302 @@
 
 
 /* =====================================================
-   LARGE TABLET
+   TABLET / SMALL DESKTOP
 ===================================================== */
 
 @media (max-width: 1250px) {
 
   .navbar-container {
-    padding: 0 22px;
+    width:
+      calc(100% - 30px);
+
+    gap: 10px;
   }
 
+
   .desktop-nav {
-    gap: 1px;
+    gap: 0;
   }
+
 
   .desktop-nav > button,
   .nav-dropdown-trigger {
     padding: 0 7px;
 
-    font-size: 10px;
+    font-size: 11px;
   }
+
+
+  .navbar-phone-number {
+    padding: 0 7px;
+
+    font-size: 9px;
+  }
+
 
   .navbar-actions {
-    margin-left: 10px;
-  }
-
-  .navbar-call {
-    padding: 0 10px;
+    gap: 4px;
   }
 
 }
 
 
 /* =====================================================
-   TABLET / MOBILE NAV
+   TABLET
 ===================================================== */
 
 @media (max-width: 1050px) {
 
-  .navbar-container {
-    min-height: 70px;
+  .desktop-nav > button,
+  .nav-dropdown-trigger {
+    padding: 0 5px;
 
-    padding: 0 22px;
+    font-size: 10px;
   }
+
+
+  .navbar-phone-number {
+    padding: 0 6px;
+
+    font-size: 8px;
+  }
+
+
+  .navbar-phone-number svg {
+    width: 12px;
+    height: 12px;
+  }
+
+
+  .navbar-whatsapp {
+    width: 37px;
+    height: 37px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE BREAKPOINT
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .navbar-container {
+    min-height: 72px;
+
+    width:
+      calc(100% - 30px);
+  }
+
 
   .desktop-nav,
   .navbar-actions {
     display: none;
   }
 
+
   .mobile-menu-button {
-    display: flex;
+    display: inline-flex;
   }
 
-}
+
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+  }
 
 
-/* =====================================================
-   MOBILE NAVIGATION
-===================================================== */
+  .logo-text strong {
+    font-size: 15px;
+  }
 
-@media (max-width: 1050px) {
+
+  /* =================================================
+     MOBILE NAV
+  ================================================= */
 
   .mobile-nav {
+    display: block;
+
     position: absolute;
 
     top: 100%;
+
     left: 0;
+    right: 0;
 
-    width: 100%;
+    max-height: 0;
 
-    display: block;
-
-    background: #ffffff;
-
-    border-top: 1px solid #eeeeee;
-
-    box-shadow:
-      0 18px 35px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
 
     opacity: 0;
+
     visibility: hidden;
 
-    transform: translateY(-8px);
+    background:
+      rgba(255, 255, 255, 0.98);
+
+    border-top:
+      1px solid transparent;
+
+    box-shadow:
+      0 18px 35px rgba(20, 83, 45, 0.08);
 
     transition:
+      max-height 0.3s ease,
       opacity 0.25s ease,
       visibility 0.25s ease,
-      transform 0.25s ease;
-
-    pointer-events: none;
+      border-color 0.25s ease;
   }
 
-  .mobile-nav.mobile-nav-open {
+
+  .mobile-nav-open {
+    max-height:
+      calc(100vh - 72px);
+
+    overflow-y: auto;
+
     opacity: 1;
+
     visibility: visible;
 
-    transform: translateY(0);
-
-    pointer-events: auto;
+    border-top-color:
+      rgba(20, 83, 45, 0.07);
   }
 
+
+  /* =================================================
+     MOBILE INNER
+  ================================================= */
+
   .mobile-nav-inner {
-    width: 100%;
-    max-width: 700px;
+    width:
+      min(
+        720px,
+        calc(100% - 30px)
+      );
 
     margin: 0 auto;
 
-    padding: 12px 20px 22px;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 3px;
+    padding:
+      10px 0 22px;
   }
 
 
-  /* ===================================================
-     MOBILE MAIN LINKS
-  =================================================== */
+  /* =================================================
+     MOBILE MAIN BUTTONS
+  ================================================= */
 
-  .mobile-nav-inner > button {
+  .mobile-nav-inner > button,
+  .mobile-product-trigger {
     width: 100%;
 
-    min-height: 46px;
-
-    padding: 0 12px;
+    min-height: 47px;
 
     display: flex;
+
     align-items: center;
 
-    border: none;
-    border-radius: 8px;
+    justify-content: space-between;
+
+    padding:
+      0 12px;
+
+    border: 0;
+
+    border-radius: 9px;
 
     background: transparent;
 
-    color: #444;
+    color: #34483b;
 
     font-family: inherit;
 
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 13px;
+
+    font-weight: 750;
 
     text-align: left;
 
     cursor: pointer;
 
     transition:
-      color 0.2s ease,
-      background 0.2s ease;
-  }
-
-  .mobile-nav-inner > button:hover {
-    color: var(--green, #14532d);
-
-    background: #f4f7f4;
+      background 0.2s ease,
+      color 0.2s ease;
   }
 
 
-  /* ===================================================
+  .mobile-nav-inner > button:hover,
+  .mobile-product-trigger:hover {
+    background: #f1f7f2;
+
+    color: #14532d;
+  }
+
+
+  /* =================================================
      MOBILE DROPDOWN WRAPPER
-  =================================================== */
+  ================================================= */
 
   .mobile-product-wrapper {
     width: 100%;
   }
 
 
-  /* ===================================================
-     MOBILE DROPDOWN TRIGGER
-  =================================================== */
-
-  .mobile-product-trigger {
-    width: 100%;
-
-    min-height: 46px;
-
-    padding: 0 12px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    border: none;
-    border-radius: 8px;
-
-    background: transparent;
-
-    color: #444;
-
-    font-family: inherit;
-
-    font-size: 12px;
-    font-weight: 700;
-
-    cursor: pointer;
-
-    text-align: left;
-
-    transition:
-      color 0.2s ease,
-      background 0.2s ease;
-  }
-
-  .mobile-product-trigger:hover {
-    color: var(--green, #14532d);
-
-    background: #f4f7f4;
-  }
-
-  .mobile-product-trigger svg {
-    transition:
-      transform 0.25s ease;
-  }
-
-
-  /* ===================================================
+  /* =================================================
      MOBILE DROPDOWN
-  =================================================== */
+  ================================================= */
 
   .mobile-product-menu {
     max-height: 0;
 
     overflow: hidden;
 
-    padding: 0 8px;
-
     opacity: 0;
 
     transition:
       max-height 0.3s ease,
-      opacity 0.25s ease,
-      padding 0.3s ease;
+      opacity 0.25s ease;
   }
+
 
   .mobile-product-menu-open {
-    max-height: 600px;
-
-    padding-top: 5px;
-    padding-bottom: 6px;
+    max-height: 500px;
 
     opacity: 1;
+
+    padding:
+      4px 0 7px;
   }
 
-
-  /* ===================================================
-     MOBILE DROPDOWN BUTTONS
-  =================================================== */
 
   .mobile-product-menu button {
     width: 100%;
 
-    min-height: 38px;
-
-    padding: 7px 14px;
+    min-height: 39px;
 
     display: flex;
+
     align-items: center;
 
-    border: none;
-    border-radius: 7px;
+    padding:
+      0 20px;
+
+    border: 0;
+
+    border-left:
+      2px solid #e7eee9;
 
     background: transparent;
 
-    color: #777;
+    color: #68746c;
 
     font-family: inherit;
 
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 11px;
+
+    font-weight: 650;
 
     text-align: left;
 
@@ -747,108 +848,175 @@
     transition:
       color 0.2s ease,
       background 0.2s ease,
-      padding-left 0.2s ease;
+      border-color 0.2s ease;
   }
+
 
   .mobile-product-menu button:hover {
-    color: var(--green, #14532d);
+    color: #14532d;
 
-    background: #f4f7f4;
+    background: #f5f9f6;
 
-    padding-left: 18px;
+    border-left-color:
+      #ff6b00;
   }
 
 
-  /* ===================================================
-     MOBILE ACTIONS
-  =================================================== */
+  /* =================================================
+     MOBILE CONTACT ACTIONS
+  ================================================= */
 
   .mobile-nav-actions {
-    margin-top: 12px;
-
-    padding-top: 15px;
-
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      1fr 1fr;
 
     gap: 8px;
 
-    border-top: 1px solid #eeeeee;
+    margin-top: 13px;
+
+    padding-top: 14px;
+
+    border-top:
+      1px solid #e7eee9;
   }
 
 
-  /* ===================================================
-     MOBILE CALL
-  =================================================== */
-
-  .mobile-call {
-    min-height: 44px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 7px;
-
-    color: var(--green, #14532d);
-
-    background: #f3f7f3;
-
-    border: 1px solid #e2ebe3;
-
-    border-radius: 8px;
-
-    font-size: 11px;
-    font-weight: 800;
-
-    text-decoration: none;
-
-    transition:
-      color 0.2s ease,
-      background 0.2s ease;
-  }
-
-  .mobile-call:hover {
-    color: #ffffff;
-
-    background: var(--green, #14532d);
-  }
-
-
-  /* ===================================================
-     MOBILE WHATSAPP
-  =================================================== */
-
+  .mobile-call,
   .mobile-whatsapp {
     min-height: 44px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 6px;
 
-    color: #ffffff;
+    padding:
+      0 8px;
 
-    background: var(--orange, #ff6b00);
+    border-radius: 9px;
 
-    border-radius: 8px;
+    font-family: inherit;
 
     font-size: 11px;
+
     font-weight: 800;
 
     text-decoration: none;
 
+    white-space: nowrap;
+
     transition:
-      background 0.2s ease,
-      transform 0.2s ease;
+      transform 0.2s ease,
+      background 0.2s ease;
   }
 
-  .mobile-whatsapp:hover {
-    background: var(--green, #14532d);
 
-    transform: translateY(-1px);
+  .mobile-call {
+    border:
+      1px solid rgba(20, 83, 45, 0.12);
+
+    background: #ffffff;
+
+    color: #14532d;
+  }
+
+
+  .mobile-call svg {
+    color: #ff6b00;
+
+    flex-shrink: 0;
+  }
+
+
+  .mobile-whatsapp {
+    background: #14532d;
+
+    color: #ffffff;
+  }
+
+
+  .mobile-call:hover,
+  .mobile-whatsapp:hover {
+    transform:
+      translateY(-1px);
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .navbar-container {
+    width:
+      calc(100% - 24px);
+
+    min-height: 68px;
+  }
+
+
+  .logo-mark {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    font-size: 11px;
+  }
+
+
+  .logo-text strong {
+    font-size: 14px;
+  }
+
+
+  .logo-text span {
+    font-size: 7px;
+
+    letter-spacing: 1.7px;
+  }
+
+
+  .mobile-menu-button {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .mobile-nav-inner {
+    width:
+      calc(100% - 24px);
+
+    padding-top: 8px;
+  }
+
+
+  .mobile-nav-inner > button,
+  .mobile-product-trigger {
+    min-height: 45px;
+
+    font-size: 12px;
+  }
+
+
+  .mobile-product-menu button {
+    min-height: 37px;
+
+    font-size: 10px;
+  }
+
+
+  .mobile-nav-actions {
+    grid-template-columns:
+      1fr 1fr;
   }
 
 }
@@ -858,82 +1026,41 @@
    SMALL MOBILE
 ===================================================== */
 
-@media (max-width: 560px) {
+@media (max-width: 390px) {
 
   .navbar-container {
-    min-height: 66px;
-
-    padding: 0 16px;
+    width:
+      calc(100% - 18px);
   }
 
-
-  /* LOGO */
 
   .logo-mark {
-    width: 39px;
-    height: 39px;
-
-    border-radius: 9px;
-
-    font-size: 11px;
+    width: 36px;
+    height: 36px;
   }
+
 
   .logo-text strong {
     font-size: 13px;
   }
 
-  .logo-text span {
-    margin-top: 3px;
-
-    font-size: 8px;
-
-    letter-spacing: 1.7px;
-  }
-
-
-  /* MOBILE BUTTON */
 
   .mobile-menu-button {
-    width: 39px;
-    height: 39px;
+    width: 38px;
+    height: 38px;
   }
 
-
-  /* MOBILE MENU */
 
   .mobile-nav-inner {
-    padding:
-      10px 16px 18px;
+    width:
+      calc(100% - 18px);
   }
 
-}
-
-
-/* =====================================================
-   VERY SMALL MOBILE
-===================================================== */
-
-@media (max-width: 360px) {
-
-  .navbar-container {
-    padding: 0 13px;
-  }
-
-  .logo-mark {
-    width: 37px;
-    height: 37px;
-  }
-
-  .logo-text strong {
-    font-size: 12px;
-  }
-
-  .logo-text span {
-    font-size: 7px;
-  }
 
   .mobile-nav-actions {
     grid-template-columns: 1fr;
+
+    gap: 7px;
   }
 
 }
@@ -943,25 +1070,17 @@
    ACCESSIBILITY
 ===================================================== */
 
-.navbar-logo:focus-visible,
-.desktop-nav button:focus-visible,
-.nav-dropdown-menu button:focus-visible,
-.mobile-menu-button:focus-visible,
-.mobile-nav-inner button:focus-visible,
-.navbar-call:focus-visible,
-.navbar-whatsapp:focus-visible,
-.mobile-call:focus-visible,
-.mobile-whatsapp:focus-visible {
+.navbar button:focus-visible,
+.navbar a:focus-visible {
   outline:
-    3px solid
-    rgba(255, 107, 0, 0.3);
+    2px solid #ff6b00;
 
   outline-offset: 3px;
 }
 
 
 /* =====================================================
-   REDUCED MOTION
+   REDUCE MOTION
 ===================================================== */
 
 @media (prefers-reduced-motion: reduce) {

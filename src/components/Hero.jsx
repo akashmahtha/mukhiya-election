@@ -5,9 +5,19 @@ import {
   ShieldCheck,
   CheckCircle2,
   Sparkles,
+  FileText,
 } from "lucide-react";
 
 import "../styles/hero.css";
+
+
+/* =====================================================
+   PDF IMPORTS
+===================================================== */
+
+import materialsListPdf from "../assets/election kart final materails list _26.pdf";
+import mukhiyaElectionPdf from "../assets/Mukhiya Election 2026 ekart final.pdf";
+
 
 export default function Hero() {
   return (
@@ -21,8 +31,11 @@ export default function Hero() {
       ===================================================== */}
 
       <div className="hero-background">
+
         <div className="hero-background-pattern"></div>
+
         <div className="hero-overlay"></div>
+
       </div>
 
 
@@ -39,7 +52,10 @@ export default function Hero() {
 
         <div className="hero-content">
 
-          {/* Badge */}
+
+          {/* =================================================
+              BADGE
+          ================================================= */}
 
           <div className="hero-badge">
 
@@ -52,7 +68,9 @@ export default function Hero() {
           </div>
 
 
-          {/* Main Heading */}
+          {/* =================================================
+              MAIN HEADING
+          ================================================= */}
 
           <h1>
 
@@ -65,14 +83,18 @@ export default function Hero() {
           </h1>
 
 
-          {/* Subtitle */}
+          {/* =================================================
+              SUBTITLE
+          ================================================= */}
 
           <p className="hero-subtitle">
             संपूर्ण चुनाव प्रचार एवं Campaign Support Services
           </p>
 
 
-          {/* Description */}
+          {/* =================================================
+              DESCRIPTION
+          ================================================= */}
 
           <p className="hero-description">
 
@@ -96,38 +118,53 @@ export default function Hero() {
           <div className="hero-highlights">
 
             <div>
+
               <CheckCircle2 size={16} />
+
               <span>
                 Campaign Planning
               </span>
+
             </div>
 
+
             <div>
+
               <CheckCircle2 size={16} />
+
               <span>
                 Printing & Branding
               </span>
+
             </div>
 
+
             <div>
+
               <CheckCircle2 size={16} />
+
               <span>
                 Digital Campaign
               </span>
+
             </div>
 
+
             <div>
+
               <CheckCircle2 size={16} />
+
               <span>
                 Ground Support
               </span>
+
             </div>
 
           </div>
 
 
           {/* =================================================
-              BUTTONS
+              MAIN BUTTONS
           ================================================= */}
 
           <div className="hero-buttons">
@@ -137,7 +174,9 @@ export default function Hero() {
               className="hero-primary-btn"
             >
 
-              Explore Services
+              <span>
+                Explore Services
+              </span>
 
               <ArrowRight size={18} />
 
@@ -147,13 +186,15 @@ export default function Hero() {
             <a
               href="https://wa.me/919820280493"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="hero-secondary-btn"
             >
 
               <MessageCircle size={18} />
 
-              WhatsApp Enquiry
+              <span>
+                WhatsApp Enquiry
+              </span>
 
             </a>
 
@@ -161,18 +202,167 @@ export default function Hero() {
 
 
           {/* =================================================
-              CONTACT
+              PDF DOCUMENTS
+          ================================================= */}
+
+          <div className="hero-pdf-section">
+
+
+            {/* PDF TITLE */}
+
+            <div className="hero-pdf-title">
+
+              <FileText size={17} />
+
+              <span>
+                Election Campaign Materials
+              </span>
+
+            </div>
+
+
+            {/* PDF BUTTONS */}
+
+            <div className="hero-pdf-buttons">
+
+
+              {/* =================================================
+                  PDF 01
+              ================================================= */}
+
+              <a
+                href={materialsListPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-pdf-btn"
+                aria-label="Open Election Materials List 2026"
+              >
+
+                <span className="hero-pdf-number">
+                  01
+                </span>
+
+
+                <span className="hero-pdf-icon">
+
+                  <FileText size={18} />
+
+                </span>
+
+
+                <span className="hero-pdf-content">
+
+                  <strong>
+                    Materials List 2026
+                  </strong>
+
+                  <small>
+                    Complete Election Materials
+                  </small>
+
+                </span>
+
+
+                <ArrowRight size={15} />
+
+              </a>
+
+
+              {/* =================================================
+                  PDF 02
+              ================================================= */}
+
+              <a
+                href={mukhiyaElectionPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-pdf-btn"
+                aria-label="Open Mukhiya Election 2026 Catalogue"
+              >
+
+                <span className="hero-pdf-number">
+                  02
+                </span>
+
+
+                <span className="hero-pdf-icon">
+
+                  <FileText size={18} />
+
+                </span>
+
+
+                <span className="hero-pdf-content">
+
+                  <strong>
+                    Mukhiya Election 2026
+                  </strong>
+
+                  <small>
+                    Campaign Catalogue
+                  </small>
+
+                </span>
+
+
+                <ArrowRight size={15} />
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          {/* =================================================
+              CONTACT NUMBERS
           ================================================= */}
 
           <div className="hero-contact">
 
-            <Phone size={16} />
 
-            <strong>
-              98202 80493
-            </strong>
+            {/* NUMBER 1 */}
 
-            <span>
+            <a
+              href="tel:+9173525555"
+              className="hero-contact-number"
+              aria-label="Call 73525555"
+            >
+
+              <Phone size={16} />
+
+              <strong>
+                73525555
+              </strong>
+
+            </a>
+
+
+            {/* DIVIDER */}
+
+            <span className="hero-contact-divider"></span>
+
+
+            {/* NUMBER 2 */}
+
+            <a
+              href="tel:+919820280493"
+              className="hero-contact-number"
+              aria-label="Call 9820280493"
+            >
+
+              <Phone size={16} />
+
+              <strong>
+                9820280493
+              </strong>
+
+            </a>
+
+
+            {/* LABEL */}
+
+            <span className="hero-contact-label">
               Quick Campaign Enquiry
             </span>
 
@@ -188,19 +378,23 @@ export default function Hero() {
         <div className="hero-visual">
 
 
-          {/* Decorative Glow */}
+          {/* =================================================
+              DECORATIVE GLOW
+          ================================================= */}
 
           <div className="hero-glow hero-glow-one"></div>
 
           <div className="hero-glow hero-glow-two"></div>
 
 
-          {/* Main Campaign Card */}
+          {/* =================================================
+              MAIN CAMPAIGN CARD
+          ================================================= */}
 
           <div className="hero-main-card">
 
 
-            {/* Card Header */}
+            {/* CARD HEADER */}
 
             <div className="hero-card-header">
 
@@ -211,6 +405,7 @@ export default function Hero() {
                 </div>
 
                 <div>
+
                   <strong>
                     MUKHIYA
                   </strong>
@@ -218,6 +413,7 @@ export default function Hero() {
                   <span>
                     ELECTION
                   </span>
+
                 </div>
 
               </div>
@@ -231,7 +427,7 @@ export default function Hero() {
             </div>
 
 
-            {/* Card Main */}
+            {/* CARD MAIN */}
 
             <div className="hero-card-main">
 
@@ -239,12 +435,17 @@ export default function Hero() {
                 BIHAR ELECTION 2026
               </span>
 
+
               <h2>
+
                 Campaign
+
                 <span>
                   Ready.
                 </span>
+
               </h2>
+
 
               <p>
                 Strategy • Design • Print •
@@ -254,11 +455,12 @@ export default function Hero() {
             </div>
 
 
-            {/* Campaign Steps */}
+            {/* CARD SERVICES */}
 
             <div className="hero-card-services">
 
               <div>
+
                 <span>
                   01
                 </span>
@@ -266,9 +468,12 @@ export default function Hero() {
                 <strong>
                   PLAN
                 </strong>
+
               </div>
 
+
               <div>
+
                 <span>
                   02
                 </span>
@@ -276,9 +481,12 @@ export default function Hero() {
                 <strong>
                   DESIGN
                 </strong>
+
               </div>
 
+
               <div>
+
                 <span>
                   03
                 </span>
@@ -286,9 +494,12 @@ export default function Hero() {
                 <strong>
                   PRINT
                 </strong>
+
               </div>
 
+
               <div>
+
                 <span>
                   04
                 </span>
@@ -296,12 +507,13 @@ export default function Hero() {
                 <strong>
                   DIGITAL
                 </strong>
+
               </div>
 
             </div>
 
 
-            {/* Card Footer */}
+            {/* CARD FOOTER */}
 
             <div className="hero-card-footer">
 
@@ -373,16 +585,33 @@ export default function Hero() {
           SCROLL INDICATOR
       ===================================================== */}
 
-      <a
-        href="#about"
+      <button
+        type="button"
         className="hero-scroll"
+        onClick={() => {
+
+          const aboutSection =
+            document.getElementById("about");
+
+          if (aboutSection) {
+
+            aboutSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+
+          }
+
+        }}
       >
 
         <span className="hero-scroll-line"></span>
 
-        Scroll to explore
+        <span>
+          Scroll to explore
+        </span>
 
-      </a>
+      </button>
 
     </section>
   );

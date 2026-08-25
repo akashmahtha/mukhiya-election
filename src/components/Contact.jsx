@@ -1,7 +1,6 @@
 import {
   ArrowUpRight,
   CheckCircle2,
-  Mail,
   MapPin,
   MessageCircle,
   Phone,
@@ -114,7 +113,44 @@ export default function Contact() {
 
             <div className="contact-cards">
 
-              {/* PHONE */}
+              {/* =================================================
+                  PHONE 1
+              ================================================= */}
+
+              <a
+                href="tel:73525555"
+                className="contact-card"
+              >
+
+                <div className="contact-card-icon">
+                  <Phone size={19} />
+                </div>
+
+                <div>
+                  <span>
+                    CALL US
+                  </span>
+
+                  <strong>
+                    73525555
+                  </strong>
+
+                  <small>
+                    Primary Campaign Enquiry
+                  </small>
+                </div>
+
+                <ArrowUpRight
+                  size={15}
+                  className="contact-card-arrow"
+                />
+
+              </a>
+
+
+              {/* =================================================
+                  PHONE 2
+              ================================================= */}
 
               <a
                 href="tel:+919820280493"
@@ -147,7 +183,9 @@ export default function Contact() {
               </a>
 
 
-              {/* WHATSAPP */}
+              {/* =================================================
+                  WHATSAPP
+              ================================================= */}
 
               <a
                 href="https://wa.me/919820280493"
@@ -182,7 +220,9 @@ export default function Contact() {
               </a>
 
 
-              {/* LOCATION */}
+              {/* =================================================
+                  LOCATION
+              ================================================= */}
 
               <div className="contact-card contact-card-static">
 
@@ -226,12 +266,10 @@ export default function Contact() {
               <div className="contact-area-list">
 
                 {serviceAreas.map((area) => (
-
                   <div key={area}>
                     <CheckCircle2 size={12} />
                     {area}
                   </div>
-
                 ))}
 
               </div>
@@ -347,14 +385,12 @@ export default function Contact() {
                   </option>
 
                   {serviceOptions.map((service) => (
-
                     <option
                       key={service}
                       value={service}
                     >
                       {service}
                     </option>
-
                   ))}
 
                 </select>
@@ -386,8 +422,11 @@ export default function Contact() {
                 className="contact-submit"
               >
                 Send Campaign Enquiry
+
                 <Send size={16} />
+
               </button>
+
 
               <small className="contact-form-note">
                 By submitting this form, you agree to be contacted
@@ -433,7 +472,9 @@ export default function Contact() {
             className="contact-whatsapp-btn"
           >
             WhatsApp Now
+
             <ArrowUpRight size={16} />
+
           </a>
 
         </div>
