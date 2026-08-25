@@ -46,7 +46,6 @@ export default function Navbar() {
     setProductsOpen(false);
   };
 
-
   /* =====================================================
      SCROLL TO SECTION
   ===================================================== */
@@ -57,10 +56,7 @@ export default function Navbar() {
     const element = document.getElementById(id);
 
     if (!element) {
-      console.warn(
-        `Section with id="${id}" was not found.`
-      );
-
+      console.warn(`Section with id="${id}" was not found.`);
       return;
     }
 
@@ -72,7 +68,6 @@ export default function Navbar() {
     }, 50);
   };
 
-
   return (
     <header className="navbar">
 
@@ -82,7 +77,6 @@ export default function Navbar() {
 
       <div className="navbar-container">
 
-
         {/* =================================================
             LOGO
         ================================================= */}
@@ -90,30 +84,18 @@ export default function Navbar() {
         <button
           type="button"
           className="navbar-logo"
-          onClick={() =>
-            scrollToSection("top")
-          }
-          aria-label="Election Kart Home"
+          onClick={() => scrollToSection("top")}
+          aria-label="Mukhiya Election Home"
         >
-
           <div className="logo-mark">
-            EK
+            ME
           </div>
 
           <div className="logo-text">
-
-            <strong>
-              ELECTION
-            </strong>
-
-            <span>
-              KART
-            </span>
-
+            <strong>MUKHIYA</strong>
+            <span>ELECTION</span>
           </div>
-
         </button>
-
 
         {/* =================================================
             DESKTOP NAVIGATION
@@ -121,30 +103,23 @@ export default function Navbar() {
 
         <nav className="desktop-nav">
 
-
           {/* HOME */}
 
           <button
             type="button"
-            onClick={() =>
-              scrollToSection("top")
-            }
+            onClick={() => scrollToSection("top")}
           >
             Home
           </button>
-
 
           {/* ABOUT */}
 
           <button
             type="button"
-            onClick={() =>
-              scrollToSection("about")
-            }
+            onClick={() => scrollToSection("about")}
           >
             About
           </button>
-
 
           {/* =================================================
               PRODUCTS DROPDOWN
@@ -152,22 +127,15 @@ export default function Navbar() {
 
           <div
             className="nav-dropdown"
-            onMouseEnter={() =>
-              setProductsOpen(true)
-            }
-            onMouseLeave={() =>
-              setProductsOpen(false)
-            }
+            onMouseEnter={() => setProductsOpen(true)}
+            onMouseLeave={() => setProductsOpen(false)}
           >
 
             <button
               type="button"
               className="nav-dropdown-trigger"
-              onClick={() =>
-                setProductsOpen(!productsOpen)
-              }
+              onClick={() => setProductsOpen(!productsOpen)}
             >
-
               Products
 
               <ChevronDown
@@ -178,9 +146,7 @@ export default function Navbar() {
                     : ""
                 }
               />
-
             </button>
-
 
             <div
               className={`nav-dropdown-menu ${
@@ -189,9 +155,7 @@ export default function Navbar() {
                   : ""
               }`}
             >
-
               {productLinks.map((item) => (
-
                 <button
                   type="button"
                   key={item.label}
@@ -201,25 +165,19 @@ export default function Navbar() {
                 >
                   {item.label}
                 </button>
-
               ))}
-
             </div>
 
           </div>
-
 
           {/* SERVICES */}
 
           <button
             type="button"
-            onClick={() =>
-              scrollToSection("services")
-            }
+            onClick={() => scrollToSection("services")}
           >
             Services
           </button>
-
 
           {/* BOOTH PACKET */}
 
@@ -232,46 +190,36 @@ export default function Navbar() {
             Booth Packet
           </button>
 
-
           {/* CAMPAIGN VEHICLES */}
 
           <button
             type="button"
             onClick={() =>
-              scrollToSection(
-                "campaign-vehicles"
-              )
+              scrollToSection("campaign-vehicles")
             }
           >
             Campaign Vehicles
           </button>
 
-
           {/* GALLERY */}
 
           <button
             type="button"
-            onClick={() =>
-              scrollToSection("gallery")
-            }
+            onClick={() => scrollToSection("gallery")}
           >
             Gallery
           </button>
-
 
           {/* CONTACT */}
 
           <button
             type="button"
-            onClick={() =>
-              scrollToSection("contact")
-            }
+            onClick={() => scrollToSection("contact")}
           >
             Contact
           </button>
 
         </nav>
-
 
         {/* =================================================
             DESKTOP ACTIONS
@@ -279,23 +227,19 @@ export default function Navbar() {
 
         <div className="navbar-actions">
 
-
           {/* CALL */}
 
           <a
             href="tel:+919820280493"
             className="navbar-call"
-            aria-label="Call Election Kart"
+            aria-label="Call Mukhiya Election"
           >
-
             <Phone size={16} />
 
             <span>
               Call Now
             </span>
-
           </a>
-
 
           {/* WHATSAPP */}
 
@@ -304,15 +248,12 @@ export default function Navbar() {
             target="_blank"
             rel="noreferrer"
             className="navbar-whatsapp"
-            aria-label="WhatsApp Election Kart"
+            aria-label="WhatsApp Mukhiya Election"
           >
-
             <MessageCircle size={16} />
-
           </a>
 
         </div>
-
 
         {/* =================================================
             MOBILE MENU BUTTON
@@ -321,9 +262,7 @@ export default function Navbar() {
         <button
           type="button"
           className="mobile-menu-button"
-          onClick={() =>
-            setMenuOpen(!menuOpen)
-          }
+          onClick={() => setMenuOpen(!menuOpen)}
           aria-label={
             menuOpen
               ? "Close menu"
@@ -331,17 +270,14 @@ export default function Navbar() {
           }
           aria-expanded={menuOpen}
         >
-
           {menuOpen ? (
             <X size={23} />
           ) : (
             <Menu size={23} />
           )}
-
         </button>
 
       </div>
-
 
       {/* =================================================
           MOBILE NAVIGATION
@@ -357,37 +293,26 @@ export default function Navbar() {
 
         <div className="mobile-nav-inner">
 
-
-          {/* =================================================
-              HOME
-          ================================================= */}
+          {/* HOME */}
 
           <button
             type="button"
-            onClick={() =>
-              scrollToSection("top")
-            }
+            onClick={() => scrollToSection("top")}
           >
             Home
           </button>
 
-
-          {/* =================================================
-              ABOUT
-          ================================================= */}
+          {/* ABOUT */}
 
           <button
             type="button"
-            onClick={() =>
-              scrollToSection("about")
-            }
+            onClick={() => scrollToSection("about")}
           >
             About
           </button>
 
-
           {/* =================================================
-              PRODUCTS
+              MOBILE PRODUCTS
           ================================================= */}
 
           <div className="mobile-product-wrapper">
@@ -396,12 +321,9 @@ export default function Navbar() {
               type="button"
               className="mobile-product-trigger"
               onClick={() =>
-                setProductsOpen(
-                  !productsOpen
-                )
+                setProductsOpen(!productsOpen)
               }
             >
-
               <span>
                 Products
               </span>
@@ -414,9 +336,7 @@ export default function Navbar() {
                     : ""
                 }
               />
-
             </button>
-
 
             <div
               className={`mobile-product-menu ${
@@ -425,31 +345,22 @@ export default function Navbar() {
                   : ""
               }`}
             >
-
               {productLinks.map((item) => (
-
                 <button
                   type="button"
                   key={item.label}
                   onClick={() =>
-                    scrollToSection(
-                      item.target
-                    )
+                    scrollToSection(item.target)
                   }
                 >
                   {item.label}
                 </button>
-
               ))}
-
             </div>
 
           </div>
 
-
-          {/* =================================================
-              SERVICES
-          ================================================= */}
+          {/* SERVICES */}
 
           <button
             type="button"
@@ -460,42 +371,29 @@ export default function Navbar() {
             Services
           </button>
 
-
-          {/* =================================================
-              BOOTH PACKET
-          ================================================= */}
+          {/* BOOTH PACKET */}
 
           <button
             type="button"
             onClick={() =>
-              scrollToSection(
-                "booth-packet"
-              )
+              scrollToSection("booth-packet")
             }
           >
             Booth Packet
           </button>
 
-
-          {/* =================================================
-              CAMPAIGN VEHICLES
-          ================================================= */}
+          {/* CAMPAIGN VEHICLES */}
 
           <button
             type="button"
             onClick={() =>
-              scrollToSection(
-                "campaign-vehicles"
-              )
+              scrollToSection("campaign-vehicles")
             }
           >
             Campaign Vehicles
           </button>
 
-
-          {/* =================================================
-              GALLERY
-          ================================================= */}
+          {/* GALLERY */}
 
           <button
             type="button"
@@ -506,10 +404,7 @@ export default function Navbar() {
             Gallery
           </button>
 
-
-          {/* =================================================
-              CONTACT
-          ================================================= */}
+          {/* CONTACT */}
 
           <button
             type="button"
@@ -520,13 +415,11 @@ export default function Navbar() {
             Contact
           </button>
 
-
           {/* =================================================
               MOBILE ACTIONS
           ================================================= */}
 
           <div className="mobile-nav-actions">
-
 
             {/* CALL */}
 
@@ -534,13 +427,9 @@ export default function Navbar() {
               href="tel:+919820280493"
               className="mobile-call"
             >
-
               <Phone size={17} />
-
               Call Now
-
             </a>
-
 
             {/* WHATSAPP */}
 
@@ -550,13 +439,11 @@ export default function Navbar() {
               rel="noreferrer"
               className="mobile-whatsapp"
             >
-
               <MessageCircle size={17} />
 
               WhatsApp
 
               <ArrowUpRight size={15} />
-
             </a>
 
           </div>

@@ -57,12 +57,15 @@ export default function Footer() {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
 
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    if (!element) {
+      console.warn(`Section with id="${id}" was not found.`);
+      return;
     }
+
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
   return (
@@ -86,25 +89,26 @@ export default function Footer() {
               type="button"
               className="footer-logo"
               onClick={() => scrollToSection("top")}
-              aria-label="Election Kart Home"
+              aria-label="Mukhiya Election Home"
             >
 
               <div className="footer-logo-mark">
-                EK
+                ME
               </div>
 
               <div className="footer-logo-text">
-                <strong>ELECTION</strong>
-                <span>KART</span>
+                <strong>MUKHIYA</strong>
+                <span>ELECTION</span>
               </div>
 
             </button>
 
 
             <p className="footer-description">
-              Election campaign ke liye products,
-              printing, branding aur promotional
-              solutions — ek organised platform par.
+              Mukhiya election campaign ke liye
+              products, printing, branding aur
+              promotional solutions — ek organised
+              platform par.
             </p>
 
 
@@ -142,13 +146,13 @@ export default function Footer() {
                 href="https://wa.me/919820280493"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp"
+                aria-label="WhatsApp Mukhiya Election"
               >
                 <MessageCircle size={16} />
               </a>
 
 
-              {/* Other Social */}
+              {/* Share */}
 
               <a
                 href="#"
@@ -240,7 +244,7 @@ export default function Footer() {
               </div>
 
               <p>
-                Election Kart,
+                Mukhiya Election,
                 <br />
                 Bhagwat Complex, Office No. 401,
                 <br />
@@ -354,7 +358,7 @@ export default function Footer() {
         <div className="footer-bottom">
 
           <p>
-            © {new Date().getFullYear()} Election Kart.
+            © {new Date().getFullYear()} Mukhiya Election.
             All Rights Reserved.
           </p>
 
@@ -375,7 +379,7 @@ export default function Footer() {
             </span>
 
             <span>
-              Election Campaign Solutions
+              Mukhiya Election Campaign Solutions
             </span>
 
           </div>
