@@ -1,0 +1,690 @@
+/* =====================================================
+   GALLERY SECTION
+===================================================== */
+
+.gallery-section {
+  position: relative;
+
+  padding: 110px 30px;
+
+  background: #f7f8f5;
+
+  overflow: hidden;
+}
+
+.gallery-container {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.gallery-header {
+  max-width: 720px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+.gallery-header h2 {
+  margin-top: 15px;
+
+  color: var(--green);
+
+  font-size: clamp(
+    36px,
+    4vw,
+    58px
+  );
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+}
+
+.gallery-header h2 span {
+  color: var(--orange);
+}
+
+.gallery-header p {
+  max-width: 620px;
+
+  margin: 17px auto 0;
+
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   GALLERY GRID
+===================================================== */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* =====================================================
+   GALLERY ITEM
+===================================================== */
+
+.gallery-item {
+  position: relative;
+
+  min-width: 0;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 25px
+    rgba(0, 0, 0, 0.045);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 45px
+    rgba(0, 0, 0, 0.11);
+}
+
+
+/* =====================================================
+   GALLERY IMAGE WRAPPER
+===================================================== */
+
+.gallery-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 310px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #e9eee9,
+      #f7f8f5
+    );
+}
+
+
+/* =====================================================
+   ACTUAL IMAGE
+===================================================== */
+
+.gallery-img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.55s ease;
+}
+
+.gallery-item:hover
+.gallery-img {
+  transform: scale(1.07);
+}
+
+
+/* =====================================================
+   IMAGE DARK GRADIENT
+===================================================== */
+
+.gallery-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.05) 55%,
+      transparent
+    );
+
+  opacity: 0.85;
+}
+
+
+/* =====================================================
+   GALLERY OVERLAY
+===================================================== */
+
+.gallery-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: stretch;
+
+  justify-content: space-between;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease;
+}
+
+.gallery-item:hover
+.gallery-overlay {
+  opacity: 1;
+}
+
+
+/* =====================================================
+   OVERLAY CONTENT
+===================================================== */
+
+.gallery-overlay-content {
+  margin-top: auto;
+}
+
+.gallery-overlay-content span {
+  color: #ff9955;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.2px;
+}
+
+.gallery-overlay-content h3 {
+  margin-top: 5px;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+/* =====================================================
+   GALLERY ARROW
+===================================================== */
+
+.gallery-arrow {
+  width: 42px;
+
+  height: 42px;
+
+  margin-left: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--green);
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  transform:
+    translateY(-8px)
+    rotate(-8deg);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.gallery-item:hover
+.gallery-arrow {
+  transform:
+    translateY(0)
+    rotate(0deg);
+
+  color: #ffffff;
+
+  background: var(--orange);
+}
+
+
+/* =====================================================
+   DESKTOP ALTERNATING LAYOUT
+===================================================== */
+
+.gallery-item-1 {
+  grid-row: span 1;
+}
+
+.gallery-item-2 {
+  grid-row: span 1;
+}
+
+.gallery-item-3 {
+  grid-row: span 1;
+}
+
+.gallery-item-4 {
+  grid-row: span 1;
+}
+
+.gallery-item-5 {
+  grid-row: span 1;
+}
+
+.gallery-item-6 {
+  grid-row: span 1;
+}
+
+
+/* =====================================================
+   GALLERY BOTTOM CTA
+===================================================== */
+
+.gallery-bottom {
+  margin-top: 42px;
+
+  padding: 22px 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e8ebe7;
+
+  border-radius: 14px;
+}
+
+.gallery-bottom p {
+  color: #777;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+.gallery-bottom a {
+  flex-shrink: 0;
+
+  min-height: 42px;
+
+  padding: 0 16px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  color: #ffffff;
+
+  background: var(--green);
+
+  border-radius: 8px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.gallery-bottom a:hover {
+  background: var(--orange);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(255, 107, 0, 0.18);
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.gallery-empty {
+  grid-column: 1 / -1;
+
+  min-height: 300px;
+
+  padding: 40px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: #999;
+
+  background: #ffffff;
+
+  border:
+    1px dashed #d9ded9;
+
+  border-radius: 18px;
+}
+
+.gallery-empty svg {
+  margin-bottom: 13px;
+
+  color: var(--orange);
+}
+
+.gallery-empty h3 {
+  color: var(--green);
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+.gallery-empty p {
+  margin-top: 7px;
+
+  color: #888;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .gallery-section {
+    padding: 95px 25px;
+  }
+
+  .gallery-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 17px;
+  }
+
+  .gallery-image {
+    height: 300px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .gallery-section {
+    padding: 85px 22px;
+  }
+
+  .gallery-header {
+    margin-bottom: 40px;
+  }
+
+  .gallery-image {
+    height: 280px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 560px) {
+
+  .gallery-section {
+    padding: 70px 16px;
+  }
+
+
+  /* Header */
+
+  .gallery-header {
+    margin-bottom: 32px;
+  }
+
+  .gallery-header h2 {
+    font-size: clamp(
+      30px,
+      9vw,
+      42px
+    );
+
+    letter-spacing: -1px;
+  }
+
+  .gallery-header p {
+    margin-top: 14px;
+
+    font-size: 12px;
+
+    line-height: 1.75;
+  }
+
+
+  /* Grid */
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+
+  /* Image */
+
+  .gallery-image {
+    height: 260px;
+  }
+
+
+  /* Mobile overlay always slightly visible */
+
+  .gallery-overlay {
+    opacity: 1;
+
+    padding: 16px;
+  }
+
+  .gallery-overlay-content span {
+    font-size: 7px;
+  }
+
+  .gallery-overlay-content h3 {
+    font-size: 18px;
+  }
+
+  .gallery-arrow {
+    width: 37px;
+
+    height: 37px;
+  }
+
+
+  /* CTA */
+
+  .gallery-bottom {
+    margin-top: 30px;
+
+    padding: 18px;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 15px;
+  }
+
+  .gallery-bottom p {
+    font-size: 10px;
+  }
+
+  .gallery-bottom a {
+    width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .gallery-section {
+    padding-left: 14px;
+
+    padding-right: 14px;
+  }
+
+  .gallery-image {
+    height: 235px;
+  }
+
+  .gallery-overlay {
+    padding: 14px;
+  }
+
+  .gallery-overlay-content h3 {
+    font-size: 16px;
+  }
+
+}
+
+
+/* =====================================================
+   TOUCH DEVICES
+===================================================== */
+
+@media (hover: none) {
+
+  .gallery-overlay {
+    opacity: 1;
+  }
+
+  .gallery-item:hover {
+    transform: none;
+  }
+
+  .gallery-item:hover
+  .gallery-img {
+    transform: none;
+  }
+
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+.gallery-bottom a:focus-visible {
+  outline:
+    3px solid
+    rgba(255, 107, 0, 0.3);
+
+  outline-offset: 3px;
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gallery-item,
+  .gallery-img,
+  .gallery-overlay,
+  .gallery-arrow,
+  .gallery-bottom a {
+    transition: none;
+  }
+
+  .gallery-item:hover {
+    transform: none;
+  }
+
+  .gallery-item:hover
+  .gallery-img {
+    transform: none;
+  }
+
+}

@@ -1,0 +1,88 @@
+const boothPacketItems = [
+  {
+    id: 1,
+    number: "01",
+    name: "बैग",
+    englishName: "Bag",
+    image: "/images/booth-packet/bag.png",
+  },
+  {
+    id: 2,
+    number: "02",
+    name: "मास्क",
+    englishName: "Mask",
+    image: "/images/booth-packet/mask.png",
+  },
+  {
+    id: 3,
+    number: "03",
+    name: "पेन",
+    englishName: "Pen",
+    image: "/images/booth-packet/pen.png",
+  },
+  {
+    id: 4,
+    number: "04",
+    name: "सील",
+    englishName: "Seal",
+    image: "/images/booth-packet/seal.png",
+  },
+  {
+    id: 5,
+    number: "05",
+    name: "माचिस",
+    englishName: "Matchbox",
+    image: "/images/booth-packet/matchbox.png",
+  },
+  {
+    id: 6,
+    number: "06",
+    name: "कार्बन",
+    englishName: "Carbon",
+    image: "/images/booth-packet/carbon.png",
+  },
+  {
+    id: 7,
+    number: "07",
+    name: "मोमबत्ती",
+    englishName: "Candle",
+    image: "/images/booth-packet/candle.png",
+  },
+  {
+    id: 8,
+    number: "08",
+    name: "सैनिटाइजर",
+    englishName: "Sanitizer",
+    image: "/images/booth-packet/sanitizer.png",
+  },
+  {
+    id: 9,
+    number: "09",
+    name: "वोटर लेटर",
+    englishName: "Voter Letter",
+    image: "/images/booth-packet/voter-letter.png",
+  },
+  {
+    id: 10,
+    number: "10",
+    name: "सादा पेपर",
+    englishName: "Plain Paper",
+    image: "/images/booth-packet/plain-paper.png",
+  },
+  {
+    id: 11,
+    number: "11",
+    name: "आईडी कार्ड",
+    englishName: "ID Card",
+    image: "/images/booth-packet/id-card.png",
+  },
+  {
+    id: 12,
+    number: "12",
+    name: "लिफाफा",
+    englishName: "Envelope",
+    image: "/images/booth-packet/envelope.png",
+  },
+];
+
+export default boothPacketItems;

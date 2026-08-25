@@ -1,0 +1,1055 @@
+/* =====================================================
+   CAMPAIGN VEHICLES SECTION
+===================================================== */
+
+.campaign-section {
+  position: relative;
+
+  padding: 110px 30px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+.campaign-container {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.campaign-header {
+  max-width: 720px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+.campaign-header h2 {
+  margin-top: 15px;
+
+  color: var(--green);
+
+  font-size: clamp(36px, 4vw, 58px);
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+}
+
+.campaign-header h2 span {
+  color: var(--orange);
+}
+
+.campaign-header p {
+  margin-top: 17px;
+
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   FEATURED CAMPAIGN
+===================================================== */
+
+.campaign-featured {
+  position: relative;
+
+  min-height: 440px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  margin-bottom: 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--green),
+      #0a321a
+    );
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 55px
+    rgba(20, 83, 45, 0.12);
+}
+
+
+/* =====================================================
+   FEATURED CONTENT
+===================================================== */
+
+.campaign-featured-content {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 45px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.campaign-featured-label {
+  color: #ff9955;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.campaign-featured-content h3 {
+  margin-top: 15px;
+
+  color: #ffffff;
+
+  font-size: clamp(
+    36px,
+    4vw,
+    55px
+  );
+
+  line-height: 1.03;
+
+  letter-spacing: -2px;
+}
+
+.campaign-featured-content h3 span {
+  color: #ff9955;
+}
+
+.campaign-featured-content > p {
+  max-width: 470px;
+
+  margin-top: 20px;
+
+  color:
+    rgba(255, 255, 255, 0.62);
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   FEATURE POINTS
+===================================================== */
+
+.campaign-featured-points {
+  margin-top: 28px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.campaign-featured-points div {
+  min-height: 34px;
+
+  padding: 0 11px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 7px;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+.campaign-featured-points div span {
+  color: #ff9955;
+
+  font-size: 8px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   FEATURED BUTTON
+===================================================== */
+
+.campaign-featured-btn {
+  width: fit-content;
+
+  min-height: 44px;
+
+  margin-top: 30px;
+
+  padding: 0 17px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  color: var(--green);
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.campaign-featured-btn:hover {
+  color: #ffffff;
+
+  background: var(--orange);
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FEATURED VISUAL
+===================================================== */
+
+.campaign-featured-visual {
+  position: relative;
+
+  min-height: 440px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #153d24,
+      #082714
+    );
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   FEATURED IMAGE
+===================================================== */
+
+.campaign-featured-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  opacity: 0.9;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.4s ease;
+}
+
+.campaign-featured:hover
+.campaign-featured-image {
+  transform: scale(1.04);
+
+  opacity: 1;
+}
+
+
+/* =====================================================
+   FEATURED IMAGE OVERLAY
+===================================================== */
+
+.campaign-featured-visual::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 39, 20, 0.72),
+      rgba(8, 39, 20, 0.15)
+    );
+}
+
+
+/* =====================================================
+   FEATURED IMAGE DARK OVERLAY
+===================================================== */
+
+.campaign-featured-visual::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08),
+      rgba(0, 0, 0, 0.18)
+    );
+}
+
+
+/* =====================================================
+   VISUAL GLOW
+===================================================== */
+
+.campaign-visual-glow {
+  position: absolute;
+
+  z-index: 3;
+
+  width: 420px;
+
+  height: 420px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 107, 0, 0.18) 0%,
+      rgba(255, 107, 0, 0.06) 35%,
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   VEHICLE GRID
+===================================================== */
+
+.campaign-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* =====================================================
+   VEHICLE CARD
+===================================================== */
+
+.campaign-card {
+  position: relative;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e8e9e5;
+
+  border-radius: 17px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.campaign-card:hover {
+  transform: translateY(-6px);
+
+  border-color:
+    rgba(255, 107, 0, 0.25);
+
+  box-shadow:
+    0 18px 45px
+    rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================================
+   CARD IMAGE
+===================================================== */
+
+.campaign-card-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 220px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f4f7f4,
+      #e9eee9
+    );
+}
+
+
+/* =====================================================
+   ACTUAL CARD IMAGE
+===================================================== */
+
+.campaign-card-image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.45s ease;
+}
+
+.campaign-card:hover
+.campaign-card-image img {
+  transform: scale(1.06);
+}
+
+
+/* =====================================================
+   CARD IMAGE OVERLAY
+===================================================== */
+
+.campaign-card-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.18),
+      transparent 50%
+    );
+}
+
+
+/* =====================================================
+   CAMPAIGN TAG
+===================================================== */
+
+.campaign-tag {
+  position: absolute;
+
+  z-index: 5;
+
+  top: 12px;
+
+  left: 12px;
+
+  padding: 6px 9px;
+
+  color: var(--green);
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  border-radius: 6px;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  box-shadow:
+    0 4px 12px
+    rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.campaign-card-content {
+  padding: 21px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+}
+
+
+/* =====================================================
+   CARD ICON
+===================================================== */
+
+.campaign-card-icon {
+  width: 39px;
+
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--orange);
+
+  background: #fff3e9;
+
+  border-radius: 9px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.campaign-card:hover
+.campaign-card-icon {
+  color: #ffffff;
+
+  background: var(--orange);
+
+  transform: rotate(-4deg);
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.campaign-card-content h3 {
+  margin-top: 18px;
+
+  color: var(--green);
+
+  font-size: 19px;
+
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+
+/* =====================================================
+   HINDI TITLE
+===================================================== */
+
+.campaign-card-hindi {
+  margin-top: 3px;
+
+  color: var(--orange);
+
+  font-family:
+    "Noto Sans Devanagari",
+    "Poppins",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.campaign-card-content p {
+  margin-top: 11px;
+
+  color: #777;
+
+  font-size: 10px;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   CARD LINK
+===================================================== */
+
+.campaign-card-link {
+  width: fit-content;
+
+  margin-top: auto;
+
+  padding-top: 19px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: var(--green);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.campaign-card-link:hover {
+  color: var(--orange);
+
+  transform: translateX(3px);
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.campaign-empty {
+  grid-column: 1 / -1;
+
+  min-height: 260px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  text-align: center;
+
+  color: #777;
+
+  background: #f7f8f5;
+
+  border:
+    1px dashed #d8ddd8;
+
+  border-radius: 17px;
+}
+
+.campaign-empty svg {
+  margin-bottom: 12px;
+
+  color: var(--orange);
+}
+
+.campaign-empty h3 {
+  color: var(--green);
+
+  font-size: 18px;
+}
+
+.campaign-empty p {
+  margin-top: 6px;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   IMAGE ERROR / FALLBACK
+===================================================== */
+
+.campaign-card-image.image-error {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f4f7f4,
+      #e9eee9
+    );
+}
+
+.campaign-card-image.image-error::before {
+  content: "Campaign Image";
+
+  color: var(--green);
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .campaign-featured {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .campaign-featured-content {
+    padding: 35px;
+  }
+
+  .campaign-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .campaign-section {
+    padding: 85px 22px;
+  }
+
+  .campaign-featured {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .campaign-featured-content {
+    padding: 35px;
+  }
+
+  .campaign-featured-visual {
+    min-height: 360px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL TABLET
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .campaign-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .campaign-card-image {
+    height: 230px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 560px) {
+
+  .campaign-section {
+    padding: 70px 16px;
+  }
+
+
+  /* -----------------------------------------------
+     HEADER
+  ------------------------------------------------ */
+
+  .campaign-header {
+    margin-bottom: 34px;
+  }
+
+  .campaign-header h2 {
+    font-size: clamp(
+      30px,
+      9vw,
+      42px
+    );
+
+    letter-spacing: -1px;
+  }
+
+  .campaign-header p {
+    font-size: 12px;
+
+    line-height: 1.75;
+  }
+
+
+  /* -----------------------------------------------
+     FEATURED
+  ------------------------------------------------ */
+
+  .campaign-featured {
+    border-radius: 17px;
+  }
+
+  .campaign-featured-content {
+    padding: 27px 21px;
+  }
+
+  .campaign-featured-label {
+    font-size: 8px;
+  }
+
+  .campaign-featured-content h3 {
+    margin-top: 12px;
+
+    font-size: 35px;
+
+    letter-spacing: -1px;
+  }
+
+  .campaign-featured-content > p {
+    margin-top: 15px;
+
+    font-size: 10px;
+  }
+
+
+  /* -----------------------------------------------
+     FEATURE POINTS
+  ------------------------------------------------ */
+
+  .campaign-featured-points {
+    margin-top: 21px;
+
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+  .campaign-featured-points div {
+    width: fit-content;
+
+    min-height: 32px;
+
+    font-size: 8px;
+  }
+
+
+  /* -----------------------------------------------
+     FEATURE BUTTON
+  ------------------------------------------------ */
+
+  .campaign-featured-btn {
+    width: 100%;
+
+    margin-top: 23px;
+  }
+
+
+  /* -----------------------------------------------
+     FEATURE IMAGE
+  ------------------------------------------------ */
+
+  .campaign-featured-visual {
+    min-height: 290px;
+  }
+
+  .campaign-featured-image {
+    object-position: center;
+  }
+
+
+  /* -----------------------------------------------
+     CARDS
+  ------------------------------------------------ */
+
+  .campaign-card {
+    border-radius: 15px;
+  }
+
+  .campaign-card-image {
+    height: 215px;
+  }
+
+  .campaign-card-content {
+    padding: 18px;
+  }
+
+  .campaign-card-content h3 {
+    font-size: 18px;
+  }
+
+  .campaign-card-content p {
+    font-size: 10px;
+  }
+
+  .campaign-card-link {
+    padding-top: 17px;
+
+    font-size: 9px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .campaign-section {
+    padding-left: 14px;
+
+    padding-right: 14px;
+  }
+
+  .campaign-featured-content {
+    padding: 24px 18px;
+  }
+
+  .campaign-featured-content h3 {
+    font-size: 31px;
+  }
+
+  .campaign-featured-visual {
+    min-height: 260px;
+  }
+
+  .campaign-card-image {
+    height: 200px;
+  }
+
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+.campaign-featured-btn:focus-visible,
+.campaign-card-link:focus-visible {
+  outline:
+    3px solid
+    rgba(255, 107, 0, 0.3);
+
+  outline-offset: 3px;
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .campaign-card,
+  .campaign-card-image img,
+  .campaign-featured-image,
+  .campaign-featured-btn,
+  .campaign-card-link {
+    transition: none;
+  }
+
+  .campaign-card:hover {
+    transform: none;
+  }
+
+  .campaign-card:hover
+  .campaign-card-image img {
+    transform: none;
+  }
+
+  .campaign-featured:hover
+  .campaign-featured-image {
+    transform: none;
+  }
+
+}

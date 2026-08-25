@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --orange: #ff6b00;
+  --orange-dark: #e85d00;
+  --green: #14532d;
+  --green-dark: #0b3b1d;
+  --black: #111111;
+  --white: #ffffff;
+  --light: #f8f8f5;
+  --border: #e8e8e8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", "Noto Sans Devanagari", sans-serif;
+  background: var(--white);
+  color: var(--black);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  width: 100%;
+}
+
+::selection {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.home-placeholder {
+  padding: 120px 20px;
+  text-align: center;
+  background: var(--light);
+}
+
+.home-placeholder span {
+  color: var(--orange);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.home-placeholder h2 {
+  margin-top: 12px;
+  font-size: 42px;
+  color: var(--green);
+}
+
+.home-placeholder p {
+  margin-top: 15px;
+  color: #666;
+}
