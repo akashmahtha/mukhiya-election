@@ -2,60 +2,22 @@
    DIGITAL CAMPAIGN SECTION
 ===================================================== */
 
-.digital-section {
+.digital-campaign-section {
   position: relative;
-
-  padding: 110px 30px;
-
-  background: #ffffff;
-
+  width: 100%;
   overflow: hidden;
-}
 
-.digital-section::before {
-  content: "";
-
-  position: absolute;
-
-  width: 500px;
-  height: 500px;
-
-  top: -250px;
-  left: -220px;
-
-  border-radius: 50%;
+  padding: 100px 0;
 
   background:
-    radial-gradient(
-      circle,
-      rgba(20, 83, 45, 0.055),
-      transparent 70%
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f8faf7 55%,
+      #f1f6f0 100%
     );
 
-  pointer-events: none;
-}
-
-.digital-section::after {
-  content: "";
-
-  position: absolute;
-
-  width: 420px;
-  height: 420px;
-
-  right: -220px;
-  bottom: -250px;
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(255, 107, 0, 0.045),
-      transparent 70%
-    );
-
-  pointer-events: none;
+  color: #173524;
 }
 
 
@@ -63,14 +25,8 @@
    CONTAINER
 ===================================================== */
 
-.digital-container {
-  position: relative;
-
-  z-index: 2;
-
-  width: 100%;
-
-  max-width: 1400px;
+.digital-campaign-container {
+  width: min(1280px, calc(100% - 70px));
 
   margin: 0 auto;
 }
@@ -80,57 +36,84 @@
    HEADER
 ===================================================== */
 
-.digital-header {
-  max-width: 760px;
+.digital-campaign-header {
+  max-width: 780px;
 
-  margin: 0 auto 55px;
-
-  text-align: center;
+  margin-bottom: 55px;
 }
 
-.digital-header .section-label {
-  color: var(--green, #14532d);
 
-  font-size: 9px;
+.digital-campaign-header .section-label {
+  width: fit-content;
 
-  font-weight: 800;
+  position: relative;
 
-  letter-spacing: 1.6px;
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 14px;
+
+  color: #ff6b00;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
 
   text-transform: uppercase;
 }
 
-.digital-header h2 {
-  margin-top: 15px;
 
-  color: var(--green, #14532d);
+.digital-campaign-header .section-label::before,
+.digital-campaign-header .section-label::after {
+  content: "";
 
-  font-size:
-    clamp(38px, 4.5vw, 60px);
+  width: 25px;
+  height: 2px;
 
-  line-height: 1.05;
-
-  letter-spacing: -2.5px;
+  background: #ff6b00;
 }
 
-.digital-header h2 span {
-  display: block;
 
-  margin-top: 7px;
+.digital-campaign-header h2 {
+  margin: 0;
 
-  color: var(--orange, #ff6b00);
+  color: #14532d;
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+
+  font-weight: 950;
 }
 
-.digital-header p {
-  max-width: 650px;
 
-  margin: 18px auto 0;
+.digital-campaign-header h2 span {
+  display: inline-block;
 
-  color: #777;
+  margin-left: 12px;
 
-  font-size: 12px;
+  color: #ff6b00;
+}
 
-  line-height: 1.85;
+
+.digital-campaign-header p {
+  max-width: 720px;
+
+  margin: 18px 0 0;
+
+  color: #66736a;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  font-weight: 500;
 }
 
 
@@ -138,31 +121,36 @@
    FEATURE
 ===================================================== */
 
-.digital-feature {
-  min-height: 455px;
-
+.digital-campaign-feature {
   display: grid;
 
   grid-template-columns:
-    0.95fr
-    1.05fr;
+    minmax(0, 1fr)
+    minmax(430px, 0.85fr);
 
-  color: #ffffff;
+  gap: 35px;
+
+  min-height: 530px;
+
+  margin-bottom: 55px;
+
+  padding: 48px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
 
   background:
     linear-gradient(
       135deg,
-      var(--green, #14532d),
-      #092d18
+      #ffffff 0%,
+      #f4f8f4 100%
     );
 
-  border-radius: 21px;
-
-  overflow: hidden;
+  border: 1px solid rgba(20, 83, 45, 0.08);
 
   box-shadow:
-    0 20px 55px
-    rgba(20, 83, 45, 0.11);
+    0 20px 55px rgba(20, 83, 45, 0.07);
 }
 
 
@@ -170,60 +158,72 @@
    FEATURE CONTENT
 ===================================================== */
 
-.digital-feature-content {
+.digital-campaign-feature-content {
   position: relative;
 
   z-index: 3;
-
-  padding: 48px;
 
   display: flex;
 
   flex-direction: column;
 
   justify-content: center;
+
+  max-width: 600px;
 }
 
-.digital-feature-label {
-  color: #ff9955;
 
-  font-size: 8px;
+.digital-campaign-feature-label {
+  width: fit-content;
 
-  font-weight: 900;
+  display: inline-block;
 
-  letter-spacing: 1.8px;
-}
+  margin-bottom: 15px;
 
-.digital-feature-content h3 {
-  margin-top: 16px;
-
-  color: #ffffff;
-
-  font-size:
-    clamp(36px, 4vw, 54px);
-
-  line-height: 1.02;
-
-  letter-spacing: -2px;
-}
-
-.digital-feature-content h3 span {
-  display: block;
-
-  color: #ff9955;
-}
-
-.digital-feature-content > p {
-  max-width: 500px;
-
-  margin-top: 19px;
-
-  color:
-    rgba(255, 255, 255, 0.58);
+  color: #ff6b00;
 
   font-size: 10px;
 
-  line-height: 1.85;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.digital-campaign-feature-content h3 {
+  margin: 0;
+
+  color: #14532d;
+
+  font-size: clamp(38px, 4vw, 58px);
+
+  line-height: 0.98;
+
+  letter-spacing: -2.5px;
+
+  font-weight: 950;
+}
+
+
+.digital-campaign-feature-content h3 span {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #ff6b00;
+}
+
+
+.digital-campaign-feature-content > p {
+  max-width: 560px;
+
+  margin: 22px 0 0;
+
+  color: #68746c;
+
+  font-size: 14px;
+
+  line-height: 1.8;
 }
 
 
@@ -231,46 +231,95 @@
    FEATURE POINTS
 ===================================================== */
 
-.digital-feature-points {
+.digital-campaign-points {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 9px;
+
   margin-top: 25px;
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 8px;
 }
 
-.digital-feature-points div {
-  min-height: 34px;
+
+.digital-campaign-points > div {
+  min-height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
 
   padding: 0 11px;
 
-  display: inline-flex;
+  border: 1px solid #e2e9e3;
 
-  align-items: center;
+  border-radius: 9px;
 
-  gap: 6px;
+  background: #ffffff;
 
-  color:
-    rgba(255, 255, 255, 0.8);
+  color: #405147;
 
-  background:
-    rgba(255, 255, 255, 0.065);
+  font-size: 11px;
 
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.08);
+  font-weight: 750;
 
-  border-radius: 7px;
-
-  font-size: 8px;
-
-  font-weight: 700;
+  box-shadow:
+    0 5px 15px rgba(20, 83, 45, 0.035);
 }
 
-.digital-feature-points svg {
-  color: #ff9955;
+
+.digital-campaign-points svg {
+  flex-shrink: 0;
+
+  color: #ff6b00;
+}
+
+
+/* =====================================================
+   FEATURE BUTTON
+===================================================== */
+
+.digital-campaign-btn {
+  width: fit-content;
+
+  min-height: 45px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 25px;
+
+  padding: 0 17px;
+
+  border-radius: 10px;
+
+  background: #ff6b00;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 850;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 25px rgba(255, 107, 0, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.digital-campaign-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 30px rgba(255, 107, 0, 0.25);
 }
 
 
@@ -278,111 +327,113 @@
    FEATURE VISUAL
 ===================================================== */
 
-.digital-feature-visual {
+.digital-campaign-feature-visual {
   position: relative;
 
-  min-height: 455px;
+  min-height: 440px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
-  background:
-    linear-gradient(
-      145deg,
-      #153d24,
-      #062613
-    );
-
-  overflow: hidden;
+  overflow: visible;
 }
 
-.digital-glow {
+
+/* =====================================================
+   GLOW
+===================================================== */
+
+.digital-campaign-glow {
   position: absolute;
 
-  width: 440px;
-  height: 440px;
+  width: 390px;
+  height: 390px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       circle,
-      rgba(255, 107, 0, 0.18),
-      rgba(255, 107, 0, 0.05) 42%,
-      transparent 70%
+      rgba(20, 83, 45, 0.15),
+      transparent 68%
     );
+
+  filter: blur(4px);
 }
 
 
-/* =====================================================
-   DECORATIVE CIRCLES
-===================================================== */
-
-.digital-circle {
+.digital-campaign-circle {
   position: absolute;
 
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(20, 83, 45, 0.1);
 
   border-radius: 50%;
 }
 
-.digital-circle-one {
-  width: 330px;
-  height: 330px;
+
+.digital-campaign-circle.circle-one {
+  width: 380px;
+  height: 380px;
 }
 
-.digital-circle-two {
-  width: 500px;
-  height: 500px;
 
-  border-color:
-    rgba(255, 255, 255, 0.045);
+.digital-campaign-circle.circle-two {
+  width: 280px;
+  height: 280px;
 }
 
 
 /* =====================================================
-   DIGITAL PHONE CARD
+   PHONE
 ===================================================== */
 
-.digital-phone-card {
+.digital-phone {
   position: relative;
 
-  z-index: 4;
+  z-index: 3;
 
-  width: 245px;
-  height: 350px;
+  width: 235px;
+  height: 425px;
 
-  padding: 13px;
+  padding: 10px;
 
-  background:
-    #111b15;
+  border-radius: 31px;
 
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.13);
+  background: #101a14;
 
-  border-radius: 25px;
+  border: 5px solid #26372c;
 
   box-shadow:
-    0 25px 60px
-    rgba(0, 0, 0, 0.28);
+    0 30px 60px rgba(10, 40, 22, 0.28);
 
-  transform:
-    rotate(4deg);
-
-  transition:
-    transform 0.35s ease;
+  transform: rotate(2deg);
 }
 
-.digital-feature:hover .digital-phone-card {
-  transform:
-    rotate(0deg)
-    translateY(-5px);
+
+.digital-phone::before {
+  content: "";
+
+  position: absolute;
+
+  top: 7px;
+  left: 50%;
+
+  width: 80px;
+  height: 17px;
+
+  transform: translateX(-50%);
+
+  border-radius: 20px;
+
+  background: #07110b;
+
+  z-index: 5;
 }
 
 
@@ -391,34 +442,19 @@
 ===================================================== */
 
 .digital-phone-top {
-  height: 38px;
-
-  padding: 0 10px;
+  height: 35px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-}
 
-.digital-phone-top span:first-child {
-  color:
-    rgba(255, 255, 255, 0.6);
+  padding: 0 8px;
+
+  color: rgba(255, 255, 255, 0.6);
 
   font-size: 8px;
 
   font-weight: 700;
-}
-
-.digital-phone-top span:last-child {
-  color: #ff9955;
-
-  font-size: 7px;
-
-  font-weight: 900;
-
-  letter-spacing: 0.8px;
 }
 
 
@@ -427,753 +463,702 @@
 ===================================================== */
 
 .digital-phone-screen {
-  height: calc(100% - 38px);
+  height: calc(100% - 35px);
 
-  display: flex;
+  padding: 35px 16px 18px;
 
-  flex-direction: column;
+  overflow: hidden;
 
-  align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
+  border-radius: 22px;
 
   background:
     linear-gradient(
-      145deg,
-      #1d4028,
-      #0a2414
+      160deg,
+      #145b32 0%,
+      #0d4325 58%,
+      #092d19 100%
     );
-
-  border-radius: 17px;
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.07);
-}
-
-.digital-phone-screen svg {
-  color: #ff9955;
-
-  margin-bottom: 18px;
-}
-
-.digital-phone-screen strong {
-  color: #ffffff;
-
-  font-size: 14px;
-
-  font-weight: 900;
-}
-
-.digital-phone-screen small {
-  margin-top: 7px;
-
-  color:
-    rgba(255, 255, 255, 0.4);
-
-  font-size: 7px;
 }
 
 
 /* =====================================================
-   SUB HEADER
+   SCREEN BADGE
 ===================================================== */
 
-.digital-subheader {
-  margin-top: 65px;
+.digital-screen-badge {
+  width: fit-content;
 
-  margin-bottom: 25px;
+  padding: 6px 8px;
+
+  border-radius: 5px;
+
+  background: rgba(255, 107, 0, 0.15);
+
+  color: #ff8a45;
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
 }
 
-.digital-subheader > span {
-  color:
-    var(--orange, #ff6b00);
+
+/* =====================================================
+   SCREEN TITLE
+===================================================== */
+
+.digital-screen-title {
+  margin-top: 28px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -1px;
+}
+
+
+.digital-screen-title strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #ff8a45;
+}
+
+
+/* =====================================================
+   SCREEN ITEMS
+===================================================== */
+
+.digital-screen-items {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-top: 35px;
+}
+
+
+.digital-screen-items > div {
+  min-height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+.digital-screen-items svg {
+  color: #ff8a45;
+}
+
+
+/* =====================================================
+   FLOATING CARDS
+===================================================== */
+
+.digital-floating-card {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 12px 14px;
+
+  border: 1px solid rgba(20, 83, 45, 0.08);
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  box-shadow:
+    0 15px 35px rgba(20, 83, 45, 0.12);
+}
+
+
+.digital-floating-card svg {
+  color: #ff6b00;
+}
+
+
+.digital-floating-card div {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.digital-floating-card strong {
+  color: #14532d;
+
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+
+.digital-floating-card span {
+  margin-top: 3px;
+
+  color: #77817a;
+
+  font-size: 8px;
+
+  font-weight: 650;
+}
+
+
+.digital-floating-one {
+  top: 55px;
+
+  left: 10px;
+}
+
+
+.digital-floating-two {
+  right: 0;
+
+  bottom: 55px;
+}
+
+
+/* =====================================================
+   SERVICES GRID
+===================================================== */
+
+.digital-services-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-bottom: 50px;
+}
+
+
+/* =====================================================
+   SERVICE CARD
+===================================================== */
+
+.digital-service-card {
+  position: relative;
+
+  min-height: 260px;
+
+  padding: 25px;
+
+  border: 1px solid rgba(20, 83, 45, 0.09);
+
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 30px rgba(20, 83, 45, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.digital-service-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(255, 107, 0, 0.18);
+
+  box-shadow:
+    0 20px 40px rgba(20, 83, 45, 0.1);
+}
+
+
+/* =====================================================
+   SERVICE ICON
+===================================================== */
+
+.digital-service-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 11px;
+
+  background: #f1f7f2;
+
+  color: #14532d;
+}
+
+
+.digital-service-card:hover .digital-service-icon {
+  background: #ff6b00;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   SERVICE TITLE
+===================================================== */
+
+.digital-service-card h3 {
+  margin: 0;
+
+  color: #173524;
+
+  font-size: 16px;
+
+  line-height: 1.3;
+
+  font-weight: 850;
+}
+
+
+.digital-service-hindi {
+  margin-top: 5px;
+
+  color: #ff6b00;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   SERVICE LIST
+===================================================== */
+
+.digital-service-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-top: 17px;
+}
+
+
+.digital-service-list > div {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #68746c;
+
+  font-size: 10.5px;
+
+  line-height: 1.3;
+}
+
+
+.digital-service-list > div > span {
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #ff6b00;
+}
+
+
+/* =====================================================
+   SUPPORT CTA
+===================================================== */
+
+.digital-campaign-support {
+  display: grid;
+
+  grid-template-columns: auto 1fr auto;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 35px;
+
+  padding: 25px 28px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #14532d,
+      #0d3e22
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 18px 40px rgba(20, 83, 45, 0.16);
+}
+
+
+.digital-support-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: #ff8a45;
+}
+
+
+.digital-support-content > span {
+  color: #ff8a45;
 
   font-size: 8px;
 
   font-weight: 900;
 
-  letter-spacing: 1.6px;
+  letter-spacing: 1.5px;
 }
 
-.digital-subheader h3 {
-  margin-top: 7px;
 
-  color:
-    var(--green, #14532d);
+.digital-support-content h3 {
+  margin: 5px 0 0;
+
+  color: #ffffff;
+
+  font-size: 23px;
+
+  font-weight: 850;
+}
+
+
+.digital-support-content h3 strong {
+  margin-left: 6px;
+
+  color: #ff8a45;
+}
+
+
+.digital-support-content p {
+  max-width: 700px;
+
+  margin: 6px 0 0;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+.digital-support-btn {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 15px;
+
+  border-radius: 9px;
+
+  background: #ff6b00;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 850;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   VIDEO SECTION
+===================================================== */
+
+.digital-video-section {
+  display: grid;
+
+  grid-template-columns: 0.75fr 1.25fr;
+
+  align-items: center;
+
+  gap: 30px;
+
+  margin-bottom: 35px;
+
+  padding: 30px;
+
+  border: 1px solid rgba(20, 83, 45, 0.08);
+
+  border-radius: 18px;
+
+  background: #ffffff;
+}
+
+
+.digital-video-heading > span {
+  color: #ff6b00;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+
+.digital-video-heading h3 {
+  margin: 8px 0 0;
+
+  color: #14532d;
 
   font-size: 28px;
 
   line-height: 1.1;
 
   letter-spacing: -1px;
-}
-
-.digital-subheader h3 strong {
-  color:
-    var(--orange, #ff6b00);
-}
-
-
-/* =====================================================
-   SOCIAL GRID
-===================================================== */
-
-.digital-social-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, minmax(0, 1fr));
-
-  gap: 14px;
-}
-
-
-/* =====================================================
-   SOCIAL CARD
-===================================================== */
-
-.digital-social-card {
-  min-height: 230px;
-
-  padding: 23px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  background: #ffffff;
-
-  border:
-    1px solid #e5e9e4;
-
-  border-radius: 15px;
-
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.digital-social-card:hover {
-  transform:
-    translateY(-5px);
-
-  border-color:
-    rgba(255, 107, 0, 0.2);
-
-  box-shadow:
-    0 17px 40px
-    rgba(0, 0, 0, 0.065);
-}
-
-
-/* =====================================================
-   SOCIAL ICON
-===================================================== */
-
-.digital-social-icon {
-  width: 42px;
-  height: 42px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  color:
-    var(--orange, #ff6b00);
-
-  background:
-    #fff3e9;
-
-  border-radius: 10px;
-
-  transition:
-    background 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease;
-}
-
-.digital-social-card:hover
-.digital-social-icon {
-  color: #ffffff;
-
-  background:
-    var(--orange, #ff6b00);
-
-  transform:
-    rotate(-4deg);
-}
-
-
-/* =====================================================
-   SOCIAL CONTENT
-===================================================== */
-
-.digital-social-card h4 {
-  margin-top: 17px;
-
-  color:
-    var(--green, #14532d);
-
-  font-size: 16px;
 
   font-weight: 900;
-
-  line-height: 1.25;
 }
 
-.digital-social-hindi {
-  margin-top: 4px;
-
-  color:
-    var(--orange, #ff6b00);
-
-  font-family:
-    "Noto Sans Devanagari",
-    "Poppins",
-    sans-serif;
-
-  font-size: 8px;
-
-  font-weight: 700;
-}
-
-.digital-social-card p {
-  margin-top: 10px;
-
-  color: #777;
-
-  font-size: 9px;
-
-  line-height: 1.75;
-}
-
-
-/* =====================================================
-   CARD LINK
-===================================================== */
-
-.digital-card-link {
-  width: fit-content;
-
-  margin-top: auto;
-
-  padding-top: 14px;
-
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 6px;
-
-  color:
-    var(--green, #14532d);
-
-  font-size: 8px;
-
-  font-weight: 900;
-
-  text-decoration: none;
-
-  transition:
-    color 0.25s ease,
-    transform 0.25s ease;
-}
-
-.digital-card-link:hover {
-  color:
-    var(--orange, #ff6b00);
-
-  transform:
-    translateX(3px);
-}
-
-
-/* =====================================================
-   SERVICE BLOCK
-===================================================== */
-
-.digital-service-block {
-  margin-top: 18px;
-
-  padding: 30px;
-
-  background:
-    #f7f8f5;
-
-  border:
-    1px solid #e4e8e3;
-
-  border-radius: 16px;
-}
-
-.digital-service-heading {
-  display: flex;
-
-  align-items: center;
-
-  gap: 13px;
-}
-
-.digital-service-icon {
-  width: 43px;
-  height: 43px;
-
-  flex-shrink: 0;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  color:
-    var(--orange, #ff6b00);
-
-  background:
-    #fff3e9;
-
-  border-radius: 10px;
-}
-
-.digital-service-heading > div:last-child > span,
-.digital-video-heading > div:last-child > span {
-  color:
-    var(--orange, #ff6b00);
-
-  font-size: 7px;
-
-  font-weight: 900;
-
-  letter-spacing: 1.4px;
-}
-
-.digital-service-heading h3,
-.digital-video-heading h3 {
-  margin-top: 5px;
-
-  color:
-    var(--green, #14532d);
-
-  font-size: 22px;
-
-  line-height: 1.1;
-}
-
-.digital-service-heading h3 strong,
-.digital-video-heading h3 strong {
-  color:
-    var(--orange, #ff6b00);
-
-  margin-left: 5px;
-}
-
-
-/* =====================================================
-   CREATIVE LIST
-===================================================== */
-
-.digital-list-grid {
-  margin-top: 25px;
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 8px;
-}
-
-.digital-list-item {
-  min-height: 40px;
-
-  padding: 0 12px;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  color: #626762;
-
-  background: #ffffff;
-
-  border:
-    1px solid #e7ebe6;
-
-  border-radius: 8px;
-
-  font-size: 8px;
-
-  font-weight: 700;
-}
-
-.digital-list-item span {
-  width: 5px;
-  height: 5px;
-
-  flex-shrink: 0;
-
-  background:
-    var(--orange, #ff6b00);
-
-  border-radius: 50%;
-}
-
-
-/* =====================================================
-   VIDEO BLOCK
-===================================================== */
-
-.digital-video-block {
-  margin-top: 18px;
-
-  padding: 30px;
-
-  color: #ffffff;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--green, #14532d),
-      #092d18
-    );
-
-  border-radius: 16px;
-}
-
-.digital-video-heading {
-  display: flex;
-
-  align-items: center;
-
-  gap: 13px;
-}
-
-.digital-video-icon {
-  width: 43px;
-  height: 43px;
-
-  flex-shrink: 0;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  color:
-    #ff9955;
-
-  background:
-    rgba(255, 153, 85, 0.1);
-
-  border:
-    1px solid
-    rgba(255, 153, 85, 0.15);
-
-  border-radius: 10px;
-}
-
-.digital-video-heading h3 {
-  color: #ffffff;
-}
 
 .digital-video-heading h3 strong {
-  color: #ff9955;
+  display: block;
+
+  color: #ff6b00;
 }
 
 
 /* =====================================================
-   VIDEO GRID
+   VIDEO ITEMS
 ===================================================== */
 
-.digital-video-grid {
-  margin-top: 25px;
-
+.digital-video-items {
   display: grid;
 
   grid-template-columns:
-    repeat(5, minmax(0, 1fr));
+    repeat(3, 1fr);
 
-  gap: 8px;
+  gap: 10px;
 }
+
 
 .digital-video-item {
-  min-height: 73px;
-
-  padding: 11px;
+  min-height: 100px;
 
   display: flex;
 
   flex-direction: column;
 
-  justify-content: space-between;
+  justify-content: center;
 
-  background:
-    rgba(255, 255, 255, 0.055);
+  padding: 16px;
 
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+
+  background: #f5f8f5;
+
+  border: 1px solid #e5ebe6;
+}
+
+
+.digital-video-item-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 10px;
 
   border-radius: 8px;
 
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease;
+  background: #ffffff;
+
+  color: #ff6b00;
 }
 
-.digital-video-item:hover {
-  background:
-    rgba(255, 255, 255, 0.09);
 
-  transform:
-    translateY(-2px);
+.digital-video-item strong {
+  display: block;
+
+  color: #244032;
+
+  font-size: 10px;
+
+  line-height: 1.3;
 }
 
-.digital-video-item > span {
-  color:
-    #ff9955;
 
-  font-size: 7px;
+.digital-video-item span {
+  display: block;
 
-  font-weight: 900;
-}
+  margin-top: 4px;
 
-.digital-video-item p {
-  color:
-    rgba(255, 255, 255, 0.7);
+  color: #7a847d;
 
   font-size: 8px;
-
-  font-weight: 700;
 
   line-height: 1.4;
 }
 
 
 /* =====================================================
-   NOTE
+   BOTTOM CTA
 ===================================================== */
 
-.digital-note {
-  margin-top: 18px;
-
-  padding: 14px 18px;
-
-  display: flex;
-
-  align-items: flex-start;
-
-  gap: 10px;
-
-  background:
-    #fff8f2;
-
-  border:
-    1px solid #f4e5d8;
-
-  border-radius: 10px;
-}
-
-.digital-note svg {
-  flex-shrink: 0;
-
-  margin-top: 1px;
-
-  color:
-    var(--orange, #ff6b00);
-}
-
-.digital-note p {
-  color: #777;
-
-  font-size: 8px;
-
-  line-height: 1.7;
-}
-
-
-/* =====================================================
-   CTA
-===================================================== */
-
-.digital-cta {
-  position: relative;
-
-  margin-top: 18px;
-
-  padding: 29px 33px;
-
+.digital-campaign-bottom {
   display: flex;
 
   align-items: center;
-
   justify-content: space-between;
 
   gap: 30px;
 
-  color: #ffffff;
+  padding: 30px 32px;
+
+  border-radius: 20px;
 
   background:
-    #f6f8f4;
+    linear-gradient(
+      135deg,
+      #f1f7f2,
+      #ffffff
+    );
 
-  border:
-    1px solid #e3e8e1;
-
-  border-radius: 16px;
-
-  overflow: hidden;
+  border: 1px solid rgba(20, 83, 45, 0.08);
 }
 
-.digital-cta::after {
-  content: "";
 
-  position: absolute;
+.digital-campaign-bottom > div > span {
+  color: #ff6b00;
 
-  width: 250px;
-  height: 250px;
-
-  right: -150px;
-  bottom: -170px;
-
-  border:
-    1px solid
-    rgba(20, 83, 45, 0.06);
-
-  border-radius: 50%;
-}
-
-.digital-cta > div {
-  position: relative;
-
-  z-index: 2;
-}
-
-.digital-cta > div > span {
-  color:
-    var(--orange, #ff6b00);
-
-  font-size: 8px;
+  font-size: 9px;
 
   font-weight: 900;
 
-  letter-spacing: 1.6px;
+  letter-spacing: 1.5px;
 }
 
-.digital-cta h3 {
-  margin-top: 7px;
 
-  color:
-    var(--green, #14532d);
+.digital-campaign-bottom h3 {
+  margin: 6px 0 0;
 
-  font-size: 27px;
+  color: #14532d;
 
-  line-height: 1.1;
+  font-size: 26px;
 
-  letter-spacing: -1px;
+  line-height: 1.2;
+
+  font-weight: 900;
 }
 
-.digital-cta h3 strong {
-  color:
-    var(--orange, #ff6b00);
 
-  margin-left: 5px;
+.digital-campaign-bottom h3 strong {
+  margin-left: 7px;
+
+  color: #ff6b00;
 }
 
-.digital-cta p {
-  margin-top: 7px;
 
-  color: #888;
+.digital-campaign-bottom p {
+  max-width: 650px;
 
-  font-size: 9px;
+  margin: 6px 0 0;
+
+  color: #718078;
+
+  font-size: 10px;
 
   line-height: 1.6;
 }
 
 
-/* =====================================================
-   CTA BUTTON
-===================================================== */
+.digital-campaign-bottom-btn {
+  min-height: 45px;
 
-.digital-cta-btn {
-  position: relative;
+  display: inline-flex;
+  align-items: center;
 
-  z-index: 2;
+  gap: 7px;
+
+  padding: 0 17px;
 
   flex-shrink: 0;
 
-  min-height: 43px;
+  border-radius: 10px;
 
-  padding: 0 16px;
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 8px;
+  background: #ff6b00;
 
   color: #ffffff;
 
-  background:
-    var(--green, #14532d);
+  font-size: 11px;
 
-  border-radius: 8px;
-
-  font-size: 9px;
-
-  font-weight: 900;
+  font-weight: 850;
 
   text-decoration: none;
 
+  box-shadow:
+    0 10px 25px rgba(255, 107, 0, 0.16);
+
   transition:
-    background 0.25s ease,
-    transform 0.25s ease;
-}
-
-.digital-cta-btn:hover {
-  background:
-    var(--orange, #ff6b00);
-
-  transform:
-    translateY(-2px);
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 
-/* =====================================================
-   LARGE TABLET
-===================================================== */
+.digital-campaign-bottom-btn:hover {
+  transform: translateY(-2px);
 
-@media (max-width: 1100px) {
-
-  .digital-section {
-    padding:
-      90px 25px;
-  }
-
-  .digital-social-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
-
-  .digital-video-grid {
-    grid-template-columns:
-      repeat(4, minmax(0, 1fr));
-  }
-
-  .digital-video-item:last-child {
-    grid-column: span 2;
-  }
-
+  box-shadow:
+    0 15px 30px rgba(255, 107, 0, 0.24);
 }
 
 
@@ -1181,114 +1166,38 @@
    TABLET
 ===================================================== */
 
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
 
-  .digital-section {
-    padding:
-      80px 22px;
+  .digital-campaign-container {
+    width: min(900px, calc(100% - 40px));
   }
 
-  .digital-header {
-    margin-bottom: 42px;
-  }
 
-  .digital-feature {
+  .digital-campaign-feature {
     grid-template-columns: 1fr;
 
-    min-height: auto;
+    padding: 40px;
   }
 
-  .digital-feature-content {
-    padding: 38px;
+
+  .digital-campaign-feature-content {
+    max-width: 700px;
   }
 
-  .digital-feature-visual {
-    min-height: 380px;
+
+  .digital-campaign-feature-visual {
+    min-height: 480px;
   }
 
-  .digital-list-grid {
+
+  .digital-services-grid {
     grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+      repeat(2, 1fr);
   }
 
-  .digital-video-grid {
-    grid-template-columns:
-      repeat(3, minmax(0, 1fr));
-  }
 
-  .digital-video-item:last-child {
-    grid-column: auto;
-  }
-
-}
-
-
-/* =====================================================
-   SMALL TABLET
-===================================================== */
-
-@media (max-width: 650px) {
-
-  .digital-section {
-    padding:
-      70px 18px;
-  }
-
-  .digital-header {
-    margin-bottom: 35px;
-  }
-
-  .digital-header h2 {
-    font-size:
-      clamp(33px, 9vw, 47px);
-
-    letter-spacing: -1.5px;
-  }
-
-  .digital-header p {
-    font-size: 10px;
-  }
-
-  .digital-feature-content {
-    padding:
-      30px 25px;
-  }
-
-  .digital-feature-content h3 {
-    font-size: 37px;
-
-    letter-spacing: -1.3px;
-  }
-
-  .digital-feature-visual {
-    min-height: 330px;
-  }
-
-  .digital-social-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
-
-  .digital-video-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
-
-  .digital-service-block,
-  .digital-video-block {
-    padding: 25px;
-  }
-
-  .digital-cta {
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    padding: 25px;
-  }
-
-  .digital-cta-btn {
-    width: 100%;
+  .digital-video-section {
+    grid-template-columns: 1fr;
   }
 
 }
@@ -1298,228 +1207,203 @@
    MOBILE
 ===================================================== */
 
-@media (max-width: 560px) {
+@media (max-width: 650px) {
 
-  .digital-section {
-    padding:
-      65px 16px;
+  .digital-campaign-section {
+    padding: 70px 0;
+  }
+
+
+  .digital-campaign-container {
+    width: calc(100% - 28px);
   }
 
 
   /* Header */
 
-  .digital-header h2 {
-    font-size:
-      clamp(31px, 9.5vw, 42px);
-
-    line-height: 1.08;
+  .digital-campaign-header {
+    margin-bottom: 35px;
   }
 
-  .digital-header h2 span {
-    margin-top: 5px;
+
+  .digital-campaign-header h2 {
+    font-size: 42px;
+
+    letter-spacing: -2px;
   }
 
-  .digital-header p {
-    margin-top: 14px;
 
-    font-size: 9px;
+  .digital-campaign-header h2 span {
+    display: block;
 
-    line-height: 1.8;
+    margin: 5px 0 0;
+  }
+
+
+  .digital-campaign-header p {
+    font-size: 12px;
+
+    line-height: 1.7;
   }
 
 
   /* Feature */
 
-  .digital-feature {
-    border-radius: 15px;
-  }
-
-  .digital-feature-content {
-    padding:
-      26px 20px;
-  }
-
-  .digital-feature-label {
-    font-size: 7px;
-  }
-
-  .digital-feature-content h3 {
-    margin-top: 13px;
-
-    font-size:
-      clamp(30px, 9vw, 38px);
-  }
-
-  .digital-feature-content > p {
-    margin-top: 14px;
-
-    font-size: 9px;
-  }
-
-  .digital-feature-points {
-    margin-top: 19px;
+  .digital-campaign-feature {
+    display: flex;
 
     flex-direction: column;
 
-    align-items: flex-start;
+    gap: 20px;
+
+    padding: 25px 18px;
+
+    border-radius: 20px;
   }
 
-  .digital-feature-points div {
-    min-height: 31px;
 
-    font-size: 8px;
+  .digital-campaign-feature-content h3 {
+    font-size: 38px;
+
+    letter-spacing: -1.8px;
+  }
+
+
+  .digital-campaign-feature-content > p {
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+
+  /* Points */
+
+  .digital-campaign-points {
+    grid-template-columns: 1fr;
+
+    gap: 6px;
+  }
+
+
+  .digital-campaign-points > div {
+    font-size: 10px;
   }
 
 
   /* Visual */
 
-  .digital-feature-visual {
-    min-height: 300px;
-  }
-
-  .digital-glow {
-    width: 290px;
-    height: 290px;
-  }
-
-  .digital-circle-one {
-    width: 230px;
-    height: 230px;
-  }
-
-  .digital-circle-two {
-    width: 360px;
-    height: 360px;
-  }
-
-  .digital-phone-card {
-    width: 190px;
-    height: 270px;
-
-    border-radius: 20px;
-  }
-
-  .digital-phone-screen {
-    border-radius: 13px;
-  }
-
-  .digital-phone-screen svg {
-    width: 28px;
-    height: 28px;
-
-    margin-bottom: 13px;
-  }
-
-  .digital-phone-screen strong {
-    font-size: 11px;
-  }
-
-  .digital-phone-screen small {
-    font-size: 6px;
+  .digital-campaign-feature-visual {
+    min-height: 430px;
   }
 
 
-  /* Sub Header */
+  .digital-phone {
+    width: 205px;
 
-  .digital-subheader {
-    margin-top: 48px;
-
-    margin-bottom: 18px;
-  }
-
-  .digital-subheader h3 {
-    font-size: 23px;
+    height: 375px;
   }
 
 
-  /* Social */
+  .digital-campaign-circle.circle-one {
+    width: 330px;
+    height: 330px;
+  }
 
-  .digital-social-grid {
+
+  .digital-campaign-circle.circle-two {
+    width: 240px;
+    height: 240px;
+  }
+
+
+  .digital-floating-one {
+    top: 35px;
+
+    left: 0;
+  }
+
+
+  .digital-floating-two {
+    right: 0;
+
+    bottom: 35px;
+  }
+
+
+  /* Services */
+
+  .digital-services-grid {
     grid-template-columns: 1fr;
 
-    gap: 10px;
+    gap: 12px;
   }
 
-  .digital-social-card {
+
+  .digital-service-card {
     min-height: auto;
 
-    padding:
-      20px 18px;
-
-    border-radius: 14px;
+    padding: 21px;
   }
 
-  .digital-social-icon {
-    width: 38px;
-    height: 38px;
+
+  /* Support */
+
+  .digital-campaign-support {
+    grid-template-columns: auto 1fr;
+
+    padding: 20px;
+
+    gap: 12px;
   }
 
-  .digital-social-card h4 {
-    margin-top: 14px;
 
-    font-size: 17px;
+  .digital-support-content h3 {
+    font-size: 19px;
   }
 
-  .digital-social-card p {
+
+  .digital-support-content h3 strong {
+    display: block;
+
+    margin-left: 0;
+  }
+
+
+  .digital-support-content p {
     font-size: 9px;
   }
 
 
-  /* Creative */
+  .digital-support-btn {
+    grid-column: 1 / -1;
 
-  .digital-service-block,
-  .digital-video-block {
-    margin-top: 12px;
-
-    padding:
-      21px 18px;
-
-    border-radius: 14px;
-  }
-
-  .digital-service-icon,
-  .digital-video-icon {
-    width: 38px;
-    height: 38px;
-  }
-
-  .digital-service-heading h3,
-  .digital-video-heading h3 {
-    font-size: 20px;
-  }
-
-  .digital-service-heading > div:last-child > span,
-  .digital-video-heading > div:last-child > span {
-    font-size: 6px;
-  }
-
-  .digital-list-grid {
-    margin-top: 18px;
-
-    grid-template-columns: 1fr;
-
-    gap: 6px;
-  }
-
-  .digital-list-item {
-    min-height: 37px;
-
-    font-size: 8px;
+    justify-content: center;
   }
 
 
   /* Video */
 
-  .digital-video-grid {
-    margin-top: 18px;
+  .digital-video-section {
+    padding: 22px;
 
-    grid-template-columns: 1fr;
-
-    gap: 6px;
+    gap: 22px;
   }
 
+
+  .digital-video-heading h3 {
+    font-size: 25px;
+  }
+
+
+  .digital-video-items {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+
   .digital-video-item {
-    min-height: 52px;
+    min-height: 75px;
 
     flex-direction: row;
 
@@ -1528,140 +1412,88 @@
     gap: 10px;
   }
 
-  .digital-video-item p {
-    font-size: 8px;
+
+  .digital-video-item-icon {
+    flex-shrink: 0;
+
+    margin-bottom: 0;
   }
 
 
-  /* Note */
+  /* Bottom */
 
-  .digital-note {
-    margin-top: 12px;
+  .digital-campaign-bottom {
+    flex-direction: column;
 
-    padding:
-      12px 14px;
+    align-items: flex-start;
 
-    border-radius: 9px;
-  }
-
-  .digital-note p {
-    font-size: 7px;
+    padding: 24px;
   }
 
 
-  /* CTA */
-
-  .digital-cta {
-    margin-top: 12px;
-
-    padding:
-      21px 18px;
-
-    border-radius: 14px;
+  .digital-campaign-bottom h3 {
+    font-size: 23px;
   }
 
-  .digital-cta > div > span {
-    font-size: 7px;
+
+  .digital-campaign-bottom h3 strong {
+    display: block;
+
+    margin-left: 0;
   }
 
-  .digital-cta h3 {
-    font-size: 21px;
-  }
 
-  .digital-cta p {
-    font-size: 8px;
-  }
+  .digital-campaign-bottom-btn {
+    width: 100%;
 
-  .digital-cta-btn {
-    min-height: 42px;
-
-    font-size: 8px;
+    justify-content: center;
   }
 
 }
 
 
 /* =====================================================
-   VERY SMALL MOBILE
+   SMALL MOBILE
 ===================================================== */
 
-@media (max-width: 360px) {
+@media (max-width: 390px) {
 
-  .digital-section {
-    padding:
-      55px 14px;
+  .digital-campaign-header h2 {
+    font-size: 36px;
   }
 
-  .digital-feature-content {
-    padding:
-      23px 17px;
+
+  .digital-campaign-feature-content h3 {
+    font-size: 34px;
   }
 
-  .digital-feature-content h3 {
-    font-size: 29px;
+
+  .digital-campaign-feature-visual {
+    min-height: 400px;
   }
 
-  .digital-feature-visual {
-    min-height: 270px;
+
+  .digital-phone {
+    width: 185px;
+
+    height: 350px;
   }
 
-  .digital-phone-card {
-    width: 175px;
-    height: 250px;
+
+  .digital-floating-card {
+    padding: 10px;
+
+    gap: 6px;
   }
 
-  .digital-service-block,
-  .digital-video-block {
-    padding:
-      19px 16px;
+
+  .digital-floating-one {
+    left: -5px;
   }
 
-  .digital-cta {
-    padding:
-      20px 16px;
-  }
 
-  .digital-cta h3 {
-    font-size: 20px;
-  }
-
-}
-
-
-/* =====================================================
-   ACCESSIBILITY
-===================================================== */
-
-.digital-card-link:focus-visible,
-.digital-cta-btn:focus-visible {
-  outline:
-    3px solid
-    rgba(255, 107, 0, 0.3);
-
-  outline-offset: 3px;
-}
-
-
-/* =====================================================
-   REDUCED MOTION
-===================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .digital-social-card,
-  .digital-social-icon,
-  .digital-card-link,
-  .digital-phone-card,
-  .digital-cta-btn {
-    transition: none;
-  }
-
-  .digital-social-card:hover {
-    transform: none;
-  }
-
-  .digital-feature:hover .digital-phone-card {
-    transform: rotate(4deg);
+  .digital-floating-two {
+    right: -5px;
   }
 
 }
