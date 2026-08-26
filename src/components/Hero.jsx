@@ -318,55 +318,7 @@ export default function Hero() {
               CONTACT NUMBERS
           ================================================= */}
 
-          <div className="hero-contact">
-
-
-            {/* NUMBER 1 */}
-
-            <a
-              href="tel:+9173525555"
-              className="hero-contact-number"
-              aria-label="Call 73525555"
-            >
-
-              <Phone size={16} />
-
-              <strong>
-                73525555
-              </strong>
-
-            </a>
-
-
-            {/* DIVIDER */}
-
-            <span className="hero-contact-divider"></span>
-
-
-            {/* NUMBER 2 */}
-
-            <a
-              href="tel:+919820280493"
-              className="hero-contact-number"
-              aria-label="Call 9820280493"
-            >
-
-              <Phone size={16} />
-
-              <strong>
-                9820280493
-              </strong>
-
-            </a>
-
-
-            {/* LABEL */}
-
-            <span className="hero-contact-label">
-              Quick Campaign Enquiry
-            </span>
-
-          </div>
+          
 
         </div>
 

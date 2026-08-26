@@ -118,7 +118,7 @@ export default function Contact() {
               ================================================= */}
 
               <a
-                href="tel:73525555"
+                href="tel: 7352555555"
                 className="contact-card"
               >
 
@@ -132,7 +132,7 @@ export default function Contact() {
                   </span>
 
                   <strong>
-                    73525555
+                     7352555555
                   </strong>
 
                   <small>

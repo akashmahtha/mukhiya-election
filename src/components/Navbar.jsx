@@ -18,7 +18,7 @@ import "../styles/navbar.css";
 
 const phoneNumbers = [
   {
-    number: "73525555",
+    number: "7352555555",
     href: "tel:+9173525555",
   },
   {
