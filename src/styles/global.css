@@ -1,15 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap");
 
+
+/* =====================================================
+   ROOT VARIABLES
+===================================================== */
+
 :root {
   --orange: #ff6b00;
   --orange-dark: #e85d00;
+
   --green: #14532d;
   --green-dark: #0b3b1d;
+
   --black: #111111;
   --white: #ffffff;
+
   --light: #f8f8f5;
   --border: #e8e8e8;
+
+  /* Global typography */
+  --font-body: 16px;
+  --font-small: 14px;
+  --font-xs: 12px;
 }
+
+
+/* =====================================================
+   RESET
+===================================================== */
 
 * {
   margin: 0;
@@ -17,61 +35,263 @@
   box-sizing: border-box;
 }
 
+
+/* =====================================================
+   HTML
+===================================================== */
+
 html {
   scroll-behavior: smooth;
+
+  font-size: 16px;
 }
 
+
+/* =====================================================
+   BODY
+===================================================== */
+
 body {
-  font-family: "Poppins", "Noto Sans Devanagari", sans-serif;
+  font-family:
+    "Poppins",
+    "Noto Sans Devanagari",
+    sans-serif;
+
   background: var(--white);
+
   color: var(--black);
+
+  font-size: var(--font-body);
+
+  line-height: 1.6;
+
   overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
+
+/* =====================================================
+   GENERAL TEXT
+===================================================== */
+
+p {
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
 
 a {
   text-decoration: none;
+
   color: inherit;
 }
 
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
 button {
   font-family: inherit;
+
+  font-size: 14px;
+
+  cursor: pointer;
 }
+
+
+/* =====================================================
+   IMAGES
+===================================================== */
 
 img {
   max-width: 100%;
+
   display: block;
 }
+
+
+/* =====================================================
+   MAIN
+===================================================== */
 
 main {
   width: 100%;
 }
 
+
+/* =====================================================
+   SELECTION
+===================================================== */
+
 ::selection {
   background: var(--orange);
+
   color: var(--white);
 }
 
+
+/* =====================================================
+   HOME PLACEHOLDER
+===================================================== */
+
 .home-placeholder {
-  padding: 120px 20px;
+  padding:
+    120px 20px;
+
   text-align: center;
+
   background: var(--light);
 }
 
+
 .home-placeholder span {
   color: var(--orange);
+
   font-size: 14px;
+
   font-weight: 700;
+
   text-transform: uppercase;
+
   letter-spacing: 2px;
 }
 
+
 .home-placeholder h2 {
   margin-top: 12px;
+
   font-size: 42px;
+
+  line-height: 1.15;
+
   color: var(--green);
+
+  font-weight: 800;
 }
+
 
 .home-placeholder p {
   margin-top: 15px;
+
   color: #666;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   COMMON SECTION TEXT
+===================================================== */
+
+.section-label {
+  font-size: 12px;
+
+  line-height: 1.3;
+
+  font-weight: 800;
+}
+
+
+.section-label + h2 {
+  line-height: 1.15;
+}
+
+
+/* =====================================================
+   MOBILE TYPOGRAPHY
+===================================================== */
+
+@media (max-width: 768px) {
+
+  html {
+    font-size: 15px;
+  }
+
+
+  body {
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+
+  p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  button {
+    font-size: 13px;
+  }
+
+
+  .home-placeholder {
+    padding:
+      90px 18px;
+  }
+
+
+  .home-placeholder span {
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .home-placeholder h2 {
+    font-size: 32px;
+  }
+
+
+  .home-placeholder p {
+    font-size: 14px;
+  }
+
+
+  .section-label {
+    font-size: 11px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  html {
+    font-size: 15px;
+  }
+
+
+  body {
+    font-size: 15px;
+  }
+
+
+  p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .home-placeholder h2 {
+    font-size: 28px;
+  }
+
 }

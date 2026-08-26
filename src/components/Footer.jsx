@@ -3,10 +3,24 @@ import {
   MapPin,
   Phone,
   MessageCircle,
-  Share2,
 } from "lucide-react";
 
 import "../styles/footer.css";
+
+/* =====================================================
+   CONTACT NUMBERS
+===================================================== */
+
+const primaryPhone = "7352555555";
+const secondaryPhone = "9820280493";
+
+const primaryPhoneDisplay = "73525 55555";
+const secondaryPhoneDisplay = "98202 80493";
+
+
+/* =====================================================
+   CAMPAIGN PRODUCTS
+===================================================== */
 
 const productLinks = [
   "Posters & Banners",
@@ -17,6 +31,11 @@ const productLinks = [
   "Pamphlets & Stickers",
   "Pen, Diary & Calendar",
 ];
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
 
 const serviceLinks = [
   {
@@ -45,6 +64,11 @@ const serviceLinks = [
   },
 ];
 
+
+/* =====================================================
+   QUICK LINKS
+===================================================== */
+
 const quickLinks = [
   {
     label: "Home",
@@ -72,7 +96,17 @@ const quickLinks = [
   },
 ];
 
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
 export default function Footer() {
+
+  /* ===================================================
+     SCROLL FUNCTION
+  =================================================== */
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
 
@@ -84,14 +118,16 @@ export default function Footer() {
     }
   };
 
+
   return (
     <footer className="footer">
 
       <div className="footer-container">
 
-        {/* =====================================================
+
+        {/* =================================================
             TOP CTA
-        ===================================================== */}
+        ================================================= */}
 
         <div className="footer-top-cta">
 
@@ -102,7 +138,7 @@ export default function Footer() {
             </span>
 
             <h2>
-              अपना Campaign
+              अपना Campaign{" "}
               <strong>
                 Professional तरीके से Plan करें।
               </strong>
@@ -115,24 +151,29 @@ export default function Footer() {
 
           </div>
 
+
           <a
-            href="https://wa.me/919820280493"
+            href={`https://wa.me/91${primaryPhone}`}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="footer-top-cta-btn"
           >
             WhatsApp Enquiry
+
             <ArrowUpRight size={16} />
+
           </a>
 
         </div>
 
 
-        {/* =====================================================
+
+        {/* =================================================
             MAIN FOOTER
-        ===================================================== */}
+        ================================================= */}
 
         <div className="footer-main">
+
 
           {/* =================================================
               BRAND
@@ -176,48 +217,8 @@ export default function Footer() {
               एक integrated platform पर।
             </p>
 
-
-            {/* =================================================
-                SOCIAL
-            ================================================= */}
-
-            <div className="footer-socials">
-
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="footer-social-text"
-              >
-                IG
-              </a>
-
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="footer-social-text"
-              >
-                f
-              </a>
-
-              <a
-                href="https://wa.me/919820280493"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="WhatsApp"
-              >
-                <MessageCircle size={16} />
-              </a>
-
-              <a
-                href="#"
-                aria-label="Social Media"
-              >
-                <Share2 size={16} />
-              </a>
-
-            </div>
-
           </div>
+
 
 
           {/* =================================================
@@ -251,6 +252,7 @@ export default function Footer() {
           </div>
 
 
+
           {/* =================================================
               SERVICES
           ================================================= */}
@@ -280,6 +282,7 @@ export default function Footer() {
             </div>
 
           </div>
+
 
 
           {/* =================================================
@@ -313,6 +316,7 @@ export default function Footer() {
           </div>
 
 
+
           {/* =================================================
               CONTACT
           ================================================= */}
@@ -324,7 +328,9 @@ export default function Footer() {
             </h3>
 
 
-            {/* OFFICE */}
+            {/* =================================================
+                OFFICE
+            ================================================= */}
 
             <div className="footer-contact-item">
 
@@ -347,10 +353,13 @@ export default function Footer() {
             </div>
 
 
-            {/* PHONE */}
+
+            {/* =================================================
+                PRIMARY PHONE
+            ================================================= */}
 
             <a
-              href="tel:+919820280493"
+              href={`tel:+91${primaryPhone}`}
               className="footer-contact-item footer-contact-link"
             >
 
@@ -361,7 +370,7 @@ export default function Footer() {
               <p>
 
                 <strong>
-                  98202 80493
+                  {primaryPhoneDisplay}
                 </strong>
 
                 <span>
@@ -373,12 +382,44 @@ export default function Footer() {
             </a>
 
 
-            {/* WHATSAPP */}
+
+            {/* =================================================
+                SECONDARY PHONE
+            ================================================= */}
 
             <a
-              href="https://wa.me/919820280493"
+              href={`tel:+91${secondaryPhone}`}
+              className="footer-contact-item footer-contact-link"
+            >
+
+              <div className="footer-contact-icon">
+                <Phone size={16} />
+              </div>
+
+              <p>
+
+                <strong>
+                  {secondaryPhoneDisplay}
+                </strong>
+
+                <span>
+                  Call for Enquiry
+                </span>
+
+              </p>
+
+            </a>
+
+
+
+            {/* =================================================
+                PRIMARY WHATSAPP
+            ================================================= */}
+
+            <a
+              href={`https://wa.me/91${primaryPhone}`}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="footer-contact-item footer-contact-link"
             >
 
@@ -410,6 +451,7 @@ export default function Footer() {
         </div>
 
 
+
         {/* =====================================================
             SERVICE NETWORK
         ===================================================== */}
@@ -435,6 +477,7 @@ export default function Footer() {
           </p>
 
         </div>
+
 
 
         {/* =====================================================

@@ -91,11 +91,13 @@
 .booth-header .section-label {
   color: var(--green, #14532d);
 
-  font-size: 9px;
+  font-size: 12px;
 
   font-weight: 800;
 
-  letter-spacing: 1.6px;
+  letter-spacing: 2px;
+
+  line-height: 1.4;
 
   text-transform: uppercase;
 }
@@ -106,9 +108,9 @@
   color: var(--green, #14532d);
 
   font-size:
-    clamp(38px, 4.5vw, 60px);
+    clamp(40px, 4.5vw, 60px);
 
-  line-height: 1.05;
+  line-height: 1.08;
 
   letter-spacing: -2.5px;
 }
@@ -128,7 +130,7 @@
 
   color: #777;
 
-  font-size: 12px;
+  font-size: 15px;
 
   line-height: 1.85;
 }
@@ -238,7 +240,7 @@
   color:
     rgba(20, 83, 45, 0.25);
 
-  font-size: 10px;
+  font-size: 12px;
 
   font-weight: 900;
 
@@ -294,7 +296,7 @@
   color:
     var(--green, #14532d);
 
-  font-size: 21px;
+  font-size: 22px;
 
   font-weight: 900;
 
@@ -308,7 +310,7 @@
 
   z-index: 2;
 
-  margin-top: 4px;
+  margin-top: 5px;
 
   color:
     var(--orange, #ff6b00);
@@ -318,9 +320,11 @@
     "Poppins",
     sans-serif;
 
-  font-size: 9px;
+  font-size: 11px;
 
   font-weight: 700;
+
+  line-height: 1.5;
 }
 
 
@@ -337,7 +341,7 @@
 
   color: #777;
 
-  font-size: 10px;
+  font-size: 14px;
 
   line-height: 1.8;
 }
@@ -363,19 +367,21 @@
 }
 
 .booth-items div {
-  min-height: 27px;
+  min-height: 30px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 7px;
+  gap: 8px;
 
   color: #606661;
 
-  font-size: 8px;
+  font-size: 12px;
 
   font-weight: 700;
+
+  line-height: 1.45;
 }
 
 .booth-items div span {
@@ -415,9 +421,11 @@
   color:
     var(--green, #14532d);
 
-  font-size: 9px;
+  font-size: 13px;
 
   font-weight: 900;
+
+  line-height: 1.4;
 
   text-decoration: none;
 
@@ -472,11 +480,13 @@
   color:
     var(--orange, #ff6b00);
 
-  font-size: 8px;
+  font-size: 11px;
 
   font-weight: 900;
 
   letter-spacing: 1.5px;
+
+  line-height: 1.4;
 }
 
 .booth-highlights-heading h3 {
@@ -485,9 +495,9 @@
   color:
     var(--green, #14532d);
 
-  font-size: 26px;
+  font-size: 28px;
 
-  line-height: 1.1;
+  line-height: 1.12;
 
   letter-spacing: -1px;
 }
@@ -555,8 +565,8 @@
 ===================================================== */
 
 .booth-highlight-icon {
-  width: 35px;
-  height: 35px;
+  width: 37px;
+  height: 37px;
 
   flex-shrink: 0;
 
@@ -585,9 +595,11 @@
   color:
     var(--green, #14532d);
 
-  font-size: 9px;
+  font-size: 13px;
 
   font-weight: 900;
+
+  line-height: 1.4;
 }
 
 .booth-highlight span {
@@ -595,7 +607,7 @@
 
   color: #888;
 
-  font-size: 7px;
+  font-size: 11px;
 
   line-height: 1.5;
 }
@@ -680,11 +692,13 @@
   color:
     #ff9955;
 
-  font-size: 8px;
+  font-size: 11px;
 
   font-weight: 900;
 
   letter-spacing: 1.7px;
+
+  line-height: 1.4;
 }
 
 .booth-cta h3 {
@@ -692,9 +706,9 @@
 
   color: #ffffff;
 
-  font-size: 27px;
+  font-size: 29px;
 
-  line-height: 1.1;
+  line-height: 1.12;
 
   letter-spacing: -1px;
 }
@@ -710,11 +724,11 @@
   margin-top: 9px;
 
   color:
-    rgba(255, 255, 255, 0.55);
+    rgba(255, 255, 255, 0.68);
 
-  font-size: 9px;
+  font-size: 13px;
 
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 
@@ -729,9 +743,9 @@
 
   flex-shrink: 0;
 
-  min-height: 44px;
+  min-height: 46px;
 
-  padding: 0 17px;
+  padding: 0 19px;
 
   display: inline-flex;
 
@@ -748,9 +762,11 @@
 
   border-radius: 8px;
 
-  font-size: 9px;
+  font-size: 13px;
 
   font-weight: 900;
+
+  line-height: 1.4;
 
   text-decoration: none;
 
@@ -812,10 +828,22 @@
     margin-bottom: 42px;
   }
 
+  .booth-header p {
+    font-size: 14px;
+  }
+
   .booth-card {
     min-height: 410px;
 
     padding: 23px;
+  }
+
+  .booth-card p {
+    font-size: 13px;
+  }
+
+  .booth-items div {
+    font-size: 11px;
   }
 
   .booth-highlights {
@@ -846,15 +874,19 @@
     margin-bottom: 35px;
   }
 
+  .booth-header .section-label {
+    font-size: 10px;
+  }
+
   .booth-header h2 {
     font-size:
-      clamp(33px, 9vw, 47px);
+      clamp(34px, 9vw, 47px);
 
     letter-spacing: -1.5px;
   }
 
   .booth-header p {
-    font-size: 10px;
+    font-size: 13px;
 
     line-height: 1.8;
   }
@@ -877,8 +909,16 @@
     font-size: 20px;
   }
 
+  .booth-hindi {
+    font-size: 10px;
+  }
+
   .booth-card p {
-    font-size: 9px;
+    font-size: 12px;
+  }
+
+  .booth-items div {
+    font-size: 11px;
   }
 
   .booth-highlights {
@@ -890,8 +930,16 @@
     border-radius: 15px;
   }
 
-  .booth-highlights-grid {
-    grid-template-columns: 1fr;
+  .booth-highlights-heading h3 {
+    font-size: 24px;
+  }
+
+  .booth-highlight strong {
+    font-size: 12px;
+  }
+
+  .booth-highlight span {
+    font-size: 10px;
   }
 
   .booth-cta {
@@ -903,6 +951,18 @@
       25px 22px;
 
     border-radius: 15px;
+  }
+
+  .booth-cta > div > span {
+    font-size: 9px;
+  }
+
+  .booth-cta h3 {
+    font-size: 24px;
+  }
+
+  .booth-cta p {
+    font-size: 11px;
   }
 
   .booth-cta-btn {
@@ -926,9 +986,15 @@
 
   /* Header */
 
+  .booth-header .section-label {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
   .booth-header h2 {
     font-size:
-      clamp(31px, 9.5vw, 42px);
+      clamp(32px, 9.5vw, 42px);
 
     line-height: 1.08;
   }
@@ -940,7 +1006,9 @@
   .booth-header p {
     margin-top: 14px;
 
-    font-size: 9px;
+    font-size: 12px;
+
+    line-height: 1.8;
   }
 
 
@@ -954,28 +1022,28 @@
   }
 
   .booth-number {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .booth-icon {
-    width: 38px;
-    height: 38px;
+    width: 39px;
+    height: 39px;
   }
 
   .booth-card h3 {
     margin-top: 17px;
 
-    font-size: 18px;
+    font-size: 19px;
   }
 
   .booth-hindi {
-    font-size: 8px;
+    font-size: 9px;
   }
 
   .booth-card p {
     margin-top: 10px;
 
-    font-size: 9px;
+    font-size: 11px;
 
     line-height: 1.75;
   }
@@ -987,15 +1055,15 @@
   }
 
   .booth-items div {
-    min-height: 24px;
+    min-height: 26px;
 
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .booth-card-link {
     padding-top: 16px;
 
-    font-size: 8px;
+    font-size: 11px;
   }
 
 
@@ -1010,27 +1078,31 @@
     border-radius: 14px;
   }
 
+  .booth-highlights-heading > span {
+    font-size: 9px;
+  }
+
   .booth-highlights-heading h3 {
     font-size: 22px;
   }
 
   .booth-highlight {
-    min-height: 61px;
+    min-height: 63px;
 
     padding: 9px;
   }
 
   .booth-highlight-icon {
-    width: 32px;
-    height: 32px;
+    width: 33px;
+    height: 33px;
   }
 
   .booth-highlight strong {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .booth-highlight span {
-    font-size: 7px;
+    font-size: 9px;
   }
 
 
@@ -1046,7 +1118,7 @@
   }
 
   .booth-cta > div > span {
-    font-size: 7px;
+    font-size: 8px;
   }
 
   .booth-cta h3 {
@@ -1054,13 +1126,15 @@
   }
 
   .booth-cta p {
-    font-size: 8px;
+    font-size: 10px;
+
+    line-height: 1.7;
   }
 
   .booth-cta-btn {
-    min-height: 42px;
+    min-height: 43px;
 
-    font-size: 8px;
+    font-size: 11px;
   }
 
 }
@@ -1083,11 +1157,19 @@
   }
 
   .booth-card h3 {
-    font-size: 17px;
+    font-size: 18px;
+  }
+
+  .booth-card p {
+    font-size: 10px;
   }
 
   .booth-items {
     grid-template-columns: 1fr;
+  }
+
+  .booth-items div {
+    font-size: 10px;
   }
 
   .booth-highlights {

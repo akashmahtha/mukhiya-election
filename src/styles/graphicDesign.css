@@ -12,6 +12,11 @@
   overflow: hidden;
 }
 
+
+/* =====================================================
+   DECORATIVE BACKGROUND
+===================================================== */
+
 .graphic-section::before {
   content: "";
 
@@ -89,7 +94,8 @@
 }
 
 .graphic-header .section-label {
-  color: var(--green, #14532d);
+  color:
+    var(--green, #14532d);
 
   font-size: 9px;
 
@@ -103,7 +109,8 @@
 .graphic-header h2 {
   margin-top: 15px;
 
-  color: var(--green, #14532d);
+  color:
+    var(--green, #14532d);
 
   font-size:
     clamp(38px, 4.5vw, 60px);
@@ -111,6 +118,8 @@
   line-height: 1.05;
 
   letter-spacing: -2.5px;
+
+  font-weight: 900;
 }
 
 .graphic-header h2 span {
@@ -118,7 +127,8 @@
 
   margin-top: 7px;
 
-  color: var(--orange, #ff6b00);
+  color:
+    var(--orange, #ff6b00);
 }
 
 .graphic-header p {
@@ -194,6 +204,8 @@
   font-weight: 900;
 
   letter-spacing: 1.8px;
+
+  text-transform: uppercase;
 }
 
 .graphic-feature-content h3 {
@@ -207,6 +219,8 @@
   line-height: 1.02;
 
   letter-spacing: -2px;
+
+  font-weight: 900;
 }
 
 .graphic-feature-content h3 span {
@@ -272,6 +286,8 @@
 }
 
 .graphic-feature-points svg {
+  flex-shrink: 0;
+
   color: #ff9955;
 }
 
@@ -312,20 +328,18 @@
   border:
     1px solid
     rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
 }
 
 .graphic-shape-one {
   width: 350px;
   height: 350px;
-
-  border-radius: 50%;
 }
 
 .graphic-shape-two {
   width: 500px;
   height: 500px;
-
-  border-radius: 50%;
 
   border-color:
     rgba(255, 255, 255, 0.04);
@@ -347,8 +361,7 @@
 
   padding: 18px;
 
-  background:
-    #ffffff;
+  background: #ffffff;
 
   border-radius: 13px;
 
@@ -360,13 +373,19 @@
     rotate(-4deg);
 
   transition:
-    transform 0.35s ease;
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
-.graphic-feature:hover .graphic-design-board {
+.graphic-feature:hover
+.graphic-design-board {
   transform:
     rotate(0deg)
     translateY(-5px);
+
+  box-shadow:
+    0 35px 80px
+    rgba(0, 0, 0, 0.28);
 }
 
 
@@ -489,13 +508,13 @@
 
   flex-direction: column;
 
+  align-items: center;
+
   gap: 6px;
 }
 
 .graphic-board-lines span {
   display: block;
-
-  width: 100%;
 
   height: 5px;
 
@@ -535,6 +554,8 @@
   font-weight: 900;
 
   letter-spacing: 1.6px;
+
+  text-transform: uppercase;
 }
 
 .graphic-services-heading h3 {
@@ -548,6 +569,8 @@
   line-height: 1.1;
 
   letter-spacing: -1px;
+
+  font-weight: 900;
 }
 
 .graphic-services-heading h3 strong {
@@ -585,8 +608,7 @@
 
   flex-direction: column;
 
-  background:
-    #ffffff;
+  background: #ffffff;
 
   border:
     1px solid #e3e8e2;
@@ -659,7 +681,8 @@
     transform 0.25s ease;
 }
 
-.graphic-card:hover .graphic-icon {
+.graphic-card:hover
+.graphic-icon {
   color: #ffffff;
 
   background:
@@ -714,6 +737,7 @@
   height: 2px;
 
   margin-top: auto;
+
   margin-bottom: 13px;
 
   background:
@@ -775,14 +799,18 @@
 
   gap: 30px;
 
-  background:
-    #ffffff;
+  background: #ffffff;
 
   border:
     1px solid #e3e8e2;
 
   border-radius: 16px;
 }
+
+
+/* =====================================================
+   FORMATS HEADING
+===================================================== */
 
 .graphic-formats-heading > span {
   color:
@@ -793,6 +821,8 @@
   font-weight: 900;
 
   letter-spacing: 1.5px;
+
+  text-transform: uppercase;
 }
 
 .graphic-formats-heading h3 {
@@ -804,10 +834,14 @@
   font-size: 25px;
 
   line-height: 1.1;
+
+  font-weight: 900;
 }
 
 .graphic-formats-heading h3 strong {
   display: block;
+
+  margin-top: 3px;
 
   color:
     var(--orange, #ff6b00);
@@ -853,6 +887,21 @@
   font-size: 8px;
 
   font-weight: 700;
+
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.graphic-format-list div:hover {
+  background: #ffffff;
+
+  border-color:
+    rgba(255, 107, 0, 0.18);
+
+  transform:
+    translateX(3px);
 }
 
 .graphic-format-list div span {
@@ -933,6 +982,8 @@
   font-weight: 900;
 
   letter-spacing: 1.6px;
+
+  text-transform: uppercase;
 }
 
 .graphic-cta h3 {
@@ -945,12 +996,14 @@
   line-height: 1.1;
 
   letter-spacing: -1px;
+
+  font-weight: 900;
 }
 
 .graphic-cta h3 strong {
-  color: #ff9955;
-
   margin-left: 5px;
+
+  color: #ff9955;
 }
 
 .graphic-cta p {
@@ -1006,7 +1059,8 @@
   transition:
     color 0.25s ease,
     background 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .graphic-cta-btn:hover {
@@ -1017,6 +1071,10 @@
 
   transform:
     translateY(-2px);
+
+  box-shadow:
+    0 9px 22px
+    rgba(255, 107, 0, 0.18);
 }
 
 
@@ -1034,10 +1092,6 @@
   .graphic-grid {
     grid-template-columns:
       repeat(3, minmax(0, 1fr));
-  }
-
-  .graphic-card:last-child {
-    grid-column: span 1;
   }
 
 }
@@ -1167,7 +1221,7 @@
   }
 
 
-  /* Header */
+  /* HEADER */
 
   .graphic-header h2 {
     font-size:
@@ -1189,7 +1243,7 @@
   }
 
 
-  /* Feature */
+  /* FEATURE */
 
   .graphic-feature {
     margin-bottom: 45px;
@@ -1236,7 +1290,7 @@
   }
 
 
-  /* Visual */
+  /* VISUAL */
 
   .graphic-feature-visual {
     min-height: 300px;
@@ -1282,7 +1336,7 @@
   }
 
 
-  /* Services */
+  /* SERVICES */
 
   .graphic-services-heading {
     margin-bottom: 18px;
@@ -1290,6 +1344,14 @@
 
   .graphic-services-heading h3 {
     font-size: 23px;
+  }
+
+  .graphic-services-heading h3 strong {
+    display: block;
+
+    margin-left: 0;
+
+    margin-top: 3px;
   }
 
   .graphic-grid {
@@ -1301,8 +1363,7 @@
   .graphic-card {
     min-height: 155px;
 
-    padding:
-      18px;
+    padding: 18px;
 
     border-radius: 13px;
   }
@@ -1323,7 +1384,7 @@
   }
 
 
-  /* Formats */
+  /* FORMATS */
 
   .graphic-formats {
     margin-top: 12px;
@@ -1372,6 +1433,14 @@
     font-size: 21px;
 
     line-height: 1.15;
+  }
+
+  .graphic-cta h3 strong {
+    display: block;
+
+    margin-left: 0;
+
+    margin-top: 3px;
   }
 
   .graphic-cta p {
@@ -1463,6 +1532,7 @@
   .graphic-icon,
   .graphic-card-link,
   .graphic-design-board,
+  .graphic-format-list div,
   .graphic-cta-btn {
     transition: none;
   }
@@ -1471,8 +1541,13 @@
     transform: none;
   }
 
-  .graphic-feature:hover .graphic-design-board {
+  .graphic-feature:hover
+  .graphic-design-board {
     transform: rotate(-4deg);
+  }
+
+  .graphic-format-list div:hover {
+    transform: none;
   }
 
 }

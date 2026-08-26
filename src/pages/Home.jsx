@@ -20,6 +20,8 @@ import Contact from "../components/Contact";
 
 import products from "../data/products";
 
+import Footer from "../components/Footer"
+
 import "../styles/products.css";
 
 
@@ -365,6 +367,8 @@ export default function Home() {
       ================================================= */}
 
       <Contact />
+
+      <Footer/>
 
 
     </div>
