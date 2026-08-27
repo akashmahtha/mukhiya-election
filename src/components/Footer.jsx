@@ -104,7 +104,7 @@ const quickLinks = [
 export default function Footer() {
 
   /* ===================================================
-     SCROLL FUNCTION
+     SCROLL TO SECTION
   =================================================== */
 
   const scrollToSection = (id) => {
@@ -152,16 +152,20 @@ export default function Footer() {
           </div>
 
 
+          {/* =================================================
+              WHATSAPP — 98202 80493
+          ================================================= */}
+
           <a
-            href={`https://wa.me/91${primaryPhone}`}
+            href="https://wa.me/919820280493"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-top-cta-btn"
+            aria-label="WhatsApp Enquiry on 98202 80493"
           >
             WhatsApp Enquiry
 
             <ArrowUpRight size={16} />
-
           </a>
 
         </div>
@@ -190,21 +194,11 @@ export default function Footer() {
               aria-label="Mukhiya Election Home"
             >
 
-              <div className="footer-logo-mark">
-                ME
-              </div>
-
-              <div className="footer-logo-text">
-
-                <strong>
-                  MUKHIYA
-                </strong>
-
-                <span>
-                  ELECTION
-                </span>
-
-              </div>
+              <img
+                src="/logo.png"
+                alt="Mukhiya Election"
+                className="footer-logo-image"
+              />
 
             </button>
 
@@ -356,11 +350,13 @@ export default function Footer() {
 
             {/* =================================================
                 PRIMARY PHONE
+                73525 55555
             ================================================= */}
 
             <a
               href={`tel:+91${primaryPhone}`}
               className="footer-contact-item footer-contact-link"
+              aria-label={`Call ${primaryPhoneDisplay}`}
             >
 
               <div className="footer-contact-icon">
@@ -385,11 +381,13 @@ export default function Footer() {
 
             {/* =================================================
                 SECONDARY PHONE
+                98202 80493
             ================================================= */}
 
             <a
               href={`tel:+91${secondaryPhone}`}
               className="footer-contact-item footer-contact-link"
+              aria-label={`Call ${secondaryPhoneDisplay}`}
             >
 
               <div className="footer-contact-icon">
@@ -413,14 +411,16 @@ export default function Footer() {
 
 
             {/* =================================================
-                PRIMARY WHATSAPP
+                WHATSAPP
+                98202 80493
             ================================================= */}
 
             <a
-              href={`https://wa.me/91${primaryPhone}`}
+              href="https://wa.me/919820280493"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-contact-item footer-contact-link"
+              aria-label="WhatsApp on 98202 80493"
             >
 
               <div className="footer-contact-icon">
@@ -434,7 +434,7 @@ export default function Footer() {
                 </strong>
 
                 <span>
-                  Quick Campaign Enquiry
+                  98202 80493 • Quick Enquiry
                 </span>
 
               </p>

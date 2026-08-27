@@ -11,7 +11,6 @@ import {
 
 import "../styles/navbar.css";
 
-
 /* =====================================================
    PHONE NUMBERS
 ===================================================== */
@@ -19,14 +18,13 @@ import "../styles/navbar.css";
 const phoneNumbers = [
   {
     number: "7352555555",
-    href: "tel:+9173525555",
+    href: "tel:+917352555555",
   },
   {
     number: "9820280493",
     href: "tel:+919820280493",
   },
 ];
-
 
 /* =====================================================
    SERVICES DROPDOWN
@@ -67,7 +65,6 @@ const serviceLinks = [
   },
 ];
 
-
 /* =====================================================
    CAMPAIGN MATERIALS DROPDOWN
 ===================================================== */
@@ -106,7 +103,6 @@ const campaignMaterialLinks = [
     target: "products",
   },
 ];
-
 
 /* =====================================================
    CAMPAIGN SUPPORT DROPDOWN
@@ -147,14 +143,9 @@ const campaignSupportLinks = [
   },
 ];
 
-
 export default function Navbar() {
-
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const [openDropdown, setOpenDropdown] =
-    useState(null);
-
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   /* =====================================================
      CLOSE MENU
@@ -165,60 +156,45 @@ export default function Navbar() {
     setOpenDropdown(null);
   };
 
-
   /* =====================================================
      TOGGLE DROPDOWN
   ===================================================== */
 
   const toggleDropdown = (name) => {
     setOpenDropdown(
-      openDropdown === name
-        ? null
-        : name
+      openDropdown === name ? null : name
     );
   };
-
 
   /* =====================================================
      SCROLL TO SECTION
   ===================================================== */
 
   const scrollToSection = (id) => {
-
     closeMenu();
 
-    const element =
-      document.getElementById(id);
+    const element = document.getElementById(id);
 
     if (!element) {
-
       console.warn(
         `Section with id="${id}" was not found.`
       );
-
       return;
     }
 
     setTimeout(() => {
-
       element.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
-
     }, 50);
   };
-
 
   /* =====================================================
      RENDER DROPDOWN
   ===================================================== */
 
-  const renderDropdown = (
-    items,
-    dropdownName
-  ) => {
-
+  const renderDropdown = (items, dropdownName) => {
     return (
       <div
         className={`nav-dropdown-menu ${
@@ -227,9 +203,7 @@ export default function Navbar() {
             : ""
         }`}
       >
-
         {items.map((item) => (
-
           <button
             key={item.label}
             type="button"
@@ -239,13 +213,10 @@ export default function Navbar() {
           >
             {item.label}
           </button>
-
         ))}
-
       </div>
     );
   };
-
 
   return (
     <header className="navbar">
@@ -255,7 +226,6 @@ export default function Navbar() {
       ================================================= */}
 
       <div className="navbar-container">
-
 
         {/* =================================================
             LOGO
@@ -269,32 +239,18 @@ export default function Navbar() {
           }
           aria-label="Mukhiya Election Home"
         >
-
-          <div className="logo-mark">
-            ME
-          </div>
-
-          <div className="logo-text">
-
-            <strong>
-              MUKHIYA
-            </strong>
-
-            <span>
-              ELECTION
-            </span>
-
-          </div>
-
+          <img
+            src="/logo.png"
+            alt="Mukhiya Election"
+            className="navbar-logo-image"
+          />
         </button>
-
 
         {/* =================================================
             DESKTOP NAVIGATION
         ================================================= */}
 
         <nav className="desktop-nav">
-
 
           {/* HOME */}
 
@@ -307,7 +263,6 @@ export default function Navbar() {
             Home
           </button>
 
-
           {/* ABOUT */}
 
           <button
@@ -319,10 +274,7 @@ export default function Navbar() {
             About
           </button>
 
-
-          {/* =================================================
-              SERVICES
-          ================================================= */}
+          {/* SERVICES */}
 
           <div
             className="nav-dropdown"
@@ -333,7 +285,6 @@ export default function Navbar() {
               setOpenDropdown(null)
             }
           >
-
             <button
               type="button"
               className="nav-dropdown-trigger"
@@ -341,7 +292,6 @@ export default function Navbar() {
                 toggleDropdown("services")
               }
             >
-
               Services
 
               <ChevronDown
@@ -352,20 +302,15 @@ export default function Navbar() {
                     : ""
                 }
               />
-
             </button>
 
             {renderDropdown(
               serviceLinks,
               "services"
             )}
-
           </div>
 
-
-          {/* =================================================
-              CAMPAIGN MATERIALS
-          ================================================= */}
+          {/* CAMPAIGN MATERIALS */}
 
           <div
             className="nav-dropdown"
@@ -378,7 +323,6 @@ export default function Navbar() {
               setOpenDropdown(null)
             }
           >
-
             <button
               type="button"
               className="nav-dropdown-trigger"
@@ -388,7 +332,6 @@ export default function Navbar() {
                 )
               }
             >
-
               Campaign Materials
 
               <ChevronDown
@@ -400,20 +343,15 @@ export default function Navbar() {
                     : ""
                 }
               />
-
             </button>
 
             {renderDropdown(
               campaignMaterialLinks,
               "campaign-materials"
             )}
-
           </div>
 
-
-          {/* =================================================
-              CAMPAIGN SUPPORT
-          ================================================= */}
+          {/* CAMPAIGN SUPPORT */}
 
           <div
             className="nav-dropdown"
@@ -426,7 +364,6 @@ export default function Navbar() {
               setOpenDropdown(null)
             }
           >
-
             <button
               type="button"
               className="nav-dropdown-trigger"
@@ -436,7 +373,6 @@ export default function Navbar() {
                 )
               }
             >
-
               Campaign Support
 
               <ChevronDown
@@ -448,16 +384,13 @@ export default function Navbar() {
                     : ""
                 }
               />
-
             </button>
 
             {renderDropdown(
               campaignSupportLinks,
               "campaign-support"
             )}
-
           </div>
-
 
           {/* GALLERY */}
 
@@ -469,7 +402,6 @@ export default function Navbar() {
           >
             Gallery
           </button>
-
 
           {/* CONTACT */}
 
@@ -484,7 +416,6 @@ export default function Navbar() {
 
         </nav>
 
-
         {/* =================================================
             DESKTOP PHONE + WHATSAPP
         ================================================= */}
@@ -492,24 +423,19 @@ export default function Navbar() {
         <div className="navbar-actions">
 
           {phoneNumbers.map((phone) => (
-
             <a
               key={phone.number}
               href={phone.href}
               className="navbar-phone-number"
               aria-label={`Call ${phone.number}`}
             >
-
               <Phone size={14} />
 
               <span>
                 {phone.number}
               </span>
-
             </a>
-
           ))}
-
 
           <a
             href="https://wa.me/919820280493"
@@ -518,13 +444,10 @@ export default function Navbar() {
             className="navbar-whatsapp"
             aria-label="WhatsApp Mukhiya Election"
           >
-
             <MessageCircle size={16} />
-
           </a>
 
         </div>
-
 
         {/* =================================================
             MOBILE MENU BUTTON
@@ -543,17 +466,14 @@ export default function Navbar() {
           }
           aria-expanded={menuOpen}
         >
-
           {menuOpen ? (
             <X size={23} />
           ) : (
             <Menu size={23} />
           )}
-
         </button>
 
       </div>
-
 
       {/* =================================================
           MOBILE NAVIGATION
@@ -566,9 +486,7 @@ export default function Navbar() {
             : ""
         }`}
       >
-
         <div className="mobile-nav-inner">
-
 
           {/* HOME */}
 
@@ -581,7 +499,6 @@ export default function Navbar() {
             Home
           </button>
 
-
           {/* ABOUT */}
 
           <button
@@ -593,10 +510,7 @@ export default function Navbar() {
             About
           </button>
 
-
-          {/* =================================================
-              MOBILE SERVICES
-          ================================================= */}
+          {/* MOBILE SERVICES */}
 
           <div className="mobile-product-wrapper">
 
@@ -607,7 +521,6 @@ export default function Navbar() {
                 toggleDropdown("services")
               }
             >
-
               <span>
                 Services
               </span>
@@ -620,9 +533,7 @@ export default function Navbar() {
                     : ""
                 }
               />
-
             </button>
-
 
             <div
               className={`mobile-product-menu ${
@@ -631,9 +542,7 @@ export default function Navbar() {
                   : ""
               }`}
             >
-
               {serviceLinks.map((item) => (
-
                 <button
                   key={item.label}
                   type="button"
@@ -645,17 +554,12 @@ export default function Navbar() {
                 >
                   {item.label}
                 </button>
-
               ))}
-
             </div>
 
           </div>
 
-
-          {/* =================================================
-              MOBILE CAMPAIGN MATERIALS
-          ================================================= */}
+          {/* MOBILE CAMPAIGN MATERIALS */}
 
           <div className="mobile-product-wrapper">
 
@@ -668,7 +572,6 @@ export default function Navbar() {
                 )
               }
             >
-
               <span>
                 Campaign Materials
               </span>
@@ -682,9 +585,7 @@ export default function Navbar() {
                     : ""
                 }
               />
-
             </button>
-
 
             <div
               className={`mobile-product-menu ${
@@ -694,10 +595,8 @@ export default function Navbar() {
                   : ""
               }`}
             >
-
               {campaignMaterialLinks.map(
                 (item) => (
-
                   <button
                     key={item.label}
                     type="button"
@@ -709,18 +608,13 @@ export default function Navbar() {
                   >
                     {item.label}
                   </button>
-
                 )
               )}
-
             </div>
 
           </div>
 
-
-          {/* =================================================
-              MOBILE CAMPAIGN SUPPORT
-          ================================================= */}
+          {/* MOBILE CAMPAIGN SUPPORT */}
 
           <div className="mobile-product-wrapper">
 
@@ -733,7 +627,6 @@ export default function Navbar() {
                 )
               }
             >
-
               <span>
                 Campaign Support
               </span>
@@ -747,9 +640,7 @@ export default function Navbar() {
                     : ""
                 }
               />
-
             </button>
-
 
             <div
               className={`mobile-product-menu ${
@@ -759,10 +650,8 @@ export default function Navbar() {
                   : ""
               }`}
             >
-
               {campaignSupportLinks.map(
                 (item) => (
-
                   <button
                     key={item.label}
                     type="button"
@@ -774,14 +663,11 @@ export default function Navbar() {
                   >
                     {item.label}
                   </button>
-
                 )
               )}
-
             </div>
 
           </div>
-
 
           {/* GALLERY */}
 
@@ -794,7 +680,6 @@ export default function Navbar() {
             Gallery
           </button>
 
-
           {/* CONTACT */}
 
           <button
@@ -806,49 +691,40 @@ export default function Navbar() {
             Contact
           </button>
 
-
-          {/* =================================================
-              MOBILE PHONE + WHATSAPP
-          ================================================= */}
+          {/* MOBILE PHONE + WHATSAPP */}
 
           <div className="mobile-nav-actions">
 
             {phoneNumbers.map((phone) => (
-
               <a
                 key={phone.number}
                 href={phone.href}
                 className="mobile-call"
+                aria-label={`Call ${phone.number}`}
               >
-
                 <Phone size={16} />
 
                 {phone.number}
-
               </a>
-
             ))}
-
 
             <a
               href="https://wa.me/919820280493"
               target="_blank"
               rel="noopener noreferrer"
               className="mobile-whatsapp"
+              aria-label="WhatsApp Mukhiya Election"
             >
-
               <MessageCircle size={17} />
 
               WhatsApp
 
               <ArrowUpRight size={15} />
-
             </a>
 
           </div>
 
         </div>
-
       </div>
 
     </header>

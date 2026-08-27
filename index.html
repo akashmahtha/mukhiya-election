@@ -22,7 +22,10 @@
       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
 
-    <meta name="author" content="Mukhiya Election" />
+    <meta
+      name="author"
+      content="Mukhiya Election"
+    />
 
     <meta
       name="description"
@@ -34,7 +37,10 @@
       content="Bihar Mukhiya Election 2026, Mukhiya Election 2026, Mukhiya Election Campaign, Bihar Mukhiya Election, Mukhiya Chunav 2026, Bihar Panchayat Election, Mukhiya Campaign Services, Election Campaign Services Bihar, Digital Election Campaign Bihar, Election Printing Bihar, Election Branding Bihar"
     />
 
-    <meta name="theme-color" content="#b91c1c" />
+    <meta
+      name="theme-color"
+      content="#14532d"
+    />
 
     <!-- =====================================================
          CANONICAL
@@ -54,18 +60,34 @@
     </title>
 
     <!-- =====================================================
-         FAVICON
+         FAVICON / LOGO
     ====================================================== -->
 
     <link
       rel="icon"
       type="image/png"
-      href="/favicon.png"
+      href="/logo.png"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/logo.png"
     />
 
     <link
       rel="apple-touch-icon"
-      href="/favicon.png"
+      href="/logo.png"
+    />
+
+    <!-- =====================================================
+         PRELOAD LOGO
+    ====================================================== -->
+
+    <link
+      rel="preload"
+      as="image"
+      href="/logo.png"
     />
 
     <!-- =====================================================
@@ -99,7 +121,7 @@
 
     <meta
       property="og:image"
-      content="https://www.mukhiyaelection.com/og-image.jpg"
+      content="https://www.mukhiyaelection.com/logo.png"
     />
 
     <meta
@@ -114,7 +136,7 @@
 
     <meta
       property="og:image:alt"
-      content="Bihar Mukhiya Election 2026 Campaign Services"
+      content="Mukhiya Election Bihar"
     />
 
     <!-- =====================================================
@@ -138,11 +160,11 @@
 
     <meta
       name="twitter:image"
-      content="https://www.mukhiyaelection.com/og-image.jpg"
+      content="https://www.mukhiyaelection.com/logo.png"
     />
 
     <!-- =====================================================
-         ORGANIZATION / LOCAL BUSINESS SCHEMA
+         ORGANIZATION SCHEMA
     ====================================================== -->
 
     <script type="application/ld+json">
@@ -152,9 +174,16 @@
         "@id": "https://www.mukhiyaelection.com/#organization",
         "name": "Mukhiya Election",
         "url": "https://www.mukhiyaelection.com/",
-        "logo": "https://www.mukhiyaelection.com/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.mukhiyaelection.com/logo.png"
+        },
+        "image": "https://www.mukhiyaelection.com/logo.png",
         "description": "Mukhiya Election 2026 campaign support services in Bihar including campaign strategy, digital campaigns, printing, branding, ground campaigns, events, vehicles, photography and videography.",
-        "telephone": "+91-9820280493",
+        "telephone": [
+          "+91-7352555555",
+          "+91-9820280493"
+        ],
         "areaServed": {
           "@type": "State",
           "name": "Bihar"
@@ -200,6 +229,10 @@
         "about": {
           "@type": "Thing",
           "name": "Bihar Mukhiya Election 2026"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://www.mukhiyaelection.com/logo.png"
         },
         "inLanguage": "en-IN"
       }

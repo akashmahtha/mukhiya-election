@@ -121,6 +121,8 @@
     rgba(0, 0, 0, 0.12);
 
   backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
 }
 
 
@@ -276,23 +278,27 @@
 
 
 /* =====================================================
-   LOGO
+   FOOTER LOGO
 ===================================================== */
 
 .footer-logo {
   width: fit-content;
 
+  min-height: 58px;
+
   display: inline-flex;
 
   align-items: center;
 
-  gap: 11px;
+  justify-content: flex-start;
 
   padding: 0;
 
   margin: 0;
 
   border: 0;
+
+  outline: none;
 
   background: transparent;
 
@@ -301,82 +307,45 @@
   cursor: pointer;
 
   text-align: left;
+
+  appearance: none;
+
+  -webkit-appearance: none;
 }
 
 
 /* =====================================================
-   LOGO MARK
+   FOOTER LOGO IMAGE
 ===================================================== */
 
-.footer-logo-mark {
-  width: 48px;
-  height: 48px;
+.footer-logo-image {
+  width: 175px;
 
-  display: flex;
+  height: 58px;
 
-  align-items: center;
+  display: block;
 
-  justify-content: center;
+  max-width: 100%;
 
-  border-radius: 11px;
+  object-fit: contain;
 
-  background:
-    linear-gradient(
-      135deg,
-      #ff6b00,
-      #ff8b42
-    );
+  object-position: left center;
 
-  color: #ffffff;
-
-  font-size: 15px;
-
-  line-height: 1;
-
-  font-weight: 950;
-
-  letter-spacing: -0.5px;
-
-  box-shadow:
-    0 10px 25px
-    rgba(255, 107, 0, 0.18);
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
 
 /* =====================================================
-   LOGO TEXT
+   LOGO HOVER
 ===================================================== */
 
-.footer-logo-text {
-  display: flex;
+.footer-logo:hover .footer-logo-image {
+  transform:
+    translateY(-1px);
 
-  flex-direction: column;
-}
-
-.footer-logo-text strong {
-  color: #ffffff;
-
-  font-size: 18px;
-
-  line-height: 1;
-
-  font-weight: 950;
-
-  letter-spacing: 0.5px;
-}
-
-.footer-logo-text span {
-  margin-top: 4px;
-
-  color: #ff9955;
-
-  font-size: 9px;
-
-  line-height: 1.2;
-
-  font-weight: 900;
-
-  letter-spacing: 2px;
+  opacity: 0.94;
 }
 
 
@@ -398,20 +367,6 @@
 
   font-weight: 500;
 }
-
-
-/* =====================================================
-   SOCIAL ICONS REMOVED
-===================================================== */
-
-/*
-  Social media buttons intentionally removed.
-
-  No Instagram
-  No Facebook
-  No WhatsApp social icon
-  No Share icon
-*/
 
 
 /* =====================================================
@@ -544,8 +499,7 @@
     color 0.2s ease;
 }
 
-.footer-contact-link:hover
-.footer-contact-icon {
+.footer-contact-link:hover .footer-contact-icon {
   background: #ff6b00;
 
   color: #ffffff;
@@ -616,8 +570,7 @@
     transform 0.2s ease;
 }
 
-.footer-contact-link:hover
-.footer-contact-arrow {
+.footer-contact-link:hover .footer-contact-arrow {
   color: #ff9955;
 
   transform:
@@ -844,7 +797,8 @@
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
 
-    gap: 35px 25px;
+    gap:
+      35px 25px;
   }
 
   .footer-brand {
@@ -889,7 +843,9 @@
   }
 
 
-  /* Top CTA */
+  /* =================================================
+     TOP CTA
+  ================================================= */
 
   .footer-top-cta {
     margin-bottom: 40px;
@@ -936,7 +892,9 @@
   }
 
 
-  /* Main */
+  /* =================================================
+     MAIN
+  ================================================= */
 
   .footer-main {
     grid-template-columns: 1fr;
@@ -951,29 +909,26 @@
   }
 
 
-  /* Logo */
+  /* =================================================
+     LOGO
+  ================================================= */
 
-  .footer-logo-mark {
-    width: 43px;
-    height: 43px;
+  .footer-logo {
+    min-height: 50px;
 
-    font-size: 13px;
-
-    border-radius: 10px;
+    width: fit-content;
   }
 
-  .footer-logo-text strong {
-    font-size: 16px;
-  }
+  .footer-logo-image {
+    width: 150px;
 
-  .footer-logo-text span {
-    font-size: 8px;
-
-    letter-spacing: 1.7px;
+    height: 50px;
   }
 
 
-  /* Description */
+  /* =================================================
+     DESCRIPTION
+  ================================================= */
 
   .footer-description {
     max-width: 100%;
@@ -986,7 +941,9 @@
   }
 
 
-  /* Columns */
+  /* =================================================
+     COLUMNS
+  ================================================= */
 
   .footer-column h3 {
     margin-bottom: 14px;
@@ -1003,7 +960,9 @@
   }
 
 
-  /* Contact */
+  /* =================================================
+     CONTACT
+  ================================================= */
 
   .footer-contact-item {
     margin-bottom: 13px;
@@ -1013,6 +972,7 @@
 
   .footer-contact-icon {
     width: 32px;
+
     height: 32px;
   }
 
@@ -1025,7 +985,9 @@
   }
 
 
-  /* Network */
+  /* =================================================
+     NETWORK
+  ================================================= */
 
   .footer-network {
     margin-top: 5px;
@@ -1051,7 +1013,9 @@
   }
 
 
-  /* Bottom */
+  /* =================================================
+     BOTTOM
+  ================================================= */
 
   .footer-bottom {
     padding-top: 18px;
@@ -1102,13 +1066,39 @@
     gap: 27px;
   }
 
+
+  /* =================================================
+     LOGO
+  ================================================= */
+
+  .footer-logo-image {
+    width: 135px;
+
+    height: 46px;
+  }
+
+
+  /* =================================================
+     DESCRIPTION
+  ================================================= */
+
   .footer-description {
     font-size: 9px;
   }
 
+
+  /* =================================================
+     CONTACT
+  ================================================= */
+
   .footer-contact-item strong {
     font-size: 12px;
   }
+
+
+  /* =================================================
+     NETWORK
+  ================================================= */
 
   .footer-network h3 {
     font-size: 18px;
@@ -1142,6 +1132,7 @@
 
 @media (prefers-reduced-motion: reduce) {
 
+  .footer-logo-image,
   .footer-top-cta-btn,
   .footer-links button,
   .footer-contact-icon,
@@ -1149,6 +1140,7 @@
     transition: none;
   }
 
+  .footer-logo:hover .footer-logo-image,
   .footer-top-cta-btn:hover,
   .footer-links button:hover {
     transform: none;
